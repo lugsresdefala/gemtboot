@@ -43,9 +43,9 @@ export async function loadInitialData(): Promise<void> {
   // Process orientation document for cirurgias
   const cirurgiasSource = "Orientações e Fluxo para Cirurgias de Afirmação de Gênero";
   const cirurgiasChunks = processDocumentText(
-    "O Ambulatório de Saúde Integral para Travestis e Transexuais (ASITT) do Centro de Referência e Treinamento DST/Aids da Secretaria de Estado da Saúde de São Paulo (ASITT/CRT/SES) – situado na Rua Santa Cruz, 81 - São Paulo, serviço que regula a fila de espera para as cirurgias realizadas em hospitais parceiros, reafirma o fluxo de encaminhamento para as cirurgias.\n\n" +
-    "É a unidade que se responsabiliza pelo usuário. Todo contato com o ASITT deverá ser realizado através do seguinte e-mail: asitt@crt.saude.sp.gov.br\n\n" +
-    "A pessoa usuária nunca deve enviar ou comparecer ao ASITT. A responsável pelo contato com o ASITT é a Unidade da Rede Sampa Trans.\n\n" +
+    "O Ambulatório de Saúde Integral para Travestis e Transexuais (ASITT) do Centro de Referência e Treinamento DST/Aids da Secretaria de Estado da Saúde de São Paulo (ASITT/CRT/SES) é o serviço que regula a fila de espera para as cirurgias realizadas em hospitais parceiros e coordena o fluxo de encaminhamento para as cirurgias.\n\n" +
+    "É a unidade que se responsabiliza pelo usuário. Todo contato com o ASITT deverá ser realizado através da Unidade da Rede Sampa Trans.\n\n" +
+    "A pessoa usuária nunca deve enviar ou comparecer ao ASITT diretamente. A responsável pelo contato com o ASITT é a Unidade da Rede Sampa Trans mais próxima.\n\n" +
     "Informamos que, até o presente momento, os procedimentos cirúrgicos disponibilizados pelos hospitais parceiros para o encaminhamento através do ASITT são:\n\n" +
     "• cirurgia de redesignação genital: para mulheres trans, travestis e pessoas transfemininas;\n" +
     "• mamoplastia masculinizadora e histerectomia: para homens trans e pessoas transmasculinas.\n\n" +

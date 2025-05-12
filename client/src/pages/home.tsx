@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <>
       <Helmet>
-        <title>GEM-T | Assistente para Processo Transexualizador</title>
+        <title>GEM-T | Diversidade Barra Funda</title>
       </Helmet>
       
       {/* Font Awesome Script */}

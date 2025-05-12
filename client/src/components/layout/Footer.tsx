@@ -79,7 +79,7 @@ export default function Footer() {
               </li>
               <li className="flex items-center">
                 <i className="fas fa-info-circle mr-2 text-primary-light"></i>
-                <span>Parte do Projeto Diversidade Barra Funda</span>
+                <span>Ferramenta do Projeto Diversidade Barra Funda</span>
               </li>
               <li className="flex items-center">
                 <i className="fas fa-users mr-2 text-primary-light"></i>
@@ -90,7 +90,7 @@ export default function Footer() {
         </div>
         
         <div className="mt-8 pt-6 border-t border-neutral-dark text-center text-xs">
-          <p>&copy; {new Date().getFullYear()} GEM-T | Assistente do Processo Transexualizador - Diversidade Barra Funda</p>
+          <p>&copy; {new Date().getFullYear()} GEM-T | Processo Transexualizador - Projeto Diversidade Barra Funda</p>
           <p className="mt-2">
             As informações fornecidas por este assistente não substituem a consulta com profissionais de saúde qualificados.
           </p>

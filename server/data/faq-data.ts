@@ -33,7 +33,7 @@ export const faqData: FAQEntry[] = [
   },
   {
     question: "Como funciona o contato com o ASITT?",
-    answer: "O Ambulatório de Saúde Integral para Travestis e Transexuais (ASITT) do Centro de Referência e Treinamento DST/Aids da Secretaria de Estado da Saúde de São Paulo é o serviço que regula a fila de espera para as cirurgias realizadas em hospitais parceiros.\n\nTodo contato com o ASITT deverá ser realizado através do e-mail: asitt@crt.saude.sp.gov.br\n\nImportante: A pessoa usuária NUNCA deve enviar ou comparecer ao ASITT. A responsável pelo contato com o ASITT é a Unidade da Rede Sampa Trans.",
+    answer: "O Ambulatório de Saúde Integral para Travestis e Transexuais (ASITT) do Centro de Referência e Treinamento DST/Aids da Secretaria de Estado da Saúde de São Paulo é o serviço que regula a fila de espera para as cirurgias realizadas em hospitais parceiros.\n\nTodo contato com o ASITT deverá ser realizado através da Unidade da Rede Sampa Trans mais próxima.\n\nImportante: A pessoa usuária NUNCA deve enviar ou comparecer ao ASITT diretamente. A responsável pelo contato com o ASITT é a Unidade da Rede Sampa Trans.",
     source: "Orientações e Fluxo para Cirurgias de Afirmação de Gênero, pág. 1",
     category: "fluxos"
   },
