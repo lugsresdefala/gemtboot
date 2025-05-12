@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import { Trash, Settings } from "lucide-react";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import { Message } from "@/types";
+import RobotAvatar from "@/components/ui/RobotAvatar";
 
 export default function ChatInterface() {
   const { messages, sendMessage, clearConversation, isLoading } = useChat();
@@ -111,9 +112,7 @@ Você pode me perguntar sobre:
         {/* Loading indicator */}
         {isLoading && (
           <div className="flex items-start mb-4 animate-fade-in">
-            <div className="flex-shrink-0 w-8 h-8 rounded-full bg-gradient-to-r from-primary to-secondary flex items-center justify-center text-white shadow-md">
-              <i className="fas fa-robot text-xs"></i>
-            </div>
+            <RobotAvatar size="sm" />
             <div className="ml-2 bg-white rounded-lg rounded-tl-none py-3 px-4 shadow-sm">
               <div className="typing-indicator">
                 <span></span>

@@ -16,9 +16,7 @@ export default function ChatMessage({ message }: ChatMessageProps) {
       isBot ? "animate-slide-up" : "justify-end animate-fade-in"
     )}>
       {isBot && (
-        <div className="flex-shrink-0 w-8 h-8 rounded-full bg-gradient-to-r from-primary to-secondary flex items-center justify-center text-white shadow-md">
-          <i className="fas fa-robot text-xs"></i>
-        </div>
+        <RobotAvatar size="sm" />
       )}
       
       <div className={cn(
