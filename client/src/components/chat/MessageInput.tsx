@@ -51,7 +51,7 @@ export default function MessageInput({ onSendMessage, isLoading = false }: Messa
           </div>
           <input 
             type="text" 
-            placeholder="Digite sua dúvida sobre o Processo Transexualizador..." 
+            placeholder="Digite sua dúvida sobre cuidados em saúde para pessoas trans..." 
             className="w-full py-3 pl-12 pr-10 bg-slate-50 border border-slate-200 rounded-full focus:outline-none focus:ring-2 focus:ring-[#1565c0] focus:border-transparent transition-all shadow-sm hover:shadow-md"
             value={message}
             onChange={(e) => setMessage(e.target.value)}

@@ -23,10 +23,10 @@ function App() {
       <TooltipProvider>
         <Helmet>
           <title>GEM-T | Diversidade Barra Funda</title>
-          <meta name="description" content="Assistente virtual do Projeto Diversidade Barra Funda para informações sobre o Processo Transexualizador no SUS, fluxos, critérios e recomendações." />
+          <meta name="description" content="Assistente virtual do Projeto Diversidade Barra Funda para informações sobre cuidados em saúde para pessoas trans no SUS, fluxos, critérios e recomendações." />
           <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
           <meta property="og:title" content="GEM-T | Diversidade Barra Funda" />
-          <meta property="og:description" content="Assistente virtual do Projeto Diversidade Barra Funda para informações sobre o Processo Transexualizador no SUS." />
+          <meta property="og:description" content="Assistente virtual do Projeto Diversidade Barra Funda para informações sobre cuidados em saúde para pessoas trans no SUS." />
           <meta property="og:type" content="website" />
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />

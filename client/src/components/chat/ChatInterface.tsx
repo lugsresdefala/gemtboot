@@ -17,11 +17,11 @@ export default function ChatInterface() {
   const welcomeMessage: Message = {
     id: 0,
     role: "assistant",
-    content: `Olá! Eu sou o GEM-T, assistente virtual do Projeto Diversidade Barra Funda para informações sobre o Processo Transexualizador no SUS. Como posso ajudar você hoje?
+    content: `Olá! Eu sou o GEM-T, assistente virtual do Projeto Diversidade Barra Funda para informações sobre cuidados em saúde para pessoas trans no SUS. Como posso ajudar você hoje?
 
 Você pode me perguntar sobre:
 - Fluxos e procedimentos para cirurgias
-- Critérios de elegibilidade para o processo
+- Critérios de elegibilidade para atendimentos
 - Documentos necessários
 - Orientações sobre hormônios`,
     source: "",
@@ -45,7 +45,7 @@ Você pode me perguntar sobre:
             <RobotAvatar size="sm" />
           </div>
           <div>
-            <h2 className="font-semibold text-lg tracking-tight">GEM-T · Processo Transexualizador</h2>
+            <h2 className="font-semibold text-lg tracking-tight">GEM-T · Saúde Trans</h2>
             <p className="text-xs text-white/70">Projeto Diversidade Barra Funda</p>
           </div>
         </div>
@@ -92,11 +92,11 @@ Você pode me perguntar sobre:
       <TopicPills onTopicSelect={(topic) => {
         // Handle topic selection by sending a query about that topic
         const topicQueries = {
-          faq: "Quais são as perguntas frequentes sobre o processo transexualizador?",
-          fluxos: "Como funciona o fluxo do processo transexualizador?",
-          criterios: "Quais são os critérios para participar do processo transexualizador?",
-          especialistas: "Quais especialistas participam do processo transexualizador?",
-          unidades: "Onde posso encontrar unidades que oferecem o processo transexualizador?"
+          faq: "Quais são as perguntas frequentes sobre os cuidados em saúde para pessoas trans?",
+          fluxos: "Como funciona o fluxo de cuidados em saúde para pessoas trans no SUS?",
+          criterios: "Quais são os critérios para acessar os serviços de saúde para pessoas trans?",
+          especialistas: "Quais especialistas participam dos cuidados em saúde para pessoas trans?",
+          unidades: "Onde posso encontrar unidades que oferecem cuidados em saúde para pessoas trans?"
         };
         
         sendMessage(topicQueries[topic]);

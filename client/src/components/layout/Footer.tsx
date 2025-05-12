@@ -12,7 +12,7 @@ export default function Footer() {
               <h3 className="text-[#42a5f5] font-semibold">GEM-T</h3>
             </div>
             <p className="text-sm leading-relaxed text-gray-400">
-              Sistema de informações sobre o Processo Transexualizador no SUS, 
+              Sistema de informações sobre cuidados em saúde para pessoas trans no SUS, 
               desenvolvido para facilitar o acesso a orientações e fluxos de cuidado.
             </p>
           </div>
@@ -90,7 +90,7 @@ export default function Footer() {
         </div>
         
         <div className="mt-10 pt-6 border-t border-gray-800 text-center text-xs text-gray-500">
-          <p>&copy; {new Date().getFullYear()} GEM-T | Processo Transexualizador - Projeto Diversidade Barra Funda</p>
+          <p>&copy; {new Date().getFullYear()} GEM-T | Saúde Trans - Projeto Diversidade Barra Funda</p>
           <p className="mt-2">
             As informações fornecidas por este assistente não substituem a consulta com profissionais de saúde qualificados.
           </p>

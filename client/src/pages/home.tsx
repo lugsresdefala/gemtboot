@@ -34,9 +34,9 @@ export default function Home() {
         <main className="flex-grow">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 py-8 md:py-12">
             <div className="mb-3 text-center">
-              <h1 className="text-2xl md:text-3xl font-bold text-slate-800 mb-2">Processo Transexualizador no SUS</h1>
+              <h1 className="text-2xl md:text-3xl font-bold text-slate-800 mb-2">Assistente de Saúde Trans no SUS</h1>
               <p className="text-slate-600 max-w-3xl mx-auto">
-                Tire suas dúvidas sobre fluxos, critérios e orientações relacionadas ao Processo Transexualizador.
+                Tire suas dúvidas sobre fluxos, critérios e orientações relacionadas ao cuidado em saúde para pessoas trans.
               </p>
             </div>
             
