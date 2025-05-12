@@ -28,23 +28,23 @@ export default function MessageInput({ onSendMessage, isLoading = false }: Messa
   };
   
   return (
-    <div className="p-4 border-t border-neutral-light bg-white">
-      <form className="flex items-center" onSubmit={handleSubmit}>
+    <div className="p-4 border-t border-gray-200 bg-white">
+      <form className="flex items-center max-w-4xl mx-auto" onSubmit={handleSubmit}>
         <Button 
           type="button" 
           variant="ghost" 
           size="icon"
-          className="text-neutral-light hover:text-primary transition-colors" 
+          className="text-gray-400 hover:text-[#1976d2] transition-colors" 
           title="Enviar arquivo"
         >
           <Paperclip size={20} />
         </Button>
         
-        <div className="relative flex-grow mx-2">
+        <div className="relative flex-grow mx-3">
           <input 
             type="text" 
             placeholder="Digite sua dúvida sobre o Processo Transexualizador..." 
-            className="w-full py-3 px-4 bg-neutral-lightest border border-neutral-light rounded-full focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
+            className="w-full py-3 px-5 bg-gray-50 border border-gray-200 rounded-full focus:outline-none focus:ring-2 focus:ring-[#1976d2] focus:border-transparent transition-all shadow-sm"
             value={message}
             onChange={(e) => setMessage(e.target.value)}
             onKeyDown={handleKeyDown}
@@ -56,7 +56,7 @@ export default function MessageInput({ onSendMessage, isLoading = false }: Messa
               type="button" 
               variant="ghost"
               size="icon"
-              className="absolute right-3 top-1/2 transform -translate-y-1/2 text-neutral-light hover:text-primary transition-colors bg-transparent" 
+              className="absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-600 transition-colors bg-transparent" 
               title="Limpar"
               onClick={() => setMessage("")}
             >
@@ -69,7 +69,11 @@ export default function MessageInput({ onSendMessage, isLoading = false }: Messa
           type="submit" 
           size="icon"
           disabled={!message.trim() || isLoading}
-          className="bg-primary hover:bg-primary-dark text-white p-3 rounded-full transition-colors shadow-sm"
+          className={`p-3 rounded-full transition-all duration-200 ${
+            !message.trim() || isLoading
+              ? "bg-gray-300 text-gray-500 cursor-not-allowed"
+              : "bg-[#1976d2] hover:bg-[#1565c0] text-white shadow-md"
+          }`}
         >
           <Send size={18} />
         </Button>

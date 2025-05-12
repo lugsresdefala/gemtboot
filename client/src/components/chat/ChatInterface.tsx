@@ -37,12 +37,12 @@ Você pode me perguntar sobre:
   }, [messages]);
   
   return (
-    <div className="bg-white rounded-xl shadow-md overflow-hidden">
+    <div className="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-200">
       {/* Top bar with title */}
-      <div className="p-4 bg-gradient-to-r from-primary-dark to-secondary-dark text-white flex justify-between items-center">
-        <div className="flex items-center">
-          <i className="fas fa-comment-medical mr-2"></i>
-          <h2 className="font-semibold">Assistente do Processo Transexualizador - Projeto Diversidade Barra Funda</h2>
+      <div className="p-4 bg-gradient-to-r from-[#1976d2] to-[#7b1fa2] text-white flex justify-between items-center">
+        <div className="flex items-center space-x-3">
+          <RobotAvatar size="sm" />
+          <h2 className="font-semibold text-lg">GEM-T · Processo Transexualizador</h2>
         </div>
         
         <div className="flex space-x-2">
@@ -53,7 +53,7 @@ Você pode me perguntar sobre:
                   onClick={clearConversation} 
                   variant="ghost" 
                   size="icon" 
-                  className="text-white hover:text-primary-light hover:bg-transparent"
+                  className="text-white hover:text-white hover:bg-white/20 transition-colors"
                 >
                   <Trash size={18} />
                 </Button>
@@ -70,7 +70,7 @@ Você pode me perguntar sobre:
                 <Button 
                   variant="ghost" 
                   size="icon" 
-                  className="text-white hover:text-primary-light hover:bg-transparent"
+                  className="text-white hover:text-white hover:bg-white/20 transition-colors"
                 >
                   <Settings size={18} />
                 </Button>
