@@ -25,9 +25,9 @@ export default function ChatMessage({ message }: ChatMessageProps) {
         "rounded-lg p-4 shadow-sm max-w-3xl", 
         isBot ? "ml-2 bg-white rounded-tl-none" : "mr-2 bg-primary bg-opacity-10 rounded-tr-none"
       )}>
-        <ReactMarkdown className="text-neutral-darkest whitespace-pre-line">
+        <div className="text-neutral-darkest whitespace-pre-line">
           {message.content}
-        </ReactMarkdown>
+        </div>
         
         {/* Show source reference if available */}
         {isBot && message.source && (

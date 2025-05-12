@@ -35,9 +35,9 @@ export default function FAQItem({ faq }: FAQItemProps) {
         )}
       >
         <div className="p-4 border-t border-neutral-lightest">
-          <ReactMarkdown className="text-neutral-dark whitespace-pre-line">
+          <div className="text-neutral-dark whitespace-pre-line">
             {faq.answer}
-          </ReactMarkdown>
+          </div>
           
           {faq.source && (
             <div className="mt-3 p-3 bg-neutral-lightest rounded-lg">

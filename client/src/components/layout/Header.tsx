@@ -25,21 +25,17 @@ export default function Header() {
         
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-4">
-          <Link href="/">
-            <a className="text-neutral-lightest hover:text-primary-light transition-colors text-sm px-3 py-1 rounded-full">
+          <div className="flex items-center space-x-4">
+            <Link href="/" className="text-neutral-lightest hover:text-primary-light transition-colors text-sm px-3 py-1 rounded-full">
               Início
-            </a>
-          </Link>
-          <Link href="/sobre">
-            <a className="text-neutral-lightest hover:text-primary-light transition-colors text-sm px-3 py-1 rounded-full">
+            </Link>
+            <Link href="/sobre" className="text-neutral-lightest hover:text-primary-light transition-colors text-sm px-3 py-1 rounded-full">
               Sobre
-            </a>
-          </Link>
-          <Link href="/contato">
-            <a className="text-neutral-lightest hover:text-primary-light transition-colors text-sm px-3 py-1 rounded-full">
+            </Link>
+            <Link href="/contato" className="text-neutral-lightest hover:text-primary-light transition-colors text-sm px-3 py-1 rounded-full">
               Contato
-            </a>
-          </Link>
+            </Link>
+          </div>
           <Button size="sm" className="text-sm px-4 rounded-full bg-primary hover:bg-primary-dark text-neutral-darkest">
             Acessar Conta
           </Button>
@@ -54,21 +50,21 @@ export default function Header() {
           </SheetTrigger>
           <SheetContent className="bg-neutral-darkest border-neutral-dark">
             <div className="flex flex-col space-y-4 mt-8">
-              <Link href="/">
-                <a onClick={() => setIsOpen(false)} className="text-neutral-lightest hover:text-primary-light transition-colors px-3 py-2 rounded">
+              <div onClick={() => setIsOpen(false)}>
+                <Link href="/" className="text-neutral-lightest hover:text-primary-light transition-colors px-3 py-2 rounded block">
                   Início
-                </a>
-              </Link>
-              <Link href="/sobre">
-                <a onClick={() => setIsOpen(false)} className="text-neutral-lightest hover:text-primary-light transition-colors px-3 py-2 rounded">
+                </Link>
+              </div>
+              <div onClick={() => setIsOpen(false)}>
+                <Link href="/sobre" className="text-neutral-lightest hover:text-primary-light transition-colors px-3 py-2 rounded block">
                   Sobre
-                </a>
-              </Link>
-              <Link href="/contato">
-                <a onClick={() => setIsOpen(false)} className="text-neutral-lightest hover:text-primary-light transition-colors px-3 py-2 rounded">
+                </Link>
+              </div>
+              <div onClick={() => setIsOpen(false)}>
+                <Link href="/contato" className="text-neutral-lightest hover:text-primary-light transition-colors px-3 py-2 rounded block">
                   Contato
-                </a>
-              </Link>
+                </Link>
+              </div>
               <Button onClick={() => setIsOpen(false)} className="mt-4 bg-primary hover:bg-primary-dark text-neutral-darkest">
                 Acessar Conta
               </Button>
