@@ -37,12 +37,17 @@ Você pode me perguntar sobre:
   }, [messages]);
   
   return (
-    <div className="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-200">
+    <div className="bg-white rounded-xl shadow-xl overflow-hidden border border-gray-100">
       {/* Top bar with title */}
-      <div className="p-4 bg-gradient-to-r from-[#1976d2] to-[#7b1fa2] text-white flex justify-between items-center">
+      <div className="p-5 bg-gradient-to-r from-[#1565c0] to-[#6a1b9a] text-white flex justify-between items-center">
         <div className="flex items-center space-x-3">
-          <RobotAvatar size="sm" />
-          <h2 className="font-semibold text-lg">GEM-T · Processo Transexualizador</h2>
+          <div className="bg-white/10 p-2 rounded-lg shadow-inner">
+            <RobotAvatar size="sm" />
+          </div>
+          <div>
+            <h2 className="font-semibold text-lg tracking-tight">GEM-T · Processo Transexualizador</h2>
+            <p className="text-xs text-white/70">Projeto Diversidade Barra Funda</p>
+          </div>
         </div>
         
         <div className="flex space-x-2">
@@ -53,7 +58,7 @@ Você pode me perguntar sobre:
                   onClick={clearConversation} 
                   variant="ghost" 
                   size="icon" 
-                  className="text-white hover:text-white hover:bg-white/20 transition-colors"
+                  className="text-white hover:text-white hover:bg-white/10 transition-all rounded-full"
                 >
                   <Trash size={18} />
                 </Button>
@@ -70,7 +75,7 @@ Você pode me perguntar sobre:
                 <Button 
                   variant="ghost" 
                   size="icon" 
-                  className="text-white hover:text-white hover:bg-white/20 transition-colors"
+                  className="text-white hover:text-white hover:bg-white/10 transition-all rounded-full"
                 >
                   <Settings size={18} />
                 </Button>
@@ -98,11 +103,13 @@ Você pode me perguntar sobre:
       }} />
       
       {/* Chat Messages */}
-      <div className="chat-height overflow-y-auto px-4 py-6 custom-scrollbar bg-[#f8fafc]">
+      <div className="chat-height overflow-y-auto px-5 py-8 custom-scrollbar bg-gradient-to-b from-[#f8fafc] to-[#f1f5f9]">
         <div className="max-w-4xl mx-auto">
           {/* Welcome message if no messages yet */}
           {messages.length === 0 && (
-            <ChatMessage message={welcomeMessage} />
+            <div className="mb-6">
+              <ChatMessage message={welcomeMessage} />
+            </div>
           )}
           
           {/* Actual conversation messages */}
@@ -112,9 +119,11 @@ Você pode me perguntar sobre:
           
           {/* Loading indicator */}
           {isLoading && (
-            <div className="flex items-start mb-6 animate-fade-in">
-              <RobotAvatar size="sm" className="mt-1" />
-              <div className="ml-3 bg-white rounded-xl rounded-tl-none py-3 px-4 border border-gray-200 shadow-sm">
+            <div className="flex items-start mb-8 animate-fade-in">
+              <div className="mt-1.5 flex-shrink-0">
+                <RobotAvatar size="sm" className="shadow-md" />
+              </div>
+              <div className="ml-4 bg-white rounded-2xl rounded-tl-none py-4 px-5 border border-slate-100 shadow-md">
                 <div className="typing-indicator">
                   <span></span>
                   <span></span>

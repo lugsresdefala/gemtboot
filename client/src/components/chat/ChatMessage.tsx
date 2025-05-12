@@ -12,34 +12,41 @@ export default function ChatMessage({ message }: ChatMessageProps) {
   
   return (
     <div className={cn(
-      "flex items-start mb-6",
+      "flex items-start mb-8",
       isBot ? "animate-slide-up" : "justify-end animate-fade-in"
     )}>
       {isBot && (
-        <RobotAvatar size="sm" className="mt-1" />
+        <div className="mt-1.5 flex-shrink-0">
+          <RobotAvatar size="sm" className="shadow-md" />
+        </div>
       )}
       
       <div className={cn(
-        "rounded-xl p-4 max-w-3xl", 
+        "rounded-2xl p-5 max-w-3xl", 
         isBot 
-          ? "ml-3 bg-white rounded-tl-none border border-gray-200 shadow-sm" 
-          : "mr-2 bg-[#e3f2fd] rounded-tr-none"
+          ? "ml-4 bg-white rounded-tl-none border border-slate-100 shadow-md" 
+          : "mr-3 bg-gradient-to-br from-[#e3f2fd] to-[#bbdefb] rounded-tr-none shadow-md"
       )}>
-        <div className="text-gray-800 whitespace-pre-line prose prose-sm">
+        <div className={cn(
+          "whitespace-pre-line prose prose-slate prose-p:leading-relaxed prose-headings:text-slate-700",
+          isBot ? "text-slate-700" : "text-slate-800 font-medium"
+        )}>
           {message.content}
         </div>
         
         {/* Show source reference if available */}
         {isBot && message.source && (
-          <div className="mt-3 text-xs text-gray-500 flex items-center border-t border-gray-100 pt-2">
-            <i className="fas fa-file-alt mr-2"></i>
-            <span>Fonte: {message.source}</span>
+          <div className="mt-4 text-xs text-slate-500 flex items-center border-t border-slate-100 pt-3">
+            <div className="bg-slate-100 p-1.5 rounded-md mr-2">
+              <i className="fas fa-file-alt"></i>
+            </div>
+            <span>Fonte: <span className="text-slate-600 font-medium">{message.source}</span></span>
           </div>
         )}
       </div>
       
       {!isBot && (
-        <div className="flex-shrink-0 w-8 h-8 rounded-full bg-[#1976d2] flex items-center justify-center text-white shadow-md">
+        <div className="flex-shrink-0 w-9 h-9 rounded-full bg-gradient-to-br from-[#1976d2] to-[#1565c0] flex items-center justify-center text-white shadow-lg mt-1.5">
           <i className="fas fa-user text-xs"></i>
         </div>
       )}
