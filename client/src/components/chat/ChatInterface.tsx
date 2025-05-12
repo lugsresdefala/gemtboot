@@ -98,33 +98,35 @@ Você pode me perguntar sobre:
       }} />
       
       {/* Chat Messages */}
-      <div className="chat-height overflow-y-auto p-4 custom-scrollbar bg-[#f5f7fb] bg-opacity-60">
-        {/* Welcome message if no messages yet */}
-        {messages.length === 0 && (
-          <ChatMessage message={welcomeMessage} />
-        )}
-        
-        {/* Actual conversation messages */}
-        {messages.map((message) => (
-          <ChatMessage key={message.id} message={message} />
-        ))}
-        
-        {/* Loading indicator */}
-        {isLoading && (
-          <div className="flex items-start mb-4 animate-fade-in">
-            <RobotAvatar size="sm" />
-            <div className="ml-2 bg-white rounded-lg rounded-tl-none py-3 px-4 shadow-sm">
-              <div className="typing-indicator">
-                <span></span>
-                <span></span>
-                <span></span>
+      <div className="chat-height overflow-y-auto px-4 py-6 custom-scrollbar bg-[#f8fafc]">
+        <div className="max-w-4xl mx-auto">
+          {/* Welcome message if no messages yet */}
+          {messages.length === 0 && (
+            <ChatMessage message={welcomeMessage} />
+          )}
+          
+          {/* Actual conversation messages */}
+          {messages.map((message) => (
+            <ChatMessage key={message.id} message={message} />
+          ))}
+          
+          {/* Loading indicator */}
+          {isLoading && (
+            <div className="flex items-start mb-6 animate-fade-in">
+              <RobotAvatar size="sm" className="mt-1" />
+              <div className="ml-3 bg-white rounded-xl rounded-tl-none py-3 px-4 border border-gray-200 shadow-sm">
+                <div className="typing-indicator">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
               </div>
             </div>
-          </div>
-        )}
-        
-        {/* Invisible element to scroll to */}
-        <div ref={messagesEndRef} />
+          )}
+          
+          {/* Invisible element to scroll to */}
+          <div ref={messagesEndRef} />
+        </div>
       </div>
       
       {/* Input Bar */}
