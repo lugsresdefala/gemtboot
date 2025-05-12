@@ -33,12 +33,11 @@ export default function FAQSection({ category }: FAQSectionProps) {
   
   if (isLoading) {
     return (
-      <div className="mt-8 mb-4">
-        <h2 className="text-xl font-semibold text-neutral-darkest mb-4">Perguntas Frequentes</h2>
+      <div>
         <div className="animate-pulse space-y-4">
           {[1, 2, 3].map((n) => (
-            <div key={n} className="bg-white rounded-lg shadow-sm overflow-hidden">
-              <div className="h-14 bg-neutral-lightest"></div>
+            <div key={n} className="bg-white rounded-xl shadow-md overflow-hidden">
+              <div className="h-16 bg-slate-50"></div>
             </div>
           ))}
         </div>
@@ -48,29 +47,26 @@ export default function FAQSection({ category }: FAQSectionProps) {
   
   if (error) {
     return (
-      <div className="mt-8 mb-4">
-        <h2 className="text-xl font-semibold text-neutral-darkest mb-4">Perguntas Frequentes</h2>
-        <div className="bg-red-50 border border-red-200 text-red-700 p-4 rounded-lg">
+      <div>
+        <div className="bg-red-50 border border-red-200 text-red-700 p-4 rounded-xl shadow-md">
           {error}
         </div>
       </div>
     );
   }
   
-  // Show only the first 5 FAQs
-  const displayFaqs = faqs.slice(0, 5);
+  // Show only the first 6 FAQs
+  const displayFaqs = faqs.slice(0, 6);
   
   return (
-    <div className="mt-8 mb-4">
-      <h2 className="text-xl font-semibold text-neutral-darkest mb-4">Perguntas Frequentes</h2>
-      
-      <div className="space-y-4">
+    <div>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
         {displayFaqs.map((faq, index) => (
           <FAQItem key={index} faq={faq} />
         ))}
         
         {displayFaqs.length === 0 && (
-          <div className="bg-neutral-lightest p-4 rounded-lg text-center text-neutral-dark">
+          <div className="col-span-full bg-slate-50 p-5 rounded-xl shadow text-center text-slate-600">
             Nenhuma pergunta frequente encontrada nesta categoria.
           </div>
         )}
