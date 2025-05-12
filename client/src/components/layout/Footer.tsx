@@ -64,26 +64,33 @@ export default function Footer() {
           </div>
           
           <div>
-            <h3 className="font-medium text-white mb-4">Contato</h3>
+            <h3 className="font-medium text-white mb-4">Sobre o Projeto</h3>
             <ul className="space-y-2 text-sm">
               <li className="flex items-center">
-                <i className="fas fa-envelope mr-2 text-primary-light"></i>
-                <span>asitt@crt.saude.sp.gov.br</span>
+                <i className="fas fa-globe mr-2 text-primary-light"></i>
+                <a 
+                  href="https://diversidadebarrafunda.org" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="hover:text-primary-light transition-colors"
+                >
+                  diversidadebarrafunda.org
+                </a>
               </li>
               <li className="flex items-center">
-                <i className="fas fa-map-marker-alt mr-2 text-primary-light"></i>
-                <span>Rua Santa Cruz, 81 - São Paulo</span>
+                <i className="fas fa-info-circle mr-2 text-primary-light"></i>
+                <span>Parte do Projeto Diversidade Barra Funda</span>
               </li>
               <li className="flex items-center">
-                <i className="fas fa-phone mr-2 text-primary-light"></i>
-                <span>Telefone da unidade de saúde local</span>
+                <i className="fas fa-users mr-2 text-primary-light"></i>
+                <span>Acesse a UBS mais próxima para informações</span>
               </li>
             </ul>
           </div>
         </div>
         
         <div className="mt-8 pt-6 border-t border-neutral-dark text-center text-xs">
-          <p>&copy; {new Date().getFullYear()} GEM-T | Assistente do Processo Transexualizador - Todos os direitos reservados</p>
+          <p>&copy; {new Date().getFullYear()} GEM-T | Assistente do Processo Transexualizador - Diversidade Barra Funda</p>
           <p className="mt-2">
             As informações fornecidas por este assistente não substituem a consulta com profissionais de saúde qualificados.
           </p>

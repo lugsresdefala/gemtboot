@@ -17,13 +17,13 @@ export default function ChatInterface() {
   const welcomeMessage: Message = {
     id: 0,
     role: "assistant",
-    content: `Olá! Eu sou o GEM-T, seu assistente para informações sobre o Processo Transexualizador. Como posso ajudar você hoje?
+    content: `Olá! Eu sou o GEM-T, assistente virtual do Projeto Diversidade Barra Funda para informações sobre o Processo Transexualizador no SUS. Como posso ajudar você hoje?
 
 Você pode me perguntar sobre:
 - Fluxos e procedimentos para cirurgias
 - Critérios de elegibilidade para o processo
 - Documentos necessários
-- Unidades de saúde disponíveis`,
+- Orientações sobre hormônios`,
     source: "",
     timestamp: new Date(),
     conversationId: "welcome"
@@ -42,7 +42,7 @@ Você pode me perguntar sobre:
       <div className="p-4 bg-gradient-to-r from-primary-dark to-secondary-dark text-white flex justify-between items-center">
         <div className="flex items-center">
           <i className="fas fa-comment-medical mr-2"></i>
-          <h2 className="font-semibold">Assistente do Processo Transexualizador</h2>
+          <h2 className="font-semibold">Assistente do Processo Transexualizador - Projeto Diversidade Barra Funda</h2>
         </div>
         
         <div className="flex space-x-2">

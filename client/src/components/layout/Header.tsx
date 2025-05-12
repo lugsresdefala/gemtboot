@@ -18,7 +18,7 @@ export default function Header() {
             
             <div>
               <h1 className="text-primary-light font-semibold text-xl">GEM-T</h1>
-              <p className="text-neutral-light text-xs">Assistente do Processo Transexualizador</p>
+              <p className="text-neutral-light text-xs">Diversidade Barra Funda</p>
             </div>
           </div>
         </Link>

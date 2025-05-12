@@ -22,11 +22,11 @@ function App() {
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
         <Helmet>
-          <title>GEM-T | Assistente para Processo Transexualizador</title>
-          <meta name="description" content="Assistente virtual para informações sobre o Processo Transexualizador no SUS, fluxos, critérios e recomendações." />
+          <title>GEM-T | Diversidade Barra Funda</title>
+          <meta name="description" content="Assistente virtual do Projeto Diversidade Barra Funda para informações sobre o Processo Transexualizador no SUS, fluxos, critérios e recomendações." />
           <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-          <meta property="og:title" content="GEM-T | Assistente para Processo Transexualizador" />
-          <meta property="og:description" content="Obtenha informações sobre o Processo Transexualizador no SUS, fluxos, critérios e recomendações de forma rápida e confiável." />
+          <meta property="og:title" content="GEM-T | Diversidade Barra Funda" />
+          <meta property="og:description" content="Assistente virtual do Projeto Diversidade Barra Funda para informações sobre o Processo Transexualizador no SUS." />
           <meta property="og:type" content="website" />
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
