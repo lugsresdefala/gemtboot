@@ -8,7 +8,7 @@ import { Trash, Settings, Maximize2, Minimize2 } from "lucide-react";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import { Message } from "@/types";
 import RobotAvatar from "@/components/ui/RobotAvatar";
-import Robot3D from "@/components/avatar3d/AvatarScene";
+import Robot3D from "@/components/3d/Robot3DContainer";
 import TypingIndicator from "@/components/ui/TypingIndicator";
 
 export default function ChatInterface() {
