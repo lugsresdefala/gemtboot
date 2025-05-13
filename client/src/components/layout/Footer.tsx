@@ -3,15 +3,17 @@ import RobotAvatar from "@/components/ui/RobotAvatar";
 
 export default function Footer() {
   return (
-    <footer className="bg-slate-100 text-slate-600 py-6 border-t border-slate-200">
-      <div className="max-w-4xl mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+    <footer className="bg-[#4A148C] text-purple-200/80 py-10">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
           <div>
-            <div className="flex items-center gap-2 mb-3">
-              <RobotAvatar size="sm" />
-              <h3 className="text-[#0F766E] font-medium text-sm">GEM-T</h3>
+            <div className="flex items-center space-x-3 mb-5">
+              <div className="p-1.5 bg-white/10 rounded-md shadow-inner">
+                <RobotAvatar size="sm" />
+              </div>
+              <h3 className="text-[#CE93D8] font-bold text-xl tracking-wide">GEM-T</h3>
             </div>
-            <p className="text-xs leading-relaxed text-slate-500">
+            <p className="text-sm leading-relaxed text-purple-200/80">
               Sistema de informações sobre cuidados em saúde para pessoas trans no SUS, 
               desenvolvido para facilitar o acesso a orientações e fluxos de atendimento.
             </p>
