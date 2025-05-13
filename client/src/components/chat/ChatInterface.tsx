@@ -8,7 +8,7 @@ import { Trash, Settings, Maximize2, Minimize2 } from "lucide-react";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import { Message } from "@/types";
 import RobotAvatar from "@/components/ui/RobotAvatar";
-import Robot3D from "@/components/ui/Robot3D";
+import Robot3D from "@/components/avatar3d/AvatarScene";
 import TypingIndicator from "@/components/ui/TypingIndicator";
 
 export default function ChatInterface() {
@@ -133,7 +133,11 @@ Selecione um dos tópicos acima ou me faça uma pergunta sobre cuidados em saúd
       {showRobot3D && (
         <div className="w-full flex justify-center items-center p-4 bg-gradient-to-b from-[#051622] to-[#072a43]">
           <div className="flex flex-col items-center">
-            <Robot3D width={280} height={280} />
+            <Robot3D 
+              width={280} 
+              height={280} 
+              state={isLoading ? "speaking" : "idle"}
+            />
             <h3 className="text-white font-bold text-center mt-2">GEM-T</h3>
             <p className="text-blue-200/80 text-xs text-center">Assistente digital interativo</p>
           </div>
