@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import { Switch, Route } from "wouter";
 import { queryClient } from "./lib/queryClient";
 import { QueryClientProvider } from "@tanstack/react-query";
@@ -6,6 +7,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import NotFound from "@/pages/not-found";
 import Home from "@/pages/home";
 import { Helmet } from "react-helmet";
+import SplashScreen from "@/components/ui/SplashScreen";
 
 function Router() {
   return (
@@ -18,6 +20,13 @@ function Router() {
 }
 
 function App() {
+  const [showSplash, setShowSplash] = useState(true);
+  
+  // Tela de splash automaticamente se completa após alguns segundos
+  const handleSplashComplete = () => {
+    setShowSplash(false);
+  };
+  
   return (
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
@@ -32,6 +41,10 @@ function App() {
           <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
           <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
         </Helmet>
+        
+        {/* Tela de splash com a animação de logo → robô */}
+        {showSplash && <SplashScreen onComplete={handleSplashComplete} />}
+        
         <Toaster />
         <Router />
       </TooltipProvider>
