@@ -22,10 +22,10 @@ export default function ChatInterface() {
     role: "assistant",
     content: `Olá! Eu sou a GEM-T, assistente virtual do Projeto Diversidade Barra Funda. 
 
-Estou aqui para te ajudar com informações sobre cuidados em saúde para pessoas trans no SUS. Posso fornecer informações sobre:
+Estou aqui para ajudar com informações sobre cuidados em saúde para pessoas trans no SUS. Posso fornecer informações sobre:
 
 • Fluxos de atendimento e caminhos no sistema de saúde
-• Critérios e documentos necessários para procedimentos
+• Critérios e documentos necessários para intervenções de mudança corporal
 • Locais de atendimento e unidades de referência
 • Direitos garantidos na área da saúde
 
@@ -120,8 +120,8 @@ Selecione um dos tópicos acima ou me faça uma pergunta sobre cuidados em saúd
         // Handle topic selection by sending a query about that topic
         const topicQueries = {
           faq: "Quais são as perguntas frequentes sobre os cuidados em saúde para pessoas trans?",
-          fluxos: "Como funciona o fluxo de cuidados em saúde para pessoas trans no SUS?",
-          criterios: "Quais são os critérios para acessar os serviços de saúde para pessoas trans?",
+          fluxos: "Como funcionam os fluxos de atendimento em saúde para pessoas trans no SUS?",
+          criterios: "Quais são os critérios para acessar os serviços de hormonização e intervenções cirúrgicas para mudança corporal?",
           especialistas: "Quais especialistas participam dos cuidados em saúde para pessoas trans?",
           unidades: "Onde posso encontrar unidades que oferecem cuidados em saúde para pessoas trans?"
         };

@@ -86,6 +86,6 @@ export async function generateResponse(query: string): Promise<ResponseData> {
   
   // Fallback response if no relevant information is found
   return {
-    content: "Desculpe, não encontrei informações específicas sobre esse assunto nos documentos oficiais do processo transexualizador. Você pode tentar reformular sua pergunta ou consultar diretamente a unidade da Rede SAMPA Trans mais próxima."
+    content: "Desculpe, não encontrei informações específicas sobre esse assunto nos documentos oficiais sobre assistência à saúde de pessoas trans. Você pode tentar reformular sua pergunta ou consultar diretamente a unidade de saúde mais próxima."
   };
 }
