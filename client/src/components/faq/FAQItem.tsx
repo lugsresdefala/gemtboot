@@ -12,45 +12,45 @@ export default function FAQItem({ faq }: FAQItemProps) {
   const [isOpen, setIsOpen] = useState(false);
   
   return (
-    <div className="bg-white rounded-md shadow-sm overflow-hidden border border-slate-200 hover:shadow transition-shadow">
+    <div className="bg-white rounded-xl shadow-md overflow-hidden border border-purple-100 hover:shadow-lg transition-shadow">
       <button 
-        className="w-full text-left px-4 py-3 flex justify-between items-center focus:outline-none focus:ring-1 focus:ring-[#0F766E] focus:ring-inset"
+        className="w-full text-left px-5 py-4 flex justify-between items-center focus:outline-none focus:ring-2 focus:ring-[#6A1B9A] focus:ring-inset"
         onClick={() => setIsOpen(!isOpen)}
         aria-expanded={isOpen}
       >
-        <h3 className="font-medium text-slate-800 text-sm leading-tight pr-3">{faq.question}</h3>
+        <h3 className="font-medium text-[#4A148C] leading-tight pr-4">{faq.question}</h3>
         <div className={cn(
-          "flex-shrink-0 h-6 w-6 rounded bg-slate-100 flex items-center justify-center transition-all",
-          isOpen && "bg-[#0F766E] text-white"
+          "flex-shrink-0 h-8 w-8 rounded-full bg-[#F3E5F5] flex items-center justify-center transition-all duration-300",
+          isOpen && "bg-[#6A1B9A] text-white transform scale-110"
         )}>
           <ChevronDown 
             className={cn(
-              "transition-transform",
+              "transition-transform duration-300",
               isOpen && "transform rotate-180"
             )} 
-            size={16}
+            size={18}
           />
         </div>
       </button>
       
       <div 
         className={cn(
-          "transition-all duration-200 overflow-hidden",
-          isOpen ? "max-h-[500px]" : "max-h-0"
+          "transition-all duration-300 overflow-hidden",
+          isOpen ? "max-h-[800px]" : "max-h-0"
         )}
       >
-        <div className="p-4 border-t border-slate-100 bg-slate-50">
-          <div className="text-slate-700 text-sm whitespace-pre-line leading-relaxed">
+        <div className="p-5 border-t border-purple-50 bg-[#F3E5F5]/20">
+          <div className="text-slate-700 whitespace-pre-line leading-relaxed prose prose-purple prose-p:leading-relaxed max-w-none">
             {faq.answer}
           </div>
           
           {faq.source && (
-            <div className="mt-4 p-3 bg-white rounded-lg border border-slate-100 shadow-sm">
-              <div className="text-slate-600 text-sm flex items-center">
-                <span className="bg-[#0F766E]/10 p-1.5 rounded-md mr-2 text-[#0F766E]">
+            <div className="mt-4 p-4 bg-white rounded-xl border border-purple-100 shadow-sm">
+              <div className="text-slate-600 flex items-center">
+                <div className="bg-[#F3E5F5] p-2 rounded-lg mr-3 text-[#6A1B9A]">
                   <i className="fas fa-info-circle"></i>
-                </span>
-                <span>Fonte: <span className="font-medium">{faq.source}</span></span>
+                </div>
+                <span>Fonte: <span className="text-[#4A148C] font-medium">{faq.source}</span></span>
               </div>
             </div>
           )}

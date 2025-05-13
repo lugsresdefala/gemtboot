@@ -28,13 +28,31 @@ export default function MessageInput({ onSendMessage, isLoading = false }: Messa
   };
   
   return (
-    <div className="p-3 border-t border-slate-200 bg-white">
-      <form className="flex items-center" onSubmit={handleSubmit}>
-        <div className="relative flex-grow">
+    <div className="p-5 border-t border-purple-100 bg-white">
+      <form className="flex items-center max-w-4xl mx-auto" onSubmit={handleSubmit}>
+        <Button 
+          type="button" 
+          variant="ghost" 
+          size="icon"
+          className="text-purple-300 hover:text-[#6A1B9A] transition-colors rounded-full" 
+          title="Enviar arquivo"
+        >
+          <Paperclip size={20} />
+        </Button>
+        
+        <div className="relative flex-grow mx-3">
+          <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+            <div className="h-5 w-5 text-purple-300">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5">
+                <circle cx="11" cy="11" r="8" />
+                <path d="m21 21-4.3-4.3" />
+              </svg>
+            </div>
+          </div>
           <input 
             type="text" 
-            placeholder="Digite sua dúvida sobre cuidados em saúde..." 
-            className="w-full py-2 px-3 bg-slate-50 border border-slate-200 rounded-md focus:outline-none focus:ring-1 focus:ring-[#0F766E] focus:border-[#0F766E]"
+            placeholder="Digite sua dúvida sobre cuidados em saúde para pessoas trans..." 
+            className="w-full py-3 pl-12 pr-10 bg-[#F3E5F5]/50 border border-purple-200 rounded-full focus:outline-none focus:ring-2 focus:ring-[#6A1B9A] focus:border-transparent transition-all shadow-sm hover:shadow-md"
             value={message}
             onChange={(e) => setMessage(e.target.value)}
             onKeyDown={handleKeyDown}
@@ -46,26 +64,26 @@ export default function MessageInput({ onSendMessage, isLoading = false }: Messa
               type="button" 
               variant="ghost"
               size="icon"
-              className="absolute right-1 top-1/2 transform -translate-y-1/2 text-slate-400 hover:text-slate-600 h-6 w-6" 
+              className="absolute right-4 top-1/2 transform -translate-y-1/2 text-purple-300 hover:text-purple-600 transition-colors bg-transparent rounded-full" 
+              title="Limpar"
               onClick={() => setMessage("")}
             >
-              <X size={14} />
+              <X size={16} />
             </Button>
           )}
         </div>
         
         <Button 
           type="submit" 
-          size="sm"
+          size="icon"
           disabled={!message.trim() || isLoading}
-          className={`ml-2 px-3 py-2 rounded transition-colors ${
+          className={`p-3.5 rounded-full transition-all duration-300 ${
             !message.trim() || isLoading
-              ? "bg-slate-200 text-slate-400 cursor-not-allowed"
-              : "bg-[#0F766E] text-white hover:bg-[#0c5954]"
+              ? "bg-purple-100 text-purple-300 cursor-not-allowed"
+              : "bg-gradient-to-r from-[#4A148C] to-[#6A1B9A] text-white shadow-md hover:shadow-lg hover:scale-105 transform"
           }`}
         >
-          <Send size={16} className="mr-1" />
-          <span className="text-xs">Enviar</span>
+          <Send size={18} />
         </Button>
       </form>
     </div>

@@ -17,15 +17,16 @@ export default function ChatInterface() {
   const welcomeMessage: Message = {
     id: 0,
     role: "assistant",
-    content: `Olá! Sou a GEM-T, assistente virtual do Projeto Diversidade Barra Funda. Como posso ajudar com informações sobre cuidados em saúde para pessoas trans?
+    content: `Olá! Eu sou a GEM-T, assistente virtual do Projeto Diversidade Barra Funda. 
 
-Posso esclarecer dúvidas sobre:
-• Acesso a cuidados em saúde no SUS
-• Fluxos de atendimento
-• Critérios para procedimentos
-• Unidades de referência
+Estou aqui para te ajudar com informações sobre cuidados em saúde para pessoas trans no SUS. Posso fornecer informações sobre:
 
-Selecione um dos tópicos acima ou digite sua pergunta.`,
+• **Fluxos de atendimento** e caminhos no sistema de saúde
+• **Critérios e documentos** necessários para procedimentos
+• **Locais de atendimento** e unidades de referência
+• **Direitos garantidos** na área da saúde
+
+Selecione um dos tópicos acima ou me faça uma pergunta sobre cuidados em saúde para pessoas trans.`,
     source: "",
     timestamp: new Date(),
     conversationId: "welcome"
