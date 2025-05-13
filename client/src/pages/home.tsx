@@ -28,24 +28,24 @@ export default function Home() {
         `}
       </Script>
       
-      <div className="flex flex-col min-h-screen bg-gradient-to-b from-slate-50 to-slate-100">
+      <div className="flex flex-col min-h-screen bg-white">
         <Header />
         
         <main className="flex-grow">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 py-8 md:py-12">
-            <div className="mb-3 text-center">
-              <h1 className="text-2xl md:text-3xl font-bold text-slate-800 mb-2">Assistente de Saúde Trans no SUS</h1>
-              <p className="text-slate-600 max-w-3xl mx-auto">
-                Tire suas dúvidas sobre fluxos, critérios e orientações relacionadas ao cuidado em saúde para pessoas trans.
+          <div className="max-w-4xl mx-auto px-4 py-6">
+            <div className="mb-4 text-center">
+              <h1 className="text-xl font-bold text-slate-800 mb-2">Informações sobre cuidados em saúde para pessoas trans</h1>
+              <p className="text-slate-600 text-sm">
+                Tire suas dúvidas sobre fluxos, critérios e acesso a cuidados em saúde para pessoas trans no SUS.
               </p>
             </div>
             
-            <div className="mt-6 mb-16">
+            <div className="mb-8">
               <ChatInterface />
             </div>
             
-            <div className="mb-10">
-              <h2 className="text-xl md:text-2xl font-bold text-slate-800 mb-6 text-center">
+            <div className="mb-8">
+              <h2 className="text-lg font-semibold text-slate-800 mb-4 pb-2 border-b border-slate-200">
                 Perguntas Frequentes
               </h2>
               <FAQSection />

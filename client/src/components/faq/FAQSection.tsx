@@ -36,8 +36,8 @@ export default function FAQSection({ category }: FAQSectionProps) {
       <div>
         <div className="animate-pulse space-y-4">
           {[1, 2, 3].map((n) => (
-            <div key={n} className="bg-white rounded-xl shadow-md overflow-hidden">
-              <div className="h-16 bg-slate-50"></div>
+            <div key={n} className="bg-white rounded-md shadow-sm border border-slate-200 overflow-hidden">
+              <div className="h-12 bg-slate-50"></div>
             </div>
           ))}
         </div>
@@ -48,7 +48,7 @@ export default function FAQSection({ category }: FAQSectionProps) {
   if (error) {
     return (
       <div>
-        <div className="bg-red-50 border border-red-200 text-red-700 p-4 rounded-xl shadow-md">
+        <div className="bg-red-50 border border-red-200 text-red-700 p-3 rounded-md text-sm">
           {error}
         </div>
       </div>
@@ -60,13 +60,13 @@ export default function FAQSection({ category }: FAQSectionProps) {
   
   return (
     <div>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+      <div className="grid grid-cols-1 gap-3">
         {displayFaqs.map((faq, index) => (
           <FAQItem key={index} faq={faq} />
         ))}
         
         {displayFaqs.length === 0 && (
-          <div className="col-span-full bg-slate-50 p-5 rounded-xl shadow text-center text-slate-600">
+          <div className="bg-slate-50 p-4 rounded-md border border-slate-200 text-center text-slate-600 text-sm">
             Nenhuma pergunta frequente encontrada nesta categoria.
           </div>
         )}
