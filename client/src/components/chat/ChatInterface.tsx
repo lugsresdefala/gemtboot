@@ -24,10 +24,10 @@ export default function ChatInterface() {
 
 Estou aqui para te ajudar com informações sobre cuidados em saúde para pessoas trans no SUS. Posso fornecer informações sobre:
 
-• **Fluxos de atendimento** e caminhos no sistema de saúde
-• **Critérios e documentos** necessários para procedimentos
-• **Locais de atendimento** e unidades de referência
-• **Direitos garantidos** na área da saúde
+• Fluxos de atendimento e caminhos no sistema de saúde
+• Critérios e documentos necessários para procedimentos
+• Locais de atendimento e unidades de referência
+• Direitos garantidos na área da saúde
 
 Selecione um dos tópicos acima ou me faça uma pergunta sobre cuidados em saúde para pessoas trans.`,
     source: "",
@@ -131,7 +131,7 @@ Selecione um dos tópicos acima ou me faça uma pergunta sobre cuidados em saúd
       
       {/* Robot 3D Display */}
       {showRobot3D && (
-        <div className="w-full flex justify-center items-center p-4 bg-[#051622]">
+        <div className="w-full flex justify-center items-center p-4 bg-gradient-to-b from-[#051622] to-[#072a43]">
           <div className="flex flex-col items-center">
             <Robot3D width={280} height={280} />
             <h3 className="text-white font-bold text-center mt-2">GEM-T</h3>
