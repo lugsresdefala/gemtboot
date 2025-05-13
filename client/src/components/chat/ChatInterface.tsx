@@ -1,17 +1,20 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import TopicPills from "./TopicPills";
 import MessageInput from "./MessageInput";
 import ChatMessage from "./ChatMessage";
 import { useChat } from "@/hooks/use-chat";
 import { Button } from "@/components/ui/button";
-import { Trash, Settings } from "lucide-react";
+import { Trash, Settings, Maximize2, Minimize2 } from "lucide-react";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import { Message } from "@/types";
 import RobotAvatar from "@/components/ui/RobotAvatar";
+import Robot3D from "@/components/ui/Robot3D";
+import TypingIndicator from "@/components/ui/TypingIndicator";
 
 export default function ChatInterface() {
   const { messages, sendMessage, clearConversation, isLoading } = useChat();
   const messagesEndRef = useRef<HTMLDivElement>(null);
+  const [showRobot3D, setShowRobot3D] = useState(false);
   
   // Initial welcome message
   const welcomeMessage: Message = {
@@ -44,7 +47,10 @@ Selecione um dos tópicos acima ou me faça uma pergunta sobre cuidados em saúd
       {/* Top bar with title */}
       <div className="p-5 bg-gradient-to-r from-[#4A148C] to-[#6A1B9A] text-white flex justify-between items-center">
         <div className="flex items-center space-x-3">
-          <div className="bg-white/10 p-2 rounded-lg shadow-inner">
+          <div 
+            className="bg-white/10 p-2 rounded-lg shadow-inner cursor-pointer transition-all hover:bg-white/20"
+            onClick={() => setShowRobot3D(prev => !prev)}
+          >
             <RobotAvatar size="md" />
           </div>
           <div>
@@ -54,6 +60,24 @@ Selecione um dos tópicos acima ou me faça uma pergunta sobre cuidados em saúd
         </div>
         
         <div className="flex space-x-2">
+          <TooltipProvider>
+            <Tooltip>
+              <TooltipTrigger asChild>
+                <Button 
+                  onClick={() => setShowRobot3D(prev => !prev)} 
+                  variant="ghost" 
+                  size="icon" 
+                  className="text-white hover:text-white hover:bg-white/10 transition-all rounded-full"
+                >
+                  {showRobot3D ? <Minimize2 size={18} /> : <Maximize2 size={18} />}
+                </Button>
+              </TooltipTrigger>
+              <TooltipContent>
+                <p>{showRobot3D ? 'Esconder robô 3D' : 'Mostrar robô 3D'}</p>
+              </TooltipContent>
+            </Tooltip>
+          </TooltipProvider>
+          
           <TooltipProvider>
             <Tooltip>
               <TooltipTrigger asChild>
@@ -105,8 +129,19 @@ Selecione um dos tópicos acima ou me faça uma pergunta sobre cuidados em saúd
         sendMessage(topicQueries[topic]);
       }} />
       
+      {/* Robot 3D Display */}
+      {showRobot3D && (
+        <div className="w-full flex justify-center items-center p-4 bg-[#051622]">
+          <div className="flex flex-col items-center">
+            <Robot3D width={280} height={280} />
+            <h3 className="text-white font-bold text-center mt-2">GEM-T</h3>
+            <p className="text-blue-200/80 text-xs text-center">Assistente digital interativo</p>
+          </div>
+        </div>
+      )}
+      
       {/* Chat Messages */}
-      <div className="chat-height overflow-y-auto px-5 py-8 custom-scrollbar bg-gradient-to-b from-[#f8fafc] to-[#F3E5F5]/30">
+      <div className={`chat-height overflow-y-auto px-5 py-8 custom-scrollbar bg-gradient-to-b from-[#f8fafc] to-[#F3E5F5]/30 ${showRobot3D ? 'h-[400px]' : ''}`}>
         <div className="max-w-4xl mx-auto">
           {/* Welcome message if no messages yet */}
           {messages.length === 0 && (
@@ -127,11 +162,7 @@ Selecione um dos tópicos acima ou me faça uma pergunta sobre cuidados em saúd
                 <RobotAvatar size="sm" className="shadow-md" />
               </div>
               <div className="ml-4 bg-white rounded-2xl rounded-tl-none py-4 px-5 border border-purple-100 shadow-md">
-                <div className="typing-indicator">
-                  <span></span>
-                  <span></span>
-                  <span></span>
-                </div>
+                <TypingIndicator visible={isLoading} />
               </div>
             </div>
           )}
