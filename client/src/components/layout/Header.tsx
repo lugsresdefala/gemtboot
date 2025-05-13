@@ -9,67 +9,61 @@ export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
   
   return (
-    <header className="bg-gray-900 shadow-lg">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex justify-between items-center">
+    <header className="bg-white border-b border-slate-200">
+      <div className="max-w-4xl mx-auto px-4 py-3 flex justify-between items-center">
         {/* Logo/Title */}
         <Link href="/">
-          <div className="flex items-center space-x-3 cursor-pointer group">
-            <div className="transform transition-all duration-300 group-hover:scale-105">
-              <RobotAvatar size="md" />
+          <div className="flex items-center gap-2.5 cursor-pointer">
+            <div>
+              <RobotAvatar size="sm" />
             </div>
             
             <div>
-              <h1 className="text-[#42a5f5] font-semibold text-xl">GEM-T</h1>
-              <p className="text-gray-400 text-xs">Diversidade Barra Funda</p>
+              <h1 className="text-[#0F766E] font-medium text-base">GEM-T</h1>
+              <p className="text-slate-500 text-[11px]">Diversidade Barra Funda</p>
             </div>
           </div>
         </Link>
         
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center space-x-6">
-          <div className="flex items-center space-x-5">
-            <Link href="/" className="text-gray-200 hover:text-white transition-colors text-sm font-medium">
+        <nav className="hidden md:flex items-center space-x-4">
+          <div className="flex items-center space-x-4">
+            <Link href="/" className="text-slate-600 hover:text-[#0F766E] transition-colors text-sm">
               Início
             </Link>
-            <Link href="/sobre" className="text-gray-200 hover:text-white transition-colors text-sm font-medium">
+            <Link href="/sobre" className="text-slate-600 hover:text-[#0F766E] transition-colors text-sm">
               Sobre
             </Link>
-            <Link href="/contato" className="text-gray-200 hover:text-white transition-colors text-sm font-medium">
+            <Link href="/contato" className="text-slate-600 hover:text-[#0F766E] transition-colors text-sm">
               Contato
             </Link>
           </div>
-          <Button size="sm" className="text-sm px-5 py-2 rounded-full bg-[#1976d2] hover:bg-[#1565c0] text-white shadow-md transition-colors">
-            Acessar Conta
-          </Button>
         </nav>
         
         {/* Mobile menu button */}
         <Sheet open={isOpen} onOpenChange={setIsOpen}>
           <SheetTrigger asChild>
-            <Button variant="ghost" size="icon" className="md:hidden text-gray-300 hover:text-white hover:bg-gray-800">
-              <Menu />
+            <Button variant="ghost" size="icon" className="md:hidden text-slate-700 hover:text-[#0F766E] hover:bg-slate-100 h-8 w-8">
+              <Menu size={18} />
             </Button>
           </SheetTrigger>
-          <SheetContent className="bg-gray-900 border-gray-800">
-            <div className="flex flex-col space-y-4 mt-8">
+          <SheetContent className="bg-white border-slate-200">
+            <div className="flex flex-col space-y-1 mt-6">
               <div onClick={() => setIsOpen(false)}>
-                <Link href="/" className="text-gray-200 hover:text-white transition-colors px-3 py-2 rounded block">
+                <Link href="/" className="text-slate-700 hover:text-[#0F766E] hover:bg-slate-50 transition-colors px-3 py-2 rounded block text-sm">
                   Início
                 </Link>
               </div>
               <div onClick={() => setIsOpen(false)}>
-                <Link href="/sobre" className="text-gray-200 hover:text-white transition-colors px-3 py-2 rounded block">
+                <Link href="/sobre" className="text-slate-700 hover:text-[#0F766E] hover:bg-slate-50 transition-colors px-3 py-2 rounded block text-sm">
                   Sobre
                 </Link>
               </div>
               <div onClick={() => setIsOpen(false)}>
-                <Link href="/contato" className="text-gray-200 hover:text-white transition-colors px-3 py-2 rounded block">
+                <Link href="/contato" className="text-slate-700 hover:text-[#0F766E] hover:bg-slate-50 transition-colors px-3 py-2 rounded block text-sm">
                   Contato
                 </Link>
               </div>
-              <Button onClick={() => setIsOpen(false)} className="mt-4 bg-[#1976d2] hover:bg-[#1565c0] text-white">
-                Acessar Conta
-              </Button>
             </div>
           </SheetContent>
         </Sheet>
