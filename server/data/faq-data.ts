@@ -8,14 +8,14 @@ export const faqData: FAQEntry[] = [
     category: "cirurgias"
   },
   {
-    question: "Existe alguma restrição de idade para hormonioterapia?",
-    answer: "Sim, de acordo com a Resolução CFM N° 2.427/2025, a terapia hormonal cruzada está vedada antes dos 18 (dezoito) anos de idade. Além disso, a resolução também veda o uso de bloqueadores hormonais para tratamento de incongruência de gênero ou disforia de gênero em crianças e adolescentes (Art. 5°).\n\nPara iniciar a terapia hormonal cruzada após os 18 anos, o paciente deverá:\n• Iniciar avaliação médica, com ênfase em acompanhamento psiquiátrico e endocrinológico por, no mínimo, 1 ano antes do início da terapia hormonal\n• Obter avaliação cardiovascular e metabólica com parecer médico favorável\n• Não apresentar doença psiquiátrica grave ou qualquer outra doença que contraindique a terapia",
+    question: "Existe alguma restrição de idade para hormonização?",
+    answer: "Sim, de acordo com a Resolução CFM N° 2.427/2025, a hormonização está vedada antes dos 18 (dezoito) anos de idade. Além disso, a resolução também veda o uso de bloqueadores hormonais para tratamento de incongruência de gênero ou disforia de gênero em crianças e adolescentes (Art. 5°).\n\nPara iniciar a hormonização após os 18 anos, a pessoa deverá:\n• Iniciar avaliação médica, com ênfase em acompanhamento psiquiátrico e endocrinológico por, no mínimo, 1 ano antes do início da hormonização\n• Obter avaliação cardiovascular e metabólica com parecer médico favorável\n• Não apresentar doença psiquiátrica grave ou qualquer outra doença que contraindique a hormonização",
     source: "Resolução CFM N° 2.427/2025, Art. 5° e Art. 6°",
-    category: "hormonioterapia"
+    category: "hormonizacao"
   },
   {
-    question: "Quais documentos preciso para iniciar o processo transexualizador?",
-    answer: "Para iniciar o processo transexualizador, você precisará de:\n\n• Cartão Nacional do SUS (CNS)\n• Documento de identidade com foto (RG)\n• Comprovante de residência\n\nCaso tenha feito retificação de nome e/ou sexo, também é necessário apresentar a cópia do RG atualizado e, quando houver retificação de sexo, é necessário cópia da certidão de nascimento.",
+    question: "Quais documentos preciso para acessar os serviços de saúde para pessoas trans?",
+    answer: "Para acessar os serviços de saúde para pessoas trans no âmbito da Portaria do Processo Transexualizador, você precisará de:\n\n• Cartão Nacional do SUS (CNS)\n• Documento de identidade com foto (RG)\n• Comprovante de residência\n\nCaso tenha feito retificação de nome e/ou sexo, também é necessário apresentar a cópia do RG atualizado e, quando houver retificação de sexo, é necessário cópia da certidão de nascimento.",
     source: "Orientações e Fluxo para Cirurgias de Afirmação de Gênero, pág. 2-3",
     category: "documentos"
   },
@@ -50,14 +50,14 @@ export const faqData: FAQEntry[] = [
     category: "cirurgias"
   },
   {
-    question: "O que é a terapia hormonal cruzada?",
-    answer: "A terapia hormonal cruzada é definida como a administração de hormônios sexuais para induzir características secundárias condizentes com a identidade de gênero do paciente. Os hormônios utilizados são:\n\n• Testosterona, para induzir o desenvolvimento dos caracteres sexuais secundários masculinos nos homens transexuais;\n• Estrogênio, para induzir o desenvolvimento dos caracteres sexuais secundários femininos nas mulheres transexuais e travestis;\n• Antiandrogênio, que pode ser utilizado para atenuar o crescimento dos pelos corporais e as ereções espontâneas até a realização da orquiectomia.\n\nO uso de estrógenos ou testosterona deve ser mantido ao longo da vida do indivíduo, monitorando-se os fatores de risco.",
+    question: "Como funciona a hormonização?",
+    answer: "A hormonização é definida como a administração de hormônios sexuais para induzir características secundárias condizentes com a identidade de gênero da pessoa. Os hormônios utilizados são:\n\n• Testosterona, para induzir o desenvolvimento dos caracteres sexuais secundários masculinos em homens trans e pessoas transmasculinas;\n• Estrogênio, para induzir o desenvolvimento dos caracteres sexuais secundários femininos em mulheres trans, travestis e pessoas transfemininas;\n• Antiandrogênio, que pode ser utilizado para atenuar o crescimento dos pelos corporais e as ereções espontâneas até a realização da orquiectomia.\n\nO uso de estrógenos ou testosterona deve ser mantido ao longo da vida da pessoa, com monitoramento médico regular dos fatores de risco.",
     source: "Resolução CFM N° 2.427/2025, Anexo I",
-    category: "hormonioterapia"
+    category: "hormonizacao"
   },
   {
     question: "Quais são as modalidades de habilitação dos serviços no Processo Transexualizador?",
-    answer: "De acordo com a normativa, são definidas duas modalidades de habilitação dos serviços no Processo Transexualizador:\n\n• Modalidade Ambulatorial: consiste nas ações de âmbito ambulatorial, quais sejam acompanhamento clínico, acompanhamento pré e pós-operatório e hormonioterapia, destinadas a promover atenção especializada no Processo Transexualizador no SUS.\n\n• Modalidade Hospitalar: consiste nas ações de âmbito hospitalar, quais sejam realização de cirurgias e acompanhamento pré e pós-operatório, destinadas a promover atenção especializada no Processo Transexualizador no SUS.",
+    answer: "De acordo com a Portaria do Ministério da Saúde que institui o Processo Transexualizador, são definidas duas modalidades de habilitação dos serviços:\n\n• Modalidade Ambulatorial: consiste nas ações de âmbito ambulatorial, que incluem acompanhamento clínico, acompanhamento pré e pós-operatório e hormonização, destinadas a promover atenção especializada para pessoas trans no SUS.\n\n• Modalidade Hospitalar: consiste nas ações de âmbito hospitalar, que incluem realização de cirurgias e acompanhamento pré e pós-operatório, destinadas a promover atenção especializada para pessoas trans no SUS.",
     source: "Manual de uso do SAIPS - Processo Transexualizador, pág. 3",
     category: "habilitacao"
   }

@@ -7,53 +7,125 @@ interface ResponseData {
 }
 
 /**
- * Simple keyword matching for document search
- * In a production system, this would use proper NLP techniques
+ * Busca de documentos melhorada com correspondência de relevância
  */
 async function findRelevantDocuments(query: string): Promise<DocumentChunk[]> {
-  // Convert query to keywords
+  // Extrai palavras-chave da consulta
   const keywords = query
     .toLowerCase()
     .replace(/[^\w\sàáâãéêíóôõúç]/g, '')
     .split(/\s+/)
-    .filter(word => word.length > 3);
+    .filter(word => word.length > 2);
   
-  // Get all document chunks
+  // Obter todos os fragmentos de documentos
   const documents = await storage.searchDocuments('');
   
-  // Score each document based on keyword matches
+  // Calcula a pontuação para cada documento
   const scoredDocs = documents.map(doc => {
     const docText = doc.content.toLowerCase();
     let score = 0;
     
+    // Pontuação baseada em palavras-chave
     keywords.forEach(keyword => {
       if (docText.includes(keyword)) {
-        score += 1;
+        score += 2;
+        
+        // Mais pontos se aparecer várias vezes
+        const matches = docText.split(keyword).length - 1;
+        if (matches > 1) {
+          score += matches;
+        }
+      }
+    });
+    
+    // Pontuação extra para frases completas
+    if (docText.includes(query.toLowerCase())) {
+      score += 10;
+    }
+    
+    // Verificar se o documento contém palavras específicas relacionadas à consulta
+    // Mapeia tópicos comuns para termos relacionados
+    const topicMap: {[key: string]: string[]} = {
+      'hormonizacao': ['hormon', 'estrogen', 'testoste', 'antiandrogen'],
+      'cirurgia': ['cirurg', 'redesignação', 'mastectomia', 'mamoplastia', 'histerectomia'],
+      'documentos': ['document', 'rg', 'identidade', 'certidão', 'cartão sus']
+    };
+    
+    // Verifica se a consulta pode estar relacionada a um tópico específico
+    Object.entries(topicMap).forEach(([topic, terms]) => {
+      if (keywords.some(k => terms.some(term => k.includes(term)))) {
+        // Verifica se o documento contém termos relacionados a este tópico
+        if (terms.some(term => docText.includes(term))) {
+          score += 5;
+        }
       }
     });
     
     return { doc, score };
   });
   
-  // Sort by score and take the top results
+  // Ordena por pontuação e retorna os melhores resultados
   return scoredDocs
     .sort((a, b) => b.score - a.score)
-    .filter(item => item.score > 0)
+    .filter(item => item.score > 2)
     .slice(0, 3)
     .map(item => item.doc);
 }
 
 /**
- * Simple keyword matching for FAQ search
+ * Melhorada a correspondência de perguntas com FAQs
  */
 async function findMatchingFAQs(query: string) {
   const normalizedQuery = query.toLowerCase();
   const faqs = await storage.getFAQs();
   
-  return faqs.filter(faq => 
-    faq.question.toLowerCase().includes(normalizedQuery) ||
-    normalizedQuery.includes(faq.question.toLowerCase().substring(0, 10))
-  );
+  // Extrai palavras-chave da consulta
+  const queryWords = normalizedQuery
+    .replace(/[^\w\sàáâãéêíóôõúç]/g, '')
+    .split(/\s+/)
+    .filter(word => word.length > 2);
+  
+  // Pontuação para cada FAQ baseada em correspondência de palavras-chave
+  const scoredFaqs = faqs.map(faq => {
+    const questionLower = faq.question.toLowerCase();
+    const categoryLower = (faq.category || '').toLowerCase();
+    
+    // Verifica correspondência exata
+    if (questionLower === normalizedQuery) {
+      return { faq, score: 100 };
+    }
+    
+    // Verifica correspondência de categoria
+    if (normalizedQuery.includes(categoryLower) && categoryLower) {
+      return { faq, score: 50 };
+    }
+    
+    // Conta quantas palavras da consulta estão na pergunta
+    let score = 0;
+    queryWords.forEach(word => {
+      if (questionLower.includes(word)) {
+        score += 5;
+      }
+      
+      // Dá pontuação extra para correspondências no início da pergunta
+      if (questionLower.startsWith(word)) {
+        score += 10;
+      }
+    });
+    
+    // Verifica se a consulta é uma variação da pergunta
+    if (questionLower.includes(normalizedQuery)) {
+      score += 30;
+    }
+    
+    return { faq, score };
+  });
+  
+  // Ordena e filtra FAQs com pontuação mínima
+  return scoredFaqs
+    .filter(item => item.score > 5)
+    .sort((a, b) => b.score - a.score)
+    .map(item => item.faq);
 }
 
 /**
