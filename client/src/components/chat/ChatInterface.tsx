@@ -134,9 +134,10 @@ Selecione um dos tópicos acima ou me faça uma pergunta sobre cuidados em saúd
         <div className="w-full flex justify-center items-center p-4 bg-gradient-to-b from-[#051622] to-[#072a43]">
           <div className="flex flex-col items-center">
             <Robot3D 
-              width={280} 
-              height={280} 
+              width={300} 
+              height={300} 
               state={isLoading ? "speaking" : "idle"}
+              className="shadow-2xl"
             />
             <h3 className="text-white font-bold text-center mt-2">GEM-T</h3>
             <p className="text-blue-200/80 text-xs text-center">Assistente digital interativo</p>

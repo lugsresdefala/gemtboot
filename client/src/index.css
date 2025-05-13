@@ -54,6 +54,50 @@
   margin-right: 0;
 }
 
+/* Robot animations */
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.animate-floating {
+  animation: floating 4s ease-in-out infinite;
+}
+
+.animate-talking {
+  animation: talking 1s ease-in-out infinite;
+}
+
+.animate-processing {
+  animation: processing 2s linear infinite;
+}
+
+.animate-listening {
+  animation: listening 1.5s ease-in-out infinite;
+}
+
+@keyframes floating {
+  0%, 100% { transform: translateY(0) rotateX(0) rotateY(0); }
+  50% { transform: translateY(-10px) rotateX(2deg) rotateY(-2deg); }
+}
+
+@keyframes talking {
+  0%, 100% { transform: translateY(0) scale(1) rotateX(0) rotateY(0); }
+  25% { transform: translateY(-5px) scale(1.02) rotateX(1deg) rotateY(1deg); }
+  75% { transform: translateY(-3px) scale(1.01) rotateX(-1deg) rotateY(-1deg); }
+}
+
+@keyframes processing {
+  0% { transform: rotateX(0) rotateY(0) rotateZ(0); }
+  33% { transform: rotateX(3deg) rotateY(1deg) rotateZ(1deg); }
+  66% { transform: rotateX(-2deg) rotateY(2deg) rotateZ(-1deg); }
+  100% { transform: rotateX(0) rotateY(0) rotateZ(0); }
+}
+
+@keyframes listening {
+  0%, 100% { transform: translateY(0) scale(1); }
+  50% { transform: translateY(-5px) scale(1.05); }
+}
+
 @keyframes typingDot {
   0% { transform: translateY(0); }
   20% { transform: translateY(-5px); }
