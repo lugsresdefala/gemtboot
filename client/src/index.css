@@ -89,6 +89,11 @@
   100% { transform: translateY(0); }
 }
 
+@keyframes scale200 {
+  0% { transform: scale(1); }
+  100% { transform: scale(2); }
+}
+
 /* Enhanced scrollbar styling */
 .custom-scrollbar {
   scrollbar-width: thin;
