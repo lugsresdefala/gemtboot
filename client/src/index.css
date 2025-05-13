@@ -229,41 +229,44 @@
 }
 
 :root {
-  --background: 0 0% 100%;
-  --foreground: 222.2 84% 4.9%;
+  /* Core UI colors baseadas nas cores da bandeira trans */
+  --background: 210 30% 99%;
+  --foreground: 220 60% 10%;
   --muted: 210 40% 96.1%;
   --muted-foreground: 215.4 16.3% 46.9%;
-  --popover: 0 0% 100%;
-  --popover-foreground: 222.2 84% 4.9%;
-  --card: 0 0% 100%;
-  --card-foreground: 222.2 84% 4.9%;
+  --popover: 210 30% 99%;
+  --popover-foreground: 220 60% 10%;
+  --card: 210 30% 99%;
+  --card-foreground: 220 60% 10%;
   --border: 214.3 31.8% 91.4%;
   --input: 214.3 31.8% 91.4%;
-  --primary: 207 92% 54%;
+  --primary: 207 92% 54%; /* Azul da bandeira trans */
   --primary-foreground: 210 40% 98%;
-  --secondary: 276 84% 60%;
+  --secondary: 340 82% 59%; /* Rosa da bandeira trans */
   --secondary-foreground: 210 40% 98%;
-  --accent: 210 40% 96.1%;
-  --accent-foreground: 222.2 47.4% 11.2%;
+  --accent: 220 14% 96%;
+  --accent-foreground: 220 60% 10%;
   --destructive: 0 84.2% 60.2%;
   --destructive-foreground: 210 40% 98%;
-  --ring: 215 20.2% 65.1%;
+  --ring: 207 92% 54%;
   --radius: 0.75rem;
 
-  --sidebar-background: 240 12% 3.5%;
-  --sidebar-foreground: 0 0% 99%;
-  --sidebar-primary: 207 92% 54%;
+  /* Cores da interface escura para sidebar e painéis laterais */
+  --sidebar-background: 215 30% 12%; 
+  --sidebar-foreground: 210 15% 98%;
+  --sidebar-primary: 207 92% 54%; /* Azul da bandeira trans */
   --sidebar-primary-foreground: 211 100% 99%;
-  --sidebar-accent: 276 84% 60%;
-  --sidebar-accent-foreground: 0 0% 99%;
-  --sidebar-border: 240 5% 16%;
+  --sidebar-accent: 340 82% 59%; /* Rosa da bandeira trans */
+  --sidebar-accent-foreground: 210 15% 98%;
+  --sidebar-border: 214 25% 18%;
   --sidebar-ring: 207 92% 54%;
 
-  --chart-1: 207 92% 54%;
-  --chart-2: 276 84% 60%;
-  --chart-3: 326 100% 74%;
-  --chart-4: 166 74% 49%;
-  --chart-5: 50 100% 60%;
+  /* Cores para visualização de dados - usando tons das cores trans */
+  --chart-1: 207 92% 54%; /* Azul */
+  --chart-2: 340 82% 59%; /* Rosa */
+  --chart-3: 0 0% 95%;    /* Branco */
+  --chart-4: 207 70% 45%; /* Azul mais escuro */
+  --chart-5: 340 65% 45%; /* Rosa mais escuro */
 
   --card-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.05), 0 2px 4px -2px rgb(0 0 0 / 0.05);
   --header-height: 64px;
@@ -271,26 +274,32 @@
 }
 
 .dark {
-  --background: 240 12% 3.5%;
+  /* Modo escuro com cores da bandeira trans */
+  --background: 217 33% 17%;
   --foreground: 0 0% 99%;
-  --muted: 240 5% 16%;
-  --muted-foreground: 240 6% 66%;
-  --popover: 240 12% 3.5%;
+  --muted: 215 25% 25%;
+  --muted-foreground: 215 10% 75%;
+  --popover: 217 33% 17%;
   --popover-foreground: 0 0% 99%;
-  --card: 240 12% 3.5%;
+  --card: 217 33% 17%;
   --card-foreground: 0 0% 99%;
-  --border: 240 5% 16%;
-  --input: 240 5% 16%;
-  --primary: 207 92% 54%;
-  --primary-foreground: 211 100% 99%;
-  --secondary: 276 84% 60%;
-  --secondary-foreground: 0 0% 99%;
-  --accent: 276 84% 60%;
-  --accent-foreground: 0 0% 99%;
+  --border: 215 25% 27%;
+  --input: 215 25% 25%;
+  --primary: 207 90% 64%; /* Azul da bandeira trans mais brilhante */
+  --primary-foreground: 0 0% 100%;
+  --secondary: 340 75% 65%; /* Rosa da bandeira trans mais brilhante */
+  --secondary-foreground: 0 0% 100%;
+  --accent: 0 0% 95%; /* Branco da bandeira trans */
+  --accent-foreground: 217 33% 17%;
   --destructive: 0 63% 31%;
   --destructive-foreground: 0 0% 99%;
-  --ring: 240 5% 84%;
-  --card-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.2), 0 2px 4px -2px rgb(0 0 0 / 0.2);
+  --ring: 207 90% 64%;
+  
+  /* Efeitos especiais para o modo escuro */
+  --glow-blue-trans: 0 0 15px hsla(207, 94%, 58%, 0.8);
+  --glow-pink-trans: 0 0 15px hsla(340, 85%, 65%, 0.8);
+  --glow-white-trans: 0 0 15px hsla(0, 0%, 99%, 0.8);
+  --card-shadow: 0 8px 20px -4px rgba(0, 0, 0, 0.3), 0 4px 10px -4px rgba(0, 0, 0, 0.25);
 }
 
 @supports (backdrop-filter: blur(24px)) {

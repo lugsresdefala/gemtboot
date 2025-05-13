@@ -42,20 +42,29 @@ export default function Robot3DContainer({
       style={{ 
         width: `${width}px`, 
         height: `${height}px`,
-        borderRadius: '12px',
+        borderRadius: '16px',
         overflow: 'hidden',
-        background: 'linear-gradient(to bottom, #051622, #072a43)',
+        background: 'linear-gradient(135deg, hsl(217, 33%, 17%), hsl(215, 35%, 23%))',
+        boxShadow: 'var(--card-shadow)',
         display: 'flex',
         justifyContent: 'center',
-        alignItems: 'center'
+        alignItems: 'center',
+        border: '1px solid hsla(207, 90%, 50%, 0.2)'
       }}
     >
+      {/* Elementos decorativos inspirados nas cores da bandeira trans */}
+      <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[hsl(207,90%,64%)] via-[hsl(0,0%,95%)] to-[hsl(340,75%,65%)]" />
+      
+      {/* Robô com filtros de cores baseados na bandeira trans */}
       <img 
         src={robotImage} 
         alt="GEM-T Robot" 
-        className={cn("w-auto h-auto max-w-full max-h-full object-contain", animation)}
+        className={cn("w-auto h-auto max-w-full max-h-[90%] object-contain", animation)}
         style={{ 
-          filter: 'drop-shadow(0 0 20px rgba(0, 149, 255, 0.6))'
+          filter: state === 'speaking' ? 'drop-shadow(var(--glow-pink-trans))' :
+                 state === 'processing' ? 'drop-shadow(var(--glow-blue-trans))' :
+                 state === 'listening' ? 'drop-shadow(var(--glow-white-trans))' :
+                 'drop-shadow(var(--glow-blue-trans))'
         }}
       />
     </div>
