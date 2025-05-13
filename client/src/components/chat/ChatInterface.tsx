@@ -39,20 +39,20 @@ Selecione um dos tópicos acima ou digite sua pergunta.`,
   }, [messages]);
   
   return (
-    <div className="bg-white rounded-md shadow-sm overflow-hidden border border-slate-100">
+    <div className="bg-white rounded-xl shadow-xl overflow-hidden border border-purple-100">
       {/* Top bar with title */}
-      <div className="p-4 bg-[#0F766E] text-white flex justify-between items-center">
-        <div className="flex items-center gap-3">
-          <div className="bg-white/10 p-1.5 rounded-md">
-            <RobotAvatar size="sm" />
+      <div className="p-5 bg-gradient-to-r from-[#4A148C] to-[#6A1B9A] text-white flex justify-between items-center">
+        <div className="flex items-center space-x-3">
+          <div className="bg-white/10 p-2 rounded-lg shadow-inner">
+            <RobotAvatar size="md" />
           </div>
           <div>
-            <h2 className="font-medium text-base">GEM-T</h2>
-            <p className="text-[11px] text-white/80">Diversidade Barra Funda</p>
+            <h2 className="font-bold text-lg tracking-tight">GEM-T</h2>
+            <p className="text-xs text-purple-200/80">Projeto Diversidade Barra Funda</p>
           </div>
         </div>
         
-        <div className="flex gap-1">
+        <div className="flex space-x-2">
           <TooltipProvider>
             <Tooltip>
               <TooltipTrigger asChild>
@@ -60,13 +60,13 @@ Selecione um dos tópicos acima ou digite sua pergunta.`,
                   onClick={clearConversation} 
                   variant="ghost" 
                   size="icon" 
-                  className="h-8 w-8 text-white hover:text-white hover:bg-white/10"
+                  className="text-white hover:text-white hover:bg-white/10 transition-all rounded-full"
                 >
-                  <Trash size={16} />
+                  <Trash size={18} />
                 </Button>
               </TooltipTrigger>
-              <TooltipContent side="bottom">
-                <p className="text-xs">Limpar conversa</p>
+              <TooltipContent>
+                <p>Limpar conversa</p>
               </TooltipContent>
             </Tooltip>
           </TooltipProvider>
@@ -76,14 +76,14 @@ Selecione um dos tópicos acima ou digite sua pergunta.`,
               <TooltipTrigger asChild>
                 <Button 
                   variant="ghost" 
-                  size="icon"
-                  className="h-8 w-8 text-white hover:text-white hover:bg-white/10"
+                  size="icon" 
+                  className="text-white hover:text-white hover:bg-white/10 transition-all rounded-full"
                 >
-                  <Settings size={16} />
+                  <Settings size={18} />
                 </Button>
               </TooltipTrigger>
-              <TooltipContent side="bottom">
-                <p className="text-xs">Configurações</p>
+              <TooltipContent>
+                <p>Configurações</p>
               </TooltipContent>
             </Tooltip>
           </TooltipProvider>
@@ -105,11 +105,11 @@ Selecione um dos tópicos acima ou digite sua pergunta.`,
       }} />
       
       {/* Chat Messages */}
-      <div className="chat-height overflow-y-auto p-4 custom-scrollbar bg-slate-50">
-        <div>
+      <div className="chat-height overflow-y-auto px-5 py-8 custom-scrollbar bg-gradient-to-b from-[#f8fafc] to-[#F3E5F5]/30">
+        <div className="max-w-4xl mx-auto">
           {/* Welcome message if no messages yet */}
           {messages.length === 0 && (
-            <div className="mb-4">
+            <div className="mb-6">
               <ChatMessage message={welcomeMessage} />
             </div>
           )}
@@ -121,11 +121,11 @@ Selecione um dos tópicos acima ou digite sua pergunta.`,
           
           {/* Loading indicator */}
           {isLoading && (
-            <div className="flex items-start mb-4 animate-fade-in">
-              <div className="mt-1 flex-shrink-0">
-                <RobotAvatar size="sm" />
+            <div className="flex items-start mb-8 animate-fade-in">
+              <div className="mt-1.5 flex-shrink-0">
+                <RobotAvatar size="sm" className="shadow-md" />
               </div>
-              <div className="ml-2 bg-white rounded-md rounded-tl-none py-3 px-3 border border-slate-200">
+              <div className="ml-4 bg-white rounded-2xl rounded-tl-none py-4 px-5 border border-purple-100 shadow-md">
                 <div className="typing-indicator">
                   <span></span>
                   <span></span>
