@@ -14,7 +14,7 @@ import TypingIndicator from "@/components/ui/TypingIndicator";
 export default function ChatInterface() {
   const { messages, sendMessage, clearConversation, isLoading } = useChat();
   const messagesEndRef = useRef<HTMLDivElement>(null);
-  const [showRobot3D, setShowRobot3D] = useState(false);
+  const [showRobot3D, setShowRobot3D] = useState(true);
   
   // Initial welcome message
   const welcomeMessage: Message = {
