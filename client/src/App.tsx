@@ -20,12 +20,8 @@ function Router() {
 }
 
 function App() {
-  const [showSplash, setShowSplash] = useState(true);
-  
-  // Tela de splash automaticamente se completa após alguns segundos
-  const handleSplashComplete = () => {
-    setShowSplash(false);
-  };
+  // Removendo splash screen
+  const [showSplash, setShowSplash] = useState(false);
   
   return (
     <QueryClientProvider client={queryClient}>
