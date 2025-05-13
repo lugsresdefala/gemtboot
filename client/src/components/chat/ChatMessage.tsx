@@ -12,42 +12,40 @@ export default function ChatMessage({ message }: ChatMessageProps) {
   
   return (
     <div className={cn(
-      "flex items-start mb-8",
+      "flex items-start mb-4",
       isBot ? "animate-slide-up" : "justify-end animate-fade-in"
     )}>
       {isBot && (
-        <div className="mt-1.5 flex-shrink-0">
-          <RobotAvatar size="sm" className="shadow-md" />
+        <div className="mt-1 flex-shrink-0">
+          <RobotAvatar size="sm" />
         </div>
       )}
       
       <div className={cn(
-        "rounded-2xl p-5 max-w-3xl", 
+        "rounded-md max-w-[85%]", 
         isBot 
-          ? "ml-4 bg-white rounded-tl-none border border-slate-100 shadow-md" 
-          : "mr-3 bg-gradient-to-br from-[#e3f2fd] to-[#bbdefb] rounded-tr-none shadow-md"
+          ? "ml-2 bg-white border border-slate-200 px-3 py-2 rounded-tl-none" 
+          : "mr-2 bg-[#0F766E]/10 px-3 py-2 rounded-tr-none"
       )}>
         <div className={cn(
-          "whitespace-pre-line prose prose-slate prose-p:leading-relaxed prose-headings:text-slate-700",
-          isBot ? "text-slate-700" : "text-slate-800 font-medium"
+          "whitespace-pre-line text-sm leading-normal",
+          isBot ? "text-slate-800" : "text-slate-800"
         )}>
           {message.content}
         </div>
         
         {/* Show source reference if available */}
         {isBot && message.source && (
-          <div className="mt-4 text-xs text-slate-500 flex items-center border-t border-slate-100 pt-3">
-            <div className="bg-slate-100 p-1.5 rounded-md mr-2">
-              <i className="fas fa-file-alt"></i>
-            </div>
-            <span>Fonte: <span className="text-slate-600 font-medium">{message.source}</span></span>
+          <div className="mt-2 text-xs text-slate-500 flex items-center border-t border-slate-100 pt-2">
+            <i className="fas fa-file-alt mr-1.5"></i>
+            <span>Fonte: {message.source}</span>
           </div>
         )}
       </div>
       
       {!isBot && (
-        <div className="flex-shrink-0 w-9 h-9 rounded-full bg-gradient-to-br from-[#1976d2] to-[#1565c0] flex items-center justify-center text-white shadow-lg mt-1.5">
-          <i className="fas fa-user text-xs"></i>
+        <div className="flex-shrink-0 w-7 h-7 rounded-full bg-[#0F766E] flex items-center justify-center text-white mt-1">
+          <i className="fas fa-user text-[10px]"></i>
         </div>
       )}
     </div>

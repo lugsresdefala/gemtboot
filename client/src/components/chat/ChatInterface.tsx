@@ -17,13 +17,15 @@ export default function ChatInterface() {
   const welcomeMessage: Message = {
     id: 0,
     role: "assistant",
-    content: `Olá! Eu sou o GEM-T, assistente virtual do Projeto Diversidade Barra Funda para informações sobre cuidados em saúde para pessoas trans no SUS. Como posso ajudar você hoje?
+    content: `Olá! Sou a GEM-T, assistente virtual do Projeto Diversidade Barra Funda. Como posso ajudar com informações sobre cuidados em saúde para pessoas trans?
 
-Você pode me perguntar sobre:
-- Fluxos e procedimentos para cirurgias
-- Critérios de elegibilidade para atendimentos
-- Documentos necessários
-- Orientações sobre hormônios`,
+Posso esclarecer dúvidas sobre:
+• Acesso a cuidados em saúde no SUS
+• Fluxos de atendimento
+• Critérios para procedimentos
+• Unidades de referência
+
+Selecione um dos tópicos acima ou digite sua pergunta.`,
     source: "",
     timestamp: new Date(),
     conversationId: "welcome"
@@ -37,20 +39,20 @@ Você pode me perguntar sobre:
   }, [messages]);
   
   return (
-    <div className="bg-white rounded-xl shadow-xl overflow-hidden border border-gray-100">
+    <div className="bg-white rounded-md shadow-sm overflow-hidden border border-slate-100">
       {/* Top bar with title */}
-      <div className="p-5 bg-gradient-to-r from-[#1565c0] to-[#6a1b9a] text-white flex justify-between items-center">
-        <div className="flex items-center space-x-3">
-          <div className="bg-white/10 p-2 rounded-lg shadow-inner">
+      <div className="p-4 bg-[#0F766E] text-white flex justify-between items-center">
+        <div className="flex items-center gap-3">
+          <div className="bg-white/10 p-1.5 rounded-md">
             <RobotAvatar size="sm" />
           </div>
           <div>
-            <h2 className="font-semibold text-lg tracking-tight">GEM-T · Saúde Trans</h2>
-            <p className="text-xs text-white/70">Projeto Diversidade Barra Funda</p>
+            <h2 className="font-medium text-base">GEM-T</h2>
+            <p className="text-[11px] text-white/80">Diversidade Barra Funda</p>
           </div>
         </div>
         
-        <div className="flex space-x-2">
+        <div className="flex gap-1">
           <TooltipProvider>
             <Tooltip>
               <TooltipTrigger asChild>
@@ -58,13 +60,13 @@ Você pode me perguntar sobre:
                   onClick={clearConversation} 
                   variant="ghost" 
                   size="icon" 
-                  className="text-white hover:text-white hover:bg-white/10 transition-all rounded-full"
+                  className="h-8 w-8 text-white hover:text-white hover:bg-white/10"
                 >
-                  <Trash size={18} />
+                  <Trash size={16} />
                 </Button>
               </TooltipTrigger>
-              <TooltipContent>
-                <p>Limpar conversa</p>
+              <TooltipContent side="bottom">
+                <p className="text-xs">Limpar conversa</p>
               </TooltipContent>
             </Tooltip>
           </TooltipProvider>
@@ -74,14 +76,14 @@ Você pode me perguntar sobre:
               <TooltipTrigger asChild>
                 <Button 
                   variant="ghost" 
-                  size="icon" 
-                  className="text-white hover:text-white hover:bg-white/10 transition-all rounded-full"
+                  size="icon"
+                  className="h-8 w-8 text-white hover:text-white hover:bg-white/10"
                 >
-                  <Settings size={18} />
+                  <Settings size={16} />
                 </Button>
               </TooltipTrigger>
-              <TooltipContent>
-                <p>Configurações</p>
+              <TooltipContent side="bottom">
+                <p className="text-xs">Configurações</p>
               </TooltipContent>
             </Tooltip>
           </TooltipProvider>
@@ -103,11 +105,11 @@ Você pode me perguntar sobre:
       }} />
       
       {/* Chat Messages */}
-      <div className="chat-height overflow-y-auto px-5 py-8 custom-scrollbar bg-gradient-to-b from-[#f8fafc] to-[#f1f5f9]">
-        <div className="max-w-4xl mx-auto">
+      <div className="chat-height overflow-y-auto p-4 custom-scrollbar bg-slate-50">
+        <div>
           {/* Welcome message if no messages yet */}
           {messages.length === 0 && (
-            <div className="mb-6">
+            <div className="mb-4">
               <ChatMessage message={welcomeMessage} />
             </div>
           )}
@@ -119,11 +121,11 @@ Você pode me perguntar sobre:
           
           {/* Loading indicator */}
           {isLoading && (
-            <div className="flex items-start mb-8 animate-fade-in">
-              <div className="mt-1.5 flex-shrink-0">
-                <RobotAvatar size="sm" className="shadow-md" />
+            <div className="flex items-start mb-4 animate-fade-in">
+              <div className="mt-1 flex-shrink-0">
+                <RobotAvatar size="sm" />
               </div>
-              <div className="ml-4 bg-white rounded-2xl rounded-tl-none py-4 px-5 border border-slate-100 shadow-md">
+              <div className="ml-2 bg-white rounded-md rounded-tl-none py-3 px-3 border border-slate-200">
                 <div className="typing-indicator">
                   <span></span>
                   <span></span>
