@@ -134,13 +134,13 @@ Selecione um dos tópicos acima ou me faça uma pergunta sobre cuidados em saúd
         <div className="w-full flex justify-center items-center p-4 bg-gradient-to-b from-[var(--color-chat-robot-bg-from)] to-[var(--color-chat-robot-bg-to)]">
           <div className="flex flex-col items-center">
             <Robot3D 
-              width={240} 
-              height={240} 
+              width={300} 
+              height={300} 
               state={isLoading ? "speaking" : "idle"}
-              className="shadow-lg"
+              className=""
             />
-            <h3 className="text-white font-medium text-center mt-2">GEM-T</h3>
-            <p className="text-gray-300 text-xs text-center">Assistente de informações - diversidadebarrafunda.org</p>
+            <h3 className="text-white font-medium text-center mt-0">GEM-T</h3>
+            <p className="text-white/70 text-xs text-center">Assistente de informações - diversidadebarrafunda.org</p>
           </div>
         </div>
       )}
