@@ -64,6 +64,20 @@ Como posso ajudar você hoje?`,
         </div>
       </div>
       
+      {/* Topic Pills */}
+      <TopicPills onTopicSelect={(topic) => {
+        // Handle topic selection by sending a query about that topic
+        const topicQueries = {
+          faq: "Quais são as perguntas frequentes sobre os cuidados em saúde para pessoas trans?",
+          fluxos: "Como funcionam os fluxos de atendimento em saúde para pessoas trans no SUS?",
+          criterios: "Quais são os critérios para acessar os serviços de hormonização e intervenções cirúrgicas para mudança corporal?",
+          especialistas: "Quais especialistas participam dos cuidados em saúde para pessoas trans?",
+          unidades: "Onde posso encontrar unidades que oferecem cuidados em saúde para pessoas trans?"
+        };
+        
+        sendMessage(topicQueries[topic]);
+      }} />
+      
       {/* Chat Messages */}
       <div className="chat-height overflow-y-auto px-4 py-5 bg-white h-[450px]">
         <div className="max-w-4xl mx-auto">
