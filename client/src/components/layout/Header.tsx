@@ -14,24 +14,24 @@ export default function Header() {
       <div className="absolute inset-0 bg-gradient-to-r from-[#0A3255] via-[#FFD1DC] to-white h-1.5 w-full"></div>
       
       {/* Fundo do cabeçalho com glassmorphism */}
-      <div className="relative bg-gradient-to-r from-[#061130] to-[#0A1235] shadow-xl backdrop-blur-lg border-b border-white/10">
+      <div className="relative bg-gradient-to-r from-[#062140] to-[#0A3255] shadow-xl backdrop-blur-lg border-b border-white/10">
         <div className="container-app py-6 flex-between">
           {/* Logo/Title com design renovado */}
           <Link href="/">
             <div className="flex items-center gap-4 cursor-pointer group">
-              <div className="p-1.5 bg-gradient-to-br from-[#FFD1DC] to-[#0A3285] rounded-2xl shadow-xl animate-floating hover:animate-pulse transition-all duration-500">
-                <div className="bg-white/30 backdrop-blur-md p-1.5 rounded-xl">
-                  <RobotAvatar size="md" className="transform hover:saturate-1.1 brightness-1.2 transition-all duration-300" />
+              <div className="p-2.5 bg-gradient-to-br from-[#FFD1DC] to-[#0A3255] rounded-2xl shadow-xl animate-floating hover:animate-pulse transition-all duration-500">
+                <div className="bg-white/20 backdrop-blur-md p-1.5 rounded-xl">
+                  <RobotAvatar size="md" className="transform hover:rotate-12 transition-all duration-300" />
                 </div>
               </div>
               
               <div>
-                <h1 className="text-white/10 bg-clip-text bg-gradient-to-r from-[#FFD1DC] to-white font-bold text-2xl tracking-wider">
+                <h1 className="text-transparent bg-clip-text bg-gradient-to-r from-[#FFD1DC] to-white font-bold text-2xl tracking-wider">
                   GEM-T
                 </h1>
-                <p className="text-white/90 text-xs font-light tracking-wide bg-white/50 border-[2px] border-white/60 border-style-ridge">
-                  <span className="backdrop-blur-md bg-gradient-to-r from-[#FFD1EC]/5 to-white/10 px-2 py-0.5 rounded-full">
-                    Assistente Virtual
+                <p className="text-white/90 text-xs font-light tracking-wide">
+                  <span className="bg-gradient-to-r from-[#FFD1DC]/20 to-white/20 px-2 py-0.5 rounded-full">
+                    Diversidade Barra Funda
                   </span>
                 </p>
               </div>
