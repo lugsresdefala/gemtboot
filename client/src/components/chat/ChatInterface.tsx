@@ -43,19 +43,19 @@ Selecione um dos tópicos acima ou me faça uma pergunta sobre cuidados em saúd
   }, [messages]);
   
   return (
-    <div className="bg-white rounded-xl shadow-xl overflow-hidden border border-purple-100">
-      {/* Top bar with title */}
-      <div className="p-5 bg-gradient-to-r from-[#4A148C] to-[#6A1B9A] text-white flex justify-between items-center">
+    <div className="bg-white rounded-md shadow-md overflow-hidden border border-gray-200">
+      {/* Top bar with title - Design mais sóbrio e profissional */}
+      <div className="p-4 bg-gradient-to-r from-[#1A365D] to-[#2D3748] text-white flex justify-between items-center">
         <div className="flex items-center space-x-3">
           <div 
-            className="bg-white/10 p-2 rounded-lg shadow-inner cursor-pointer transition-all hover:bg-white/20"
+            className="bg-white/10 p-2 rounded-md shadow-inner cursor-pointer transition-all hover:bg-white/15"
             onClick={() => setShowRobot3D(prev => !prev)}
           >
             <RobotAvatar size="md" />
           </div>
           <div>
-            <h2 className="font-bold text-lg tracking-tight">GEM-T</h2>
-            <p className="text-xs text-purple-200/80">Projeto Diversidade Barra Funda</p>
+            <h2 className="font-semibold text-lg tracking-tight">GEM-T</h2>
+            <p className="text-xs font-normal text-gray-300">Projeto Diversidade Barra Funda</p>
           </div>
         </div>
         
@@ -67,9 +67,9 @@ Selecione um dos tópicos acima ou me faça uma pergunta sobre cuidados em saúd
                   onClick={() => setShowRobot3D(prev => !prev)} 
                   variant="ghost" 
                   size="icon" 
-                  className="text-white hover:text-white hover:bg-white/10 transition-all rounded-full"
+                  className="text-white hover:text-white hover:bg-white/10 transition-all rounded-md"
                 >
-                  {showRobot3D ? <Minimize2 size={18} /> : <Maximize2 size={18} />}
+                  {showRobot3D ? <Minimize2 size={16} /> : <Maximize2 size={16} />}
                 </Button>
               </TooltipTrigger>
               <TooltipContent>
@@ -85,9 +85,9 @@ Selecione um dos tópicos acima ou me faça uma pergunta sobre cuidados em saúd
                   onClick={clearConversation} 
                   variant="ghost" 
                   size="icon" 
-                  className="text-white hover:text-white hover:bg-white/10 transition-all rounded-full"
+                  className="text-white hover:text-white hover:bg-white/10 transition-all rounded-md"
                 >
-                  <Trash size={18} />
+                  <Trash size={16} />
                 </Button>
               </TooltipTrigger>
               <TooltipContent>
@@ -102,9 +102,9 @@ Selecione um dos tópicos acima ou me faça uma pergunta sobre cuidados em saúd
                 <Button 
                   variant="ghost" 
                   size="icon" 
-                  className="text-white hover:text-white hover:bg-white/10 transition-all rounded-full"
+                  className="text-white hover:text-white hover:bg-white/10 transition-all rounded-md"
                 >
-                  <Settings size={18} />
+                  <Settings size={16} />
                 </Button>
               </TooltipTrigger>
               <TooltipContent>
@@ -131,22 +131,22 @@ Selecione um dos tópicos acima ou me faça uma pergunta sobre cuidados em saúd
       
       {/* Robot 3D Display */}
       {showRobot3D && (
-        <div className="w-full flex justify-center items-center p-4 bg-gradient-to-b from-[#051622] to-[#072a43]">
+        <div className="w-full flex justify-center items-center p-4 bg-gradient-to-b from-[#1A365D] to-[#2B4C7E]">
           <div className="flex flex-col items-center">
             <Robot3D 
-              width={300} 
-              height={300} 
+              width={240} 
+              height={240} 
               state={isLoading ? "speaking" : "idle"}
-              className="shadow-2xl"
+              className="shadow-lg"
             />
-            <h3 className="text-white font-bold text-center mt-2">GEM-T</h3>
-            <p className="text-blue-200/80 text-xs text-center">Assistente digital interativo</p>
+            <h3 className="text-white font-medium text-center mt-2">GEM-T</h3>
+            <p className="text-gray-300 text-xs text-center">Assistente de informações - diversidadebarrafunda.org</p>
           </div>
         </div>
       )}
       
       {/* Chat Messages */}
-      <div className={`chat-height overflow-y-auto px-5 py-8 custom-scrollbar bg-gradient-to-b from-[#f8fafc] to-[#F3E5F5]/30 ${showRobot3D ? 'h-[400px]' : ''}`}>
+      <div className={`chat-height overflow-y-auto px-5 py-6 custom-scrollbar bg-gradient-to-b from-[#f8f9fa] to-[#edf2f7] ${showRobot3D ? 'h-[380px]' : ''}`}>
         <div className="max-w-4xl mx-auto">
           {/* Welcome message if no messages yet */}
           {messages.length === 0 && (
@@ -160,13 +160,13 @@ Selecione um dos tópicos acima ou me faça uma pergunta sobre cuidados em saúd
             <ChatMessage key={message.id} message={message} />
           ))}
           
-          {/* Loading indicator */}
+          {/* Loading indicator com design mais sóbrio */}
           {isLoading && (
-            <div className="flex items-start mb-8 animate-fade-in">
+            <div className="flex items-start mb-6 animate-fade-in">
               <div className="mt-1.5 flex-shrink-0">
-                <RobotAvatar size="sm" className="shadow-md" />
+                <RobotAvatar size="sm" className="shadow-sm" />
               </div>
-              <div className="ml-4 bg-white rounded-2xl rounded-tl-none py-4 px-5 border border-purple-100 shadow-md">
+              <div className="ml-3 bg-white rounded-md rounded-tl-none py-3 px-4 border border-gray-200 shadow-sm">
                 <TypingIndicator visible={isLoading} />
               </div>
             </div>
