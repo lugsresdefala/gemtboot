@@ -52,7 +52,7 @@ export default function MessageInput({ onSendMessage, isLoading = false }: Messa
           <input 
             type="text" 
             placeholder="Digite sua dúvida sobre cuidados em saúde para pessoas trans..." 
-            className="w-full py-2.5 pl-10 pr-10 bg-gray-50 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-[#1A365D] focus:border-[#2D3748] transition-all"
+            className="w-full py-2.5 pl-10 pr-10 bg-gray-50 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-[var(--color-chat-header-from)] focus:border-[var(--color-chat-header-to)] transition-all"
             value={message}
             onChange={(e) => setMessage(e.target.value)}
             onKeyDown={handleKeyDown}
@@ -80,7 +80,7 @@ export default function MessageInput({ onSendMessage, isLoading = false }: Messa
           className={`p-2.5 rounded-md transition-all ${
             !message.trim() || isLoading
               ? "bg-gray-100 text-gray-400 cursor-not-allowed"
-              : "bg-[#1A365D] text-white hover:bg-[#2D3748]"
+              : "bg-[var(--color-chat-header-from)] text-white hover:bg-[var(--color-chat-header-to)]"
           }`}
         >
           <Send size={16} />

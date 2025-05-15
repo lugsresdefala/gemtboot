@@ -31,7 +31,7 @@ export default function TopicPills({ onTopicSelect }: TopicPillsProps) {
             className={cn(
               "px-4 py-2 text-sm font-medium rounded transition-all duration-150 flex items-center",
               activeTopic === topic.id
-                ? "bg-[#1A365D] text-white shadow-sm"
+                ? "bg-[var(--color-chat-header-from)] text-white shadow-sm"
                 : "bg-white text-gray-700 border border-gray-300 hover:border-gray-400 hover:bg-gray-50"
             )}
             onClick={() => handleTopicClick(topic.id)}

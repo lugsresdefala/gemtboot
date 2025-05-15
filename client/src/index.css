@@ -199,6 +199,13 @@
   --color-chat-body-from: #f8f9fa;
   --color-chat-body-to: #edf2f7;
   
+  /* Cores para FAQ */
+  --color-faq-question: #4A148C;
+  --color-faq-button-bg: #F3E5F5;
+  --color-faq-button-active: #6A1B9A;
+  --color-faq-source-bg: #F3E5F5;
+  --color-faq-source-text: #6A1B9A;
+  
   --card-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.05), 0 2px 4px -2px rgb(0 0 0 / 0.05);
   --header-height: 64px;
   --sidebar-width: 280px;
