@@ -60,8 +60,8 @@
   
   --color-chat-header-from: var(--color-primary);
   --color-chat-header-to: var(--color-primary-dark);
-  --color-chat-robot-bg-from: transparent;
-  --color-chat-robot-bg-to: transparent;
+  --color-chat-robot-bg-from: rgba(6, 33, 64, 0.8);
+  --color-chat-robot-bg-to: rgba(10, 50, 85, 0.8);
   --color-chat-body-from: #f8f9fa;
   --color-chat-body-to: #edf2f7;
   

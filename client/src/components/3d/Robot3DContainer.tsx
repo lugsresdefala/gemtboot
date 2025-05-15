@@ -59,12 +59,12 @@ export default function Robot3DContainer({
       <img 
         src={robotImage} 
         alt="GEM-T Robot" 
-        className={cn("w-auto h-auto max-w-full max-h-[80%] object-contain", animation)}
+        className={cn("w-auto h-auto max-w-[120%] max-h-[120%] object-contain transform scale-125", animation)}
         style={{ 
-          filter: state === 'speaking' ? 'drop-shadow(var(--glow-pink-trans))' :
-                 state === 'processing' ? 'drop-shadow(var(--glow-blue-trans))' :
-                 state === 'listening' ? 'drop-shadow(var(--glow-white-trans))' :
-                 'drop-shadow(var(--glow-blue-trans))'
+          filter: state === 'speaking' ? 'drop-shadow(0 0 8px rgba(255, 209, 220, 0.7))' :
+                 state === 'processing' ? 'drop-shadow(0 0 8px rgba(10, 50, 85, 0.7))' :
+                 state === 'listening' ? 'drop-shadow(0 0 8px rgba(255, 255, 255, 0.7))' :
+                 'drop-shadow(0 0 8px rgba(10, 50, 85, 0.6))'
         }}
       />
     </div>

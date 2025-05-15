@@ -134,10 +134,10 @@ Selecione um dos tópicos acima ou me faça uma pergunta sobre cuidados em saúd
         <div className="w-full flex justify-center items-center p-4 bg-gradient-to-b from-[var(--color-chat-robot-bg-from)] to-[var(--color-chat-robot-bg-to)]">
           <div className="flex flex-col items-center">
             <Robot3D 
-              width={350} 
-              height={350} 
+              width={300} 
+              height={300} 
               state={isLoading ? "speaking" : "idle"}
-              className="transform scale-125"
+              className=""
             />
             <h3 className="text-white font-medium text-center mt-0">GEM-T</h3>
             <p className="text-white/70 text-xs text-center">Assistente de informações - diversidadebarrafunda.org</p>
@@ -146,7 +146,7 @@ Selecione um dos tópicos acima ou me faça uma pergunta sobre cuidados em saúd
       )}
       
       {/* Chat Messages */}
-      <div className={`chat-height overflow-y-auto px-5 py-6 custom-scrollbar bg-gradient-to-b from-[var(--color-chat-body-from)] to-[var(--color-chat-body-to)] ${showRobot3D ? 'h-[450px]' : ''}`}>
+      <div className={`chat-height overflow-y-auto px-5 py-6 custom-scrollbar bg-gradient-to-b from-[var(--color-chat-body-from)] to-[var(--color-chat-body-to)] ${showRobot3D ? 'h-[380px]' : ''}`}>
         <div className="max-w-4xl mx-auto">
           {/* Welcome message if no messages yet */}
           {messages.length === 0 && (
