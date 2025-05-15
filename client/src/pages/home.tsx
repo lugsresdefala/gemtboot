@@ -66,12 +66,12 @@ export default function Home() {
             
             {/* Chat section com design visual moderno */}
             <div className="relative">
-              <div className="absolute inset-0 bg-gradient-to-b from-transparent to-indigo-950 -z-10"></div>
+              <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#062140] -z-10"></div>
               <div className="container-app">
                 <div className="max-w-5xl mx-auto">
-                  <div className="relative p-1 rounded-2xl bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 shadow-2xl">
-                    <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 opacity-30 blur-xl -z-10 transform scale-105"></div>
-                    <div className="bg-gradient-to-b from-indigo-950 to-purple-900 rounded-xl overflow-hidden border border-white/5">
+                  <div className="relative p-1 rounded-2xl bg-gradient-to-r from-[#FFD1DC] via-white to-[#0A3255] shadow-2xl">
+                    <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-[#FFD1DC] via-white to-[#0A3255] opacity-30 blur-xl -z-10 transform scale-105"></div>
+                    <div className="bg-gradient-to-b from-[#062140] to-[#0A3255] rounded-xl overflow-hidden border border-white/5">
                       <ChatInterface />
                     </div>
                   </div>
@@ -81,19 +81,19 @@ export default function Home() {
           </div>
           
           {/* FAQ section com novo design */}
-          <div className="relative bg-indigo-950/80 backdrop-blur-md py-16 md:py-24">
+          <div className="relative bg-[#062140]/80 backdrop-blur-md py-16 md:py-24">
             <div className="container-app space-y-component">
               <div className="text-center mb-12">
-                <span className="inline-flex items-center px-3 py-1 rounded-full bg-white/10 backdrop-blur-sm text-indigo-200 text-xs font-medium tracking-wider uppercase border border-white/10 mb-4">
+                <span className="inline-flex items-center px-3 py-1 rounded-full bg-white/10 backdrop-blur-sm text-[#FFD1DC] text-xs font-medium tracking-wider uppercase border border-white/10 mb-4">
                   Suporte & Auxílio
                 </span>
-                <h2 className="text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-indigo-200 to-pink-200">
+                <h2 className="text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-[#FFD1DC]">
                   Perguntas Frequentes
                 </h2>
               </div>
               
               <div className="relative">
-                <div className="absolute -top-40 -right-20 w-72 h-72 bg-pink-500 rounded-full mix-blend-multiply filter blur-3xl opacity-10 pointer-events-none"></div>
+                <div className="absolute -top-40 -right-20 w-72 h-72 bg-[#FFD1DC] rounded-full mix-blend-multiply filter blur-3xl opacity-10 pointer-events-none"></div>
                 <div className="relative z-10">
                   <FAQSection />
                 </div>
