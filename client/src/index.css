@@ -6,62 +6,57 @@
 @tailwind utilities;
 
 :root {
-  /* Sistema de cores com tons mais profissionais - inspirado nas cores da bandeira trans, mas mais sóbrios */
-  /* Tom azul mais escuro e menos saturado */
-  --color-primary-hue: 212;
-  --color-primary-saturation: 70%;
-  --color-primary-lightness-base: 35%;
+  --color-primary-hue: 220;
+  --color-primary-saturation: 85%;
+  --color-primary-lightness-base: 40%;
 
-  --color-primary-100: hsl(var(--color-primary-hue), var(--color-primary-saturation), 97%);
-  --color-primary-200: hsl(var(--color-primary-hue), var(--color-primary-saturation), 87%);
-  --color-primary-300: hsl(var(--color-primary-hue), var(--color-primary-saturation), 77%);
-  --color-primary-400: hsl(var(--color-primary-hue), var(--color-primary-saturation), 67%);
+  --color-primary-100: hsl(var(--color-primary-hue), var(--color-primary-saturation), 95%);
+  --color-primary-200: hsl(var(--color-primary-hue), var(--color-primary-saturation), 85%);
+  --color-primary-300: hsl(var(--color-primary-hue), var(--color-primary-saturation), 75%);
+  --color-primary-400: hsl(var(--color-primary-hue), var(--color-primary-saturation), 65%);
   --color-primary-500: hsl(var(--color-primary-hue), var(--color-primary-saturation), var(--color-primary-lightness-base));
-  --color-primary-600: hsl(var(--color-primary-hue), calc(var(--color-primary-saturation) + 5%), calc(var(--color-primary-lightness-base) - 8%));
-  --color-primary-700: hsl(var(--color-primary-hue), calc(var(--color-primary-saturation) + 7%), calc(var(--color-primary-lightness-base) - 16%));
-  --color-primary-800: hsl(var(--color-primary-hue), calc(var(--color-primary-saturation) + 10%), calc(var(--color-primary-lightness-base) - 24%));
-  --color-primary-900: hsl(var(--color-primary-hue), calc(var(--color-primary-saturation) + 12%), calc(var(--color-primary-lightness-base) - 32%));
+  --color-primary-600: hsl(var(--color-primary-hue), calc(var(--color-primary-saturation) + 10%), calc(var(--color-primary-lightness-base) - 8%));
+  --color-primary-700: hsl(var(--color-primary-hue), calc(var(--color-primary-saturation) + 12%), calc(var(--color-primary-lightness-base) - 16%));
+  --color-primary-800: hsl(var(--color-primary-hue), calc(var(--color-primary-saturation) + 15%), calc(var(--color-primary-lightness-base) - 24%));
+  --color-primary-900: hsl(var(--color-primary-hue), calc(var(--color-primary-saturation) + 17%), calc(var(--color-primary-lightness-base) - 32%));
 
-  /* Rosa mais escuro e menos saturado */
   --color-secondary-hue: 345;
   --color-secondary-saturation: 60%;
-  --color-secondary-lightness-base: 45%;
+  --color-secondary-lightness-base: 85%;
 
-  --color-secondary-100: hsl(var(--color-secondary-hue), var(--color-secondary-saturation), 97%);
-  --color-secondary-200: hsl(var(--color-secondary-hue), var(--color-secondary-saturation), 87%);
-  --color-secondary-300: hsl(var(--color-secondary-hue), var(--color-secondary-saturation), 77%);
-  --color-secondary-400: hsl(var(--color-secondary-hue), var(--color-secondary-saturation), 67%);
+  --color-secondary-100: hsl(var(--color-secondary-hue), var(--color-secondary-saturation), 95%);
+  --color-secondary-200: hsl(var(--color-secondary-hue), var(--color-secondary-saturation), 90%);
+  --color-secondary-300: hsl(var(--color-secondary-hue), var(--color-secondary-saturation), 85%);
+  --color-secondary-400: hsl(var(--color-secondary-hue), var(--color-secondary-saturation), 80%);
   --color-secondary-500: hsl(var(--color-secondary-hue), var(--color-secondary-saturation), var(--color-secondary-lightness-base));
-  --color-secondary-600: hsl(var(--color-secondary-hue), calc(var(--color-secondary-saturation) + 5%), calc(var(--color-secondary-lightness-base) - 8%));
-  --color-secondary-700: hsl(var(--color-secondary-hue), calc(var(--color-secondary-saturation) + 7%), calc(var(--color-secondary-lightness-base) - 16%));
-  --color-secondary-800: hsl(var(--color-secondary-hue), calc(var(--color-secondary-saturation) + 10%), calc(var(--color-secondary-lightness-base) - 24%));
-  --color-secondary-900: hsl(var(--color-secondary-hue), calc(var(--color-secondary-saturation) + 12%), calc(var(--color-secondary-lightness-base) - 32%));
+  --color-secondary-600: hsl(var(--color-secondary-hue), calc(var(--color-secondary-saturation) + 10%), calc(var(--color-secondary-lightness-base) - 5%));
+  --color-secondary-700: hsl(var(--color-secondary-hue), calc(var(--color-secondary-saturation) + 12%), calc(var(--color-secondary-lightness-base) - 10%));
+  --color-secondary-800: hsl(var(--color-secondary-hue), calc(var(--color-secondary-saturation) + 15%), calc(var(--color-secondary-lightness-base) - 15%));
+  --color-secondary-900: hsl(var(--color-secondary-hue), calc(var(--color-secondary-saturation) + 17%), calc(var(--color-secondary-lightness-base) - 20%));
 
-  /* Cinza claro para acentuação */
   --color-accent-hue: 210;
-  --color-accent-saturation: 15%;
-  --color-accent-lightness-base: 98%;
+  --color-accent-saturation: 20%;
+  --color-accent-lightness-base: 95%;
 
   --ease-bounce: cubic-bezier(0.175, 0.885, 0.32, 1.275);
   --ease-out-expo: cubic-bezier(0.19, 1, 0.22, 1);
   --ease-in-out-sine: cubic-bezier(0.445, 0.05, 0.55, 0.95);
   --spring-physics: cubic-bezier(0.34, 1.56, 0.64, 1);
 
-  --glow-blue: 0 0 10px hsla(var(--color-secondary-hue), 100%, 70%, 0.7),
-               0 0 20px hsla(var(--color-secondary-hue), 100%, 70%, 0.4),
-               0 0 30px hsla(var(--color-secondary-hue), 100%, 70%, 0.2);
-  --glow-purple: 0 0 10px hsla(var(--color-primary-hue), 100%, 70%, 0.7),
-                 0 0 20px hsla(var(--color-primary-hue), 100%, 70%, 0.4),
-                 0 0 30px hsla(var(--color-primary-hue), 100%, 70%, 0.2);
-  --glow-cyan: 0 0 10px hsla(var(--color-accent-hue), 100%, 70%, 0.7),
-               0 0 20px hsla(var(--color-accent-hue), 100%, 70%, 0.4),
-               0 0 30px hsla(var(--color-accent-hue), 100%, 70%, 0.2);
+  --glow-blue: 0 0 12px hsla(var(--color-primary-hue), 100%, 70%, 0.8),
+               0 0 25px hsla(var(--color-primary-hue), 100%, 70%, 0.5),
+               0 0 35px hsla(var(--color-primary-hue), 100%, 70%, 0.3);
+  --glow-blue-light: 0 0 12px hsla(var(--color-secondary-hue), 100%, 95%, 0.8),
+                     0 0 25px hsla(var(--color-secondary-hue), 100%, 95%, 0.5),
+                     0 0 35px hsla(var(--color-secondary-hue), 100%, 95%, 0.3);
+  --glow-cyan: 0 0 12px hsla(var(--color-accent-hue), 100%, 70%, 0.8),
+               0 0 25px hsla(var(--color-accent-hue), 100%, 70%, 0.5),
+               0 0 35px hsla(var(--color-accent-hue), 100%, 70%, 0.3);
 
-  --depth-shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.1), 0 1px 4px rgba(0, 0, 0, 0.1);
-  --depth-shadow-md: 0 4px 8px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.08);
-  --depth-shadow-lg: 0 15px 30px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.12);
+  --depth-shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1), 0 2px 5px rgba(0, 0, 0, 0.1);
+  --depth-shadow-md: 0 4px 12px rgba(0, 0, 0, 0.15), 0 3px 7px rgba(0, 0, 0, 0.12);
+  --depth-shadow-lg: 0 20px 40px rgba(0, 0, 0, 0.25), 0 7px 20px rgba(0, 0, 0, 0.15);
 }
-
 .typing-indicator {
   display: inline-flex;
   align-items: center;

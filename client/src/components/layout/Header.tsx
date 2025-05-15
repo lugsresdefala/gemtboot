@@ -9,17 +9,17 @@ export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
   
   return (
-    <header className="bg-[#4A148C] shadow-md">
+    <header className="bg-[#2A248C] shadow-md">
       <div className="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
         {/* Logo/Title */}
         <Link href="/">
           <div className="flex items-center gap-3 cursor-pointer group">
-            <div className="p-2 bg-white/10 rounded-lg shadow-inner transform transition-all duration-300 group-hover:scale-110">
+            <div className="p-2 bg-pink/5 rounded-lg shadow-inner transform transition-all duration-300 group-hover:scale-110">
               <RobotAvatar size="md" />
             </div>
             
             <div>
-              <h1 className="text-[#E1BEE7] font-bold text-xl tracking-wide">GEM-T</h1>
+              <h1 className="text-[#a1BEE7] font-bold text-xl tracking-wide">GEM-T</h1>
               <p className="text-purple-200/70 text-xs font-light">Diversidade Barra Funda</p>
             </div>
           </div>
