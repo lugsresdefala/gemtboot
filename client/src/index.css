@@ -37,17 +37,17 @@
   --ring: 212 70% 35%;
   --radius: 0.5rem;
   
-  /* App-specific color palette */
-  --color-primary: #2A248C;       /* Deep purple - brand primary */
-  --color-primary-light: #3D3AAE; /* Lighter purple - hover states */
-  --color-primary-dark: #201C6E;  /* Darker purple - active states */
+  /* App-specific color palette - SEM ROXO */
+  --color-primary: #1A73E8;       /* Azul - brand primary */
+  --color-primary-light: #4285F4; /* Azul mais claro - hover states */
+  --color-primary-dark: #0D47A1;  /* Azul escuro - active states */
   
-  --color-secondary: #4A148C;     /* Rich purple - secondary accent */
-  --color-secondary-light: #6A1B9A; /* Lighter secondary - hover states */
-  --color-secondary-dark: #38106E; /* Darker secondary - active states */
+  --color-secondary: #00796B;     /* Verde teal - secondary accent */
+  --color-secondary-light: #009688; /* Verde teal mais claro - hover states */
+  --color-secondary-dark: #004D40; /* Verde teal escuro - active states */
   
-  --color-accent: #a1BEE7;        /* Blue accent for highlights */
-  --color-accent-light: #BFD4F0;  /* Lighter accent */
+  --color-accent: #FF9800;        /* Laranja accent for highlights */
+  --color-accent-light: #FFB74D;  /* Laranja mais claro */
   
   --color-success: #2E7D32;       /* Success green */
   --color-warning: #F57C00;       /* Warning orange */
