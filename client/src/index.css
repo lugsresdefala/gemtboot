@@ -58,18 +58,18 @@
   --color-header-text: var(--color-accent);
   --color-footer-bg: var(--color-secondary);
   
-  --color-chat-header-from: #1A365D;
-  --color-chat-header-to: #2D3748;
-  --color-chat-robot-bg-from: #1A365D;
-  --color-chat-robot-bg-to: #2B4C7E;
+  --color-chat-header-from: var(--color-primary);
+  --color-chat-header-to: var(--color-primary-dark);
+  --color-chat-robot-bg-from: var(--color-primary-dark);
+  --color-chat-robot-bg-to: var(--color-primary);
   --color-chat-body-from: #f8f9fa;
   --color-chat-body-to: #edf2f7;
   
   --color-faq-question: var(--color-secondary);
-  --color-faq-button-bg: #F3E5F5;
-  --color-faq-button-active: var(--color-secondary-light);
-  --color-faq-source-bg: #F3E5F5;
-  --color-faq-source-text: var(--color-secondary-light);
+  --color-faq-button-bg: #FFF5F8;
+  --color-faq-button-active: var(--color-secondary);
+  --color-faq-source-bg: rgba(255, 209, 220, 0.2);
+  --color-faq-source-text: var(--color-primary);
 
   /* ==== TYPOGRAPHY SYSTEM ==== */
   --font-family-primary: 'Inter', system-ui, sans-serif;

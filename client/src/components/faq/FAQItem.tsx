@@ -19,15 +19,15 @@ export default function FAQItem({ faq }: FAQItemProps) {
         aria-expanded={isOpen}
       >
         <h3 className={cn(
-          "font-medium text-indigo-200 leading-tight pr-4 transition-all duration-300 group-hover:text-white",
-          isOpen && "text-pink-300"
+          "font-medium text-white/90 leading-tight pr-4 transition-all duration-300 group-hover:text-white",
+          isOpen && "text-[#FFD1DC]"
         )}>
           {faq.question}
         </h3>
         
         <div className={cn(
-          "flex-shrink-0 h-9 w-9 rounded-full bg-indigo-500/20 flex items-center justify-center transition-all duration-500 border border-white/10",
-          isOpen ? "bg-gradient-to-r from-pink-500 to-indigo-500 text-white transform rotate-[360deg]" : "group-hover:bg-indigo-500/40"
+          "flex-shrink-0 h-9 w-9 rounded-full bg-[#0A3255]/30 flex items-center justify-center transition-all duration-500 border border-white/10",
+          isOpen ? "bg-gradient-to-r from-[#FFD1DC] to-[#0A3255] text-white transform rotate-[360deg]" : "group-hover:bg-[#0A3255]/50"
         )}>
           <ChevronDown 
             className={cn(
@@ -45,19 +45,19 @@ export default function FAQItem({ faq }: FAQItemProps) {
           isOpen ? "max-h-[800px]" : "max-h-0"
         )}
       >
-        <div className="p-6 border-t border-white/5 bg-gradient-to-b from-purple-900/30 to-indigo-900/30">
-          <div className="text-indigo-100 whitespace-pre-line leading-relaxed prose prose-indigo prose-p:leading-relaxed max-w-none">
+        <div className="p-6 border-t border-white/5 bg-gradient-to-b from-[#0A3255]/30 to-[#062140]/30">
+          <div className="text-white/90 whitespace-pre-line leading-relaxed prose prose-invert prose-p:leading-relaxed max-w-none">
             <ReactMarkdown>{faq.answer}</ReactMarkdown>
           </div>
           
           {faq.source && (
             <div className="mt-5 p-4 glass rounded-xl border border-white/5 animate-pulse-glow">
-              <div className="text-indigo-200 flex items-center">
-                <div className="bg-gradient-to-r from-pink-500 to-indigo-500 p-2 rounded-lg mr-3 text-white">
+              <div className="text-white/90 flex items-center">
+                <div className="bg-gradient-to-r from-[#FFD1DC] to-[#0A3255] p-2 rounded-lg mr-3 text-white">
                   <i className="fas fa-info-circle"></i>
                 </div>
                 <div>
-                  <span className="text-indigo-300 text-sm">Fonte</span>
+                  <span className="text-[#FFD1DC] text-sm">Fonte</span>
                   <span className="block text-white/90 font-medium">{faq.source}</span>
                 </div>
               </div>
