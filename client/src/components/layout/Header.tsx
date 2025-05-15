@@ -18,19 +18,15 @@ export default function Header() {
         <div className="container-app py-2 flex-between">
           {/* Logo/Title com design renovado */}
           <Link href="/">
-            <div className="flex items-center gap-4 cursor-pointer group">
-              <div className="p-0.1 rounded-2xl hover:animate-pulse transition-all duration-500">
-                <div className="p-0.01 rounded-50">
-                  <RobotAvatar size="sm" className="transform hover:saturate-1.1 brightness-1.2 transition-all duration-300" />
-                </div>
+            <div className="flex items-center gap-3 cursor-pointer group">
+              <div className="rounded-full overflow-hidden">
+                <RobotAvatar size="md" className="transform hover:brightness-110 transition-all duration-300" />
               </div>
               
-              <div>
-                <p className="text-white/90 text-xs font-light tracking-wide">
-                  <span className="backdrop-blur-md bg-gradient-to-r from-[#FFD1EC]/5 to-white/10 px-2 py-0.5 rounded-full">
-                    Assistente Virtual
-                  </span>
-                </p>
+              <div className="flex items-center">
+                <span className="text-white text-sm font-medium">
+                  Assistente Virtual
+                </span>
               </div>
             </div>
           </Link>
@@ -67,14 +63,12 @@ export default function Header() {
               <div className="flex flex-col space-y-3 mt-10">
                 <div onClick={() => setIsOpen(false)} className="mb-4">
                   <div className="flex justify-center">
-                    <div className="p-2 rounded-2xl mb-4">
-                      <div className="backdrop-blur-md rounded-xl">
-                        <RobotAvatar size="md" />
-                      </div>
+                    <div className="mb-4">
+                      <RobotAvatar size="lg" />
                     </div>
                   </div>
-                  <h2 className="text-center text-transparent bg-clip-text bg-gradient-to-r from-[#FFD1DC] to-white font-bold text-xl mb-6">
-                    Assistente
+                  <h2 className="text-center text-white font-medium text-lg mb-6">
+                    Assistente Virtual
                   </h2>
                 </div>
                 

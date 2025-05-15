@@ -11,9 +11,9 @@ export default function RobotAvatar({
   className 
 }: RobotAvatarProps) {
   const sizeClasses = {
-    sm: "w-6 h-6", // Made smaller
-    md: "w-8 h-8", // Made smaller
-    lg: "w-10 h-10" // Made smaller
+    sm: "w-8 h-8", // Tamanho ajustado
+    md: "w-10 h-10", // Tamanho ajustado
+    lg: "w-12 h-12" // Tamanho ajustado
   };
   
   return (
