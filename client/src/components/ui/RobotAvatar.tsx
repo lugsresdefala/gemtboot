@@ -1,5 +1,5 @@
 import { cn } from "@/lib/utils";
-import gemtLogo from "@assets/ChatGPT Image 12 de mai. de 2025, 11_49_15.png";
+import gemtLogo from "@assets/gemtlogo.png";
 
 interface RobotAvatarProps {
   size?: "sm" | "md" | "lg";
