@@ -10,11 +10,11 @@ export default function Header() {
   
   return (
     <header className="bg-[var(--color-header-bg)] shadow-md">
-      <div className="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+      <div className="container-app py-4 flex-between">
         {/* Logo/Title */}
         <Link href="/">
           <div className="flex items-center gap-3 cursor-pointer group">
-            <div className="p-2 bg-pink/5 rounded-lg shadow-inner transform transition-all duration-300 group-hover:scale-110">
+            <div className="p-2 bg-pink/5 rounded-lg shadow-inner hover-scale">
               <RobotAvatar size="md" />
             </div>
             

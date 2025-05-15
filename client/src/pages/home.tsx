@@ -32,20 +32,20 @@ export default function Home() {
         <Header />
         
         <main className="flex-grow">
-          <div className="max-w-6xl mx-auto px-4 sm:px-6 py-10">
-            <div className="mb-8 text-center">
-              <h1 className="text-3xl font-bold text-[var(--color-footer-bg)] mb-3">Informações sobre cuidados em saúde para pessoas trans</h1>
+          <div className="container-app layout-section space-y-section">
+            <div className="text-center space-y-element">
+              <h1 className="heading-primary mb-3">Informações sobre cuidados em saúde para pessoas trans</h1>
               <p className="text-purple-700 max-w-3xl mx-auto text-lg font-light">
                 Tire suas dúvidas sobre fluxos, critérios e acesso a cuidados em saúde para pessoas trans no SUS.
               </p>
             </div>
             
-            <div className="mb-12">
+            <div>
               <ChatInterface />
             </div>
             
-            <div className="mb-10">
-              <h2 className="text-2xl font-bold text-[var(--color-footer-bg)] mb-6 text-center">
+            <div className="space-y-component">
+              <h2 className="heading-secondary text-center">
                 Perguntas Frequentes
               </h2>
               <FAQSection />

@@ -43,9 +43,9 @@ Selecione um dos tópicos acima ou me faça uma pergunta sobre cuidados em saúd
   }, [messages]);
   
   return (
-    <div className="bg-white rounded-md shadow-md overflow-hidden border border-gray-200">
+    <div className="card overflow-hidden">
       {/* Top bar with title - Design mais sóbrio e profissional */}
-      <div className="p-4 bg-gradient-to-r from-[var(--color-chat-header-from)] to-[var(--color-chat-header-to)] text-white flex justify-between items-center">
+      <div className="p-4 bg-gradient-to-r from-[var(--color-chat-header-from)] to-[var(--color-chat-header-to)] text-white flex-between">
         <div className="flex items-center space-x-3">
           <div 
             className="bg-white/10 p-2 rounded-md shadow-inner cursor-pointer transition-all hover:bg-white/15"

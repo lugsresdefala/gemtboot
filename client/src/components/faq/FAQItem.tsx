@@ -12,7 +12,7 @@ export default function FAQItem({ faq }: FAQItemProps) {
   const [isOpen, setIsOpen] = useState(false);
   
   return (
-    <div className="bg-white rounded-xl shadow-md overflow-hidden border border-purple-100 hover:shadow-lg transition-shadow">
+    <div className="card-xl overflow-hidden border-purple-100 hover:shadow-lg transition-shadow">
       <button 
         className="w-full text-left px-5 py-4 flex justify-between items-center focus:outline-none focus:ring-2 focus:ring-[var(--color-faq-button-active)] focus:ring-inset"
         onClick={() => setIsOpen(!isOpen)}

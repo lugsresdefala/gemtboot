@@ -4,7 +4,7 @@ import RobotAvatar from "@/components/ui/RobotAvatar";
 export default function Footer() {
   return (
     <footer className="bg-[var(--color-footer-bg)] text-purple-200/80 py-10">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6">
+      <div className="container-app">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
           <div>
             <div className="flex items-center space-x-3 mb-5">
