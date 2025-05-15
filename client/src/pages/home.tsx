@@ -28,27 +28,76 @@ export default function Home() {
         `}
       </Script>
       
-      <div className="flex flex-col min-h-screen bg-gradient-to-b from-purple-50 to-white">
+      <div className="flex flex-col min-h-screen bg-gradient-to-b from-indigo-900 via-purple-800 to-pink-500 text-white relative overflow-hidden">
+        {/* Partículas e efeitos de fundo decorativos */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <div className="absolute top-20 left-10 w-64 h-64 bg-pink-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob"></div>
+          <div className="absolute top-80 right-10 w-80 h-80 bg-indigo-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-2000"></div>
+          <div className="absolute bottom-40 left-1/4 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-4000"></div>
+          
+          {/* Grid pattern overlay */}
+          <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0zNiAxOGMwLTkuOTQtOC4wNi0xOC0xOC0xOHY2YTEyIDEyIDAgMCAxIDEyIDEyaC02eiIgZmlsbD0icmdiYSgyNTUsMjU1LDI1NSwwLjAzKSIvPjwvZz48L3N2Zz4=')] opacity-20"></div>
+        </div>
+        
         <Header />
         
-        <main className="flex-grow">
-          <div className="container-app layout-section space-y-section">
-            <div className="text-center space-y-element">
-              <h1 className="heading-primary mb-3">Informações sobre cuidados em saúde para pessoas trans</h1>
-              <p className="text-purple-700 max-w-3xl mx-auto text-lg font-light">
-                Tire suas dúvidas sobre fluxos, critérios e acesso a cuidados em saúde para pessoas trans no SUS.
-              </p>
+        <main className="flex-grow relative z-10">
+          {/* Hero section com design mais dramático */}
+          <div className="relative pt-12 pb-16 md:pt-20 md:pb-24 overflow-hidden">
+            <div className="container-app">
+              <div className="max-w-4xl mx-auto">
+                <div className="text-center mb-12 md:mb-16">
+                  <div className="inline-block mb-4">
+                    <span className="inline-flex items-center px-3 py-1 rounded-full bg-white/10 backdrop-blur-sm text-pink-200 text-xs font-medium tracking-wider uppercase border border-white/10">
+                      ✨ Plataforma Inclusiva
+                    </span>
+                  </div>
+                  
+                  <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight bg-clip-text text-transparent bg-gradient-to-r from-white via-pink-100 to-indigo-200 animate-gradient">
+                    Acolhimento e Informação para Pessoas Trans
+                  </h1>
+                  
+                  <p className="text-xl md:text-2xl text-indigo-100/90 max-w-3xl mx-auto font-light leading-relaxed">
+                    Informações acessíveis sobre fluxos, critérios e cuidados em saúde para pessoas trans no SUS.
+                  </p>
+                </div>
+              </div>
             </div>
             
-            <div>
-              <ChatInterface />
+            {/* Chat section com design visual moderno */}
+            <div className="relative">
+              <div className="absolute inset-0 bg-gradient-to-b from-transparent to-indigo-950 -z-10"></div>
+              <div className="container-app">
+                <div className="max-w-5xl mx-auto">
+                  <div className="relative p-1 rounded-2xl bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 shadow-2xl">
+                    <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 opacity-30 blur-xl -z-10 transform scale-105"></div>
+                    <div className="bg-gradient-to-b from-indigo-950 to-purple-900 rounded-xl overflow-hidden border border-white/5">
+                      <ChatInterface />
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-            
-            <div className="space-y-component">
-              <h2 className="heading-secondary text-center">
-                Perguntas Frequentes
-              </h2>
-              <FAQSection />
+          </div>
+          
+          {/* FAQ section com novo design */}
+          <div className="relative bg-indigo-950/80 backdrop-blur-md py-16 md:py-24">
+            <div className="container-app space-y-component">
+              <div className="text-center mb-12">
+                <span className="inline-flex items-center px-3 py-1 rounded-full bg-white/10 backdrop-blur-sm text-indigo-200 text-xs font-medium tracking-wider uppercase border border-white/10 mb-4">
+                  Suporte & Auxílio
+                </span>
+                <h2 className="text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-indigo-200 to-pink-200">
+                  Perguntas Frequentes
+                </h2>
+              </div>
+              
+              <div className="relative">
+                <div className="absolute -top-40 -right-20 w-72 h-72 bg-pink-500 rounded-full mix-blend-multiply filter blur-3xl opacity-10 pointer-events-none"></div>
+                <div className="relative z-10">
+                  <FAQSection />
+                </div>
+              </div>
             </div>
           </div>
         </main>

@@ -12,20 +12,26 @@ export default function FAQItem({ faq }: FAQItemProps) {
   const [isOpen, setIsOpen] = useState(false);
   
   return (
-    <div className="card-xl overflow-hidden border-purple-100 hover:shadow-lg transition-shadow">
+    <div className="glass-dark backdrop-blur-md border border-white/10 rounded-xl overflow-hidden hover:border-white/20 transition-all duration-300">
       <button 
-        className="w-full text-left px-5 py-4 flex justify-between items-center focus:outline-none focus:ring-2 focus:ring-[var(--color-faq-button-active)] focus:ring-inset"
+        className="w-full text-left px-6 py-5 flex justify-between items-center focus:outline-none focus:ring-2 focus:ring-pink-500/50 group"
         onClick={() => setIsOpen(!isOpen)}
         aria-expanded={isOpen}
       >
-        <h3 className="font-medium text-[var(--color-faq-question)] leading-tight pr-4">{faq.question}</h3>
+        <h3 className={cn(
+          "font-medium text-indigo-200 leading-tight pr-4 transition-all duration-300 group-hover:text-white",
+          isOpen && "text-pink-300"
+        )}>
+          {faq.question}
+        </h3>
+        
         <div className={cn(
-          "flex-shrink-0 h-8 w-8 rounded-full bg-[var(--color-faq-button-bg)] flex items-center justify-center transition-all duration-300",
-          isOpen && "bg-[var(--color-faq-button-active)] text-white transform scale-110"
+          "flex-shrink-0 h-9 w-9 rounded-full bg-indigo-500/20 flex items-center justify-center transition-all duration-500 border border-white/10",
+          isOpen ? "bg-gradient-to-r from-pink-500 to-indigo-500 text-white transform rotate-[360deg]" : "group-hover:bg-indigo-500/40"
         )}>
           <ChevronDown 
             className={cn(
-              "transition-transform duration-300",
+              "transition-transform duration-500",
               isOpen && "transform rotate-180"
             )} 
             size={18}
@@ -35,22 +41,25 @@ export default function FAQItem({ faq }: FAQItemProps) {
       
       <div 
         className={cn(
-          "transition-all duration-300 overflow-hidden",
+          "transition-all duration-500 overflow-hidden",
           isOpen ? "max-h-[800px]" : "max-h-0"
         )}
       >
-        <div className="p-5 border-t border-purple-50 bg-[var(--color-faq-button-bg)]/20">
-          <div className="text-slate-700 whitespace-pre-line leading-relaxed prose prose-purple prose-p:leading-relaxed max-w-none">
-            {faq.answer}
+        <div className="p-6 border-t border-white/5 bg-gradient-to-b from-purple-900/30 to-indigo-900/30">
+          <div className="text-indigo-100 whitespace-pre-line leading-relaxed prose prose-indigo prose-p:leading-relaxed max-w-none">
+            <ReactMarkdown>{faq.answer}</ReactMarkdown>
           </div>
           
           {faq.source && (
-            <div className="mt-4 p-4 bg-white rounded-xl border border-purple-100 shadow-sm">
-              <div className="text-slate-600 flex items-center">
-                <div className="bg-[var(--color-faq-source-bg)] p-2 rounded-lg mr-3 text-[var(--color-faq-source-text)]">
+            <div className="mt-5 p-4 glass rounded-xl border border-white/5 animate-pulse-glow">
+              <div className="text-indigo-200 flex items-center">
+                <div className="bg-gradient-to-r from-pink-500 to-indigo-500 p-2 rounded-lg mr-3 text-white">
                   <i className="fas fa-info-circle"></i>
                 </div>
-                <span>Fonte: <span className="text-[var(--color-faq-question)] font-medium">{faq.source}</span></span>
+                <div>
+                  <span className="text-indigo-300 text-sm">Fonte</span>
+                  <span className="block text-white/90 font-medium">{faq.source}</span>
+                </div>
               </div>
             </div>
           )}

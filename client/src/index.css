@@ -577,6 +577,83 @@
     animation: scaleIn 0.4s var(--ease-bounce) forwards;
   }
   
+  /* Animações de blob para efeitos visuais modernos */
+  .animate-blob {
+    animation: blob 7s infinite;
+  }
+  
+  .animation-delay-2000 {
+    animation-delay: 2s;
+  }
+  
+  .animation-delay-4000 {
+    animation-delay: 4s;
+  }
+  
+  @keyframes blob {
+    0% {
+      transform: translate(0px, 0px) scale(1);
+    }
+    33% {
+      transform: translate(30px, -50px) scale(1.1);
+    }
+    66% {
+      transform: translate(-20px, 20px) scale(0.9);
+    }
+    100% {
+      transform: translate(0px, 0px) scale(1);
+    }
+  }
+  
+  /* Animação para texto gradiente */
+  .animate-gradient {
+    background-size: 200% 200%;
+    animation: gradient-shift 8s ease infinite;
+  }
+  
+  @keyframes gradient-shift {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  /* Animação de destaque */
+  .animate-pulse-glow {
+    animation: pulse-glow 2s ease-in-out infinite alternate;
+  }
+  
+  @keyframes pulse-glow {
+    from {
+      box-shadow: 0 0 10px -10px rgba(255, 255, 255, 0.5);
+    }
+    to {
+      box-shadow: 0 0 20px 5px rgba(255, 255, 255, 0.2);
+    }
+  }
+  
+  /* Animação de flutuação para imagens e cartões */
+  .animate-floating {
+    animation: floating 6s ease-in-out infinite;
+  }
+  
+  @keyframes floating {
+    0% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-15px);
+    }
+    100% {
+      transform: translateY(0px);
+    }
+  }
+  
   /* Utilitários de espaçamento vertical consistente */
   .space-y-section {
     @apply space-y-10 md:space-y-16;
@@ -605,6 +682,37 @@
   
   .hover-glow:hover {
     filter: drop-shadow(var(--glow-blue-trans));
+  }
+  
+  /* Glassmorphism */
+  .glass {
+    @apply bg-white/10 backdrop-blur-md border border-white/20;
+  }
+  
+  .glass-dark {
+    @apply bg-black/30 backdrop-blur-md border border-white/10;
+  }
+  
+  /* Efeitos de cartão com borda gradiente */
+  .gradient-border {
+    position: relative;
+    border-radius: 0.75rem; /* Igual a rounded-xl */
+    background-clip: padding-box;
+    padding: 1px;
+    background: linear-gradient(to right, #f472b6, #4f46e5);
+  }
+  
+  .gradient-border::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    margin: -2px;
+    border-radius: inherit;
+    background: linear-gradient(to right, #f472b6, #4f46e5);
   }
 
   .grid-auto-fit {
