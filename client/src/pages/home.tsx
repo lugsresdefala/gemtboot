@@ -2,7 +2,6 @@ import { Helmet } from "react-helmet";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import ChatInterface from "@/components/chat/ChatInterface";
-import FAQSection from "@/components/faq/FAQSection";
 import { Script } from "@/components/ui/script";
 
 export default function Home() {
@@ -40,15 +39,8 @@ export default function Home() {
               </p>
             </div>
             
-            <div className="mb-12">
+            <div>
               <ChatInterface />
-            </div>
-            
-            <div className="mb-10">
-              <h2 className="text-2xl font-bold text-[#4A148C] mb-6 text-center">
-                Perguntas Frequentes
-              </h2>
-              <FAQSection />
             </div>
           </div>
         </main>
