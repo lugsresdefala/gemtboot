@@ -20,16 +20,16 @@ export default function ChatInterface() {
   const welcomeMessage: Message = {
     id: 0,
     role: "assistant",
-    content: `Olá! Eu sou a GEM-T, assistente virtual do Projeto Diversidade Barra Funda. 
+    content: `Olá! Sou a assistente virtual para informações sobre cuidados em saúde para pessoas trans no SUS.
 
-Estou aqui para ajudar com informações sobre cuidados em saúde para pessoas trans no SUS. Posso fornecer informações sobre:
+Posso ajudar com:
 
-• Fluxos de atendimento e caminhos no sistema de saúde
-• Critérios e documentos necessários para intervenções de mudança corporal
+• Fluxos de atendimento no sistema de saúde
+• Critérios e documentos para intervenções de mudança corporal
 • Locais de atendimento e unidades de referência
-• Direitos garantidos na área da saúde
+• Direitos na área da saúde
 
-Selecione um dos tópicos acima ou me faça uma pergunta sobre cuidados em saúde para pessoas trans.`,
+Como posso ajudar você hoje?`,
     source: "",
     timestamp: new Date(),
     conversationId: "welcome"
@@ -45,7 +45,7 @@ Selecione um dos tópicos acima ou me faça uma pergunta sobre cuidados em saúd
   return (
     <div className="bg-white rounded-md shadow-md overflow-hidden border border-gray-200">
       {/* Top bar with title - Design mais sóbrio e profissional */}
-      <div className="p-4 bg-gradient-to-r from-[#1A365D] to-[#2D3748] text-white flex justify-between items-center">
+      <div className="p-3 bg-[#1A365D] text-white flex justify-between items-center">
         <div className="flex items-center space-x-3">
           <div 
             className="bg-white/10 p-2 rounded-md shadow-inner cursor-pointer transition-all hover:bg-white/15"
@@ -54,8 +54,7 @@ Selecione um dos tópicos acima ou me faça uma pergunta sobre cuidados em saúd
             <RobotAvatar size="md" />
           </div>
           <div>
-            <h2 className="font-semibold text-lg tracking-tight">GEM-T</h2>
-            <p className="text-xs font-normal text-gray-300">Projeto Diversidade Barra Funda</p>
+            <h2 className="font-semibold text-base tracking-tight">Assistente Virtual | diversidadebarrafunda.org</h2>
           </div>
         </div>
         
@@ -131,16 +130,14 @@ Selecione um dos tópicos acima ou me faça uma pergunta sobre cuidados em saúd
       
       {/* Robot 3D Display */}
       {showRobot3D && (
-        <div className="w-full flex justify-center items-center p-4 bg-gradient-to-b from-[#1A365D] to-[#2B4C7E]">
+        <div className="w-full flex justify-center items-center p-4 bg-[#1A365D]">
           <div className="flex flex-col items-center">
             <Robot3D 
-              width={240} 
-              height={240} 
+              width={200} 
+              height={200} 
               state={isLoading ? "speaking" : "idle"}
               className="shadow-lg"
             />
-            <h3 className="text-white font-medium text-center mt-2">GEM-T</h3>
-            <p className="text-gray-300 text-xs text-center">Assistente de informações - diversidadebarrafunda.org</p>
           </div>
         </div>
       )}

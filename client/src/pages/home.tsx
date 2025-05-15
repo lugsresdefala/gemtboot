@@ -1,8 +1,5 @@
 import { Helmet } from "react-helmet";
-import Header from "@/components/layout/Header";
-import Footer from "@/components/layout/Footer";
 import ChatInterface from "@/components/chat/ChatInterface";
-import FAQSection from "@/components/faq/FAQSection";
 import { Script } from "@/components/ui/script";
 
 export default function Home() {
@@ -28,32 +25,12 @@ export default function Home() {
         `}
       </Script>
       
-      <div className="flex flex-col min-h-screen bg-gradient-to-b from-[#F3E5F5] to-white">
-        <Header />
-        
-        <main className="flex-grow">
-          <div className="max-w-6xl mx-auto px-4 sm:px-6 py-10">
-            <div className="mb-8 text-center">
-              <h1 className="text-3xl font-bold text-[#4A148C] mb-3">Informações sobre cuidados em saúde para pessoas trans</h1>
-              <p className="text-[#7B1FA2] max-w-3xl mx-auto text-lg font-light">
-                Tire suas dúvidas sobre fluxos, critérios e acesso a cuidados em saúde para pessoas trans no SUS.
-              </p>
-            </div>
-            
-            <div className="mb-12">
-              <ChatInterface />
-            </div>
-            
-            <div className="mb-10">
-              <h2 className="text-2xl font-bold text-[#4A148C] mb-6 text-center">
-                Perguntas Frequentes
-              </h2>
-              <FAQSection />
-            </div>
+      <div className="flex flex-col min-h-screen bg-gray-50">
+        <main className="flex-grow flex items-center justify-center">
+          <div className="w-full max-w-4xl px-4">
+            <ChatInterface />
           </div>
         </main>
-        
-        <Footer />
       </div>
     </>
   );
