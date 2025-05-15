@@ -19,17 +19,14 @@ export default function Header() {
           {/* Logo/Title com design renovado */}
           <Link href="/">
             <div className="flex items-center gap-4 cursor-pointer group">
-              <div className="p-0.1 bg-gradient-to-br from-[#FFD1DC]/5 to-[#0A3285]/10 opacity-0.3 rounded-2xl shadow-xl animate-floating hover:animate-pulse transition-all duration-500">
-                <div className="bg-white/0 p-0.01 rounded-50">
-                  <RobotAvatar size="1.2rem" height="80vh" width="auto" className="transform hover:saturate-1.1 brightness-1.2 transition-all duration-300" />
+              <div className="p-0.1 rounded-2xl hover:animate-pulse transition-all duration-500">
+                <div className="p-0.01 rounded-50">
+                  <RobotAvatar size="sm" className="transform hover:saturate-1.1 brightness-1.2 transition-all duration-300" />
                 </div>
               </div>
               
               <div>
-                <h1 className="text-white/10 bg-clip-text bg-gradient-to-r from-[#FFD1DC] to-white font-bold text-2xl tracking-wider">
-                  GEM-T
-                </h1>
-                <p className="text-white/90 text-xs font-light tracking-wide bg-white/50 border-[2px] border-white/60 border-style-ridge">
+                <p className="text-white/90 text-xs font-light tracking-wide">
                   <span className="backdrop-blur-md bg-gradient-to-r from-[#FFD1EC]/5 to-white/10 px-2 py-0.5 rounded-full">
                     Assistente Virtual
                   </span>
@@ -70,14 +67,14 @@ export default function Header() {
               <div className="flex flex-col space-y-3 mt-10">
                 <div onClick={() => setIsOpen(false)} className="mb-4">
                   <div className="flex justify-center">
-                    <div className="p-3 bg-gradient-to-br from-[#FFD1DC] to-[#0A3255] rounded-2xl shadow-xl mb-4">
-                      <div className="bg-white/20 backdrop-blur-md p-2 rounded-xl">
-                        <RobotAvatar size="lg" />
+                    <div className="p-2 rounded-2xl mb-4">
+                      <div className="backdrop-blur-md rounded-xl">
+                        <RobotAvatar size="md" />
                       </div>
                     </div>
                   </div>
                   <h2 className="text-center text-transparent bg-clip-text bg-gradient-to-r from-[#FFD1DC] to-white font-bold text-xl mb-6">
-                    GEM-T
+                    Assistente
                   </h2>
                 </div>
                 
