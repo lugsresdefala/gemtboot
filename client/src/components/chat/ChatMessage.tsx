@@ -46,7 +46,7 @@ export default function ChatMessage({ message }: ChatMessageProps) {
       </div>
       
       {!isBot && (
-        <div className="flex-shrink-0 w-8 h-8 rounded-full bg-[#1A365D] flex items-center justify-center text-white shadow-sm mt-1">
+        <div className="flex-shrink-0 w-8 h-8 rounded-full bg-[var(--color-chat-header-from)] flex items-center justify-center text-white shadow-sm mt-1">
           <i className="fas fa-user text-xs"></i>
         </div>
       )}

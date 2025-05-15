@@ -131,7 +131,7 @@ Selecione um dos tópicos acima ou me faça uma pergunta sobre cuidados em saúd
       
       {/* Robot 3D Display */}
       {showRobot3D && (
-        <div className="w-full flex justify-center items-center p-4 bg-gradient-to-b from-[#1A365D] to-[#2B4C7E]">
+        <div className="w-full flex justify-center items-center p-4 bg-gradient-to-b from-[var(--color-chat-robot-bg-from)] to-[var(--color-chat-robot-bg-to)]">
           <div className="flex flex-col items-center">
             <Robot3D 
               width={240} 
@@ -146,7 +146,7 @@ Selecione um dos tópicos acima ou me faça uma pergunta sobre cuidados em saúd
       )}
       
       {/* Chat Messages */}
-      <div className={`chat-height overflow-y-auto px-5 py-6 custom-scrollbar bg-gradient-to-b from-[#f8f9fa] to-[#edf2f7] ${showRobot3D ? 'h-[380px]' : ''}`}>
+      <div className={`chat-height overflow-y-auto px-5 py-6 custom-scrollbar bg-gradient-to-b from-[var(--color-chat-body-from)] to-[var(--color-chat-body-to)] ${showRobot3D ? 'h-[380px]' : ''}`}>
         <div className="max-w-4xl mx-auto">
           {/* Welcome message if no messages yet */}
           {messages.length === 0 && (
