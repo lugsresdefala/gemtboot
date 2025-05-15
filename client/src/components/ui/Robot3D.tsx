@@ -28,7 +28,7 @@ export default function Robot3D({
         width: `${width}px`, 
         height: `${height}px`,
         borderRadius: '12px',
-        overflow: 'hidden',
+        overflow: 'visible',
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center'

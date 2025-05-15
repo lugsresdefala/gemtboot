@@ -43,26 +43,28 @@ export default function Robot3DContainer({
         width: `${width}px`, 
         height: `${height}px`,
         borderRadius: '6px',
-        overflow: 'visible',
-        background: 'transparent',
+        overflow: 'hidden',
+        background: 'linear-gradient(135deg, hsl(217, 43%, 3%), hsl(205, 75%, 8%))',
+        boxShadow: 'var(--card-shadow), 0 0 12px inset rgba(255, 255, 255, 0.5)',
         display: 'flex',
         justifyContent: 'center',
-        alignItems: 'center'
+        alignItems: 'center',
+        border: '5px groove hsla(207, 90%, 5%, 0.4)'
       }}
     >
-      {/* Pequeno efeito de gradiente sob o robô para criar sensação de estar flutuando */}
-      <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-3/4 h-2 bg-gradient-to-r from-transparent via-[#FFD1DC]/40 to-transparent blur-md" />
+      {/* Elementos decorativos inspirados nas cores da bandeira trans */}
+      <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-[hsl(207,90%,64%)] via-[hsl(0,0%,95%)] to-[hsl(340,85%,75%)]" />
       
       {/* Robô com filtros de cores baseados na bandeira trans */}
       <img 
         src={robotImage} 
         alt="GEM-T Robot" 
-        className={cn("w-auto h-auto max-w-[120%] max-h-[120%] object-contain transform scale-125", animation)}
+        className={cn("w-auto h-auto max-w-full max-h-[80%] object-contain", animation)}
         style={{ 
-          filter: state === 'speaking' ? 'drop-shadow(0 0 8px rgba(255, 209, 220, 0.7))' :
-                 state === 'processing' ? 'drop-shadow(0 0 8px rgba(10, 50, 85, 0.7))' :
-                 state === 'listening' ? 'drop-shadow(0 0 8px rgba(255, 255, 255, 0.7))' :
-                 'drop-shadow(0 0 8px rgba(10, 50, 85, 0.6))'
+          filter: state === 'speaking' ? 'drop-shadow(var(--glow-pink-trans))' :
+                 state === 'processing' ? 'drop-shadow(var(--glow-blue-trans))' :
+                 state === 'listening' ? 'drop-shadow(var(--glow-white-trans))' :
+                 'drop-shadow(var(--glow-blue-trans))'
         }}
       />
     </div>
