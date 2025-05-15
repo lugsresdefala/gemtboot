@@ -12,23 +12,23 @@ export default function ChatMessage({ message }: ChatMessageProps) {
   
   return (
     <div className={cn(
-      "flex items-start mb-6",
-      isBot ? "animate-slide-up" : "justify-end animate-fade-in"
+      "flex items-start mb-5",
+      isBot ? "" : "justify-end"
     )}>
       {isBot && (
-        <div className="mt-1 flex-shrink-0">
-          <RobotAvatar size="sm" className="shadow-sm" />
+        <div className="mt-1 flex-shrink-0 mr-2">
+          <div className="w-6 h-6 bg-[#2C5282] flex items-center justify-center text-white text-[10px]">R</div>
         </div>
       )}
       
       <div className={cn(
-        "rounded-md max-w-3xl", 
+        "max-w-3xl", 
         isBot 
-          ? "ml-3 bg-white rounded-tl-none border border-gray-200 shadow-sm px-4 py-3" 
-          : "mr-3 bg-gray-100 rounded-tr-none shadow-sm px-4 py-3"
+          ? "bg-white border-l-2 border-[#2C5282] px-3 py-2" 
+          : "bg-gray-50 px-3 py-2"
       )}>
         <div className={cn(
-          "whitespace-pre-line prose prose-neutral prose-p:leading-relaxed prose-headings:text-gray-800",
+          "whitespace-pre-line prose prose-neutral prose-p:leading-relaxed prose-sm prose-headings:text-gray-800",
           isBot ? "text-gray-700" : "text-gray-800"
         )}>
           <ReactMarkdown>{message.content}</ReactMarkdown>
@@ -36,18 +36,15 @@ export default function ChatMessage({ message }: ChatMessageProps) {
         
         {/* Show source reference if available */}
         {isBot && message.source && (
-          <div className="mt-3 text-xs text-gray-500 flex items-center border-t border-gray-100 pt-2">
-            <div className="bg-gray-100 p-1 rounded mr-2 text-gray-600">
-              <i className="fas fa-file-alt"></i>
-            </div>
-            <span>Fonte: <span className="text-gray-700 font-medium">{message.source}</span></span>
+          <div className="mt-2 text-[10px] text-gray-500">
+            <span>Fonte: <span className="text-gray-700">{message.source}</span></span>
           </div>
         )}
       </div>
       
       {!isBot && (
-        <div className="flex-shrink-0 w-8 h-8 rounded-full bg-[#1A365D] flex items-center justify-center text-white shadow-sm mt-1">
-          <i className="fas fa-user text-xs"></i>
+        <div className="flex-shrink-0 ml-2 mt-1">
+          <div className="w-6 h-6 bg-gray-300 flex items-center justify-center text-white text-[10px]">U</div>
         </div>
       )}
     </div>

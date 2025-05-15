@@ -23,20 +23,20 @@ export default function TopicPills({ onTopicSelect }: TopicPillsProps) {
   };
   
   return (
-    <div className="py-3 px-4 bg-gray-100 border-b border-gray-200 overflow-x-auto whitespace-nowrap">
+    <div className="py-2 px-4 bg-gray-50 border-b border-gray-200 overflow-x-auto whitespace-nowrap">
       <div className="flex space-x-2 max-w-4xl mx-auto">
         {topics.map((topic) => (
           <button
             key={topic.id}
             className={cn(
-              "px-4 py-2 text-sm font-medium rounded transition-all duration-150 flex items-center",
+              "px-3 py-1.5 text-xs font-medium transition-colors flex items-center",
               activeTopic === topic.id
-                ? "bg-[#1A365D] text-white shadow-sm"
-                : "bg-white text-gray-700 border border-gray-300 hover:border-gray-400 hover:bg-gray-50"
+                ? "bg-[#2C5282] text-white"
+                : "bg-white text-gray-700 border border-gray-200"
             )}
             onClick={() => handleTopicClick(topic.id)}
           >
-            <i className={`${topic.icon} mr-2 ${activeTopic === topic.id ? 'text-gray-300' : 'text-gray-500'}`}></i> {topic.label}
+            {topic.label}
           </button>
         ))}
       </div>
