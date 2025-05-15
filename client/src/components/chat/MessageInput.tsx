@@ -34,7 +34,7 @@ export default function MessageInput({ onSendMessage, isLoading = false }: Messa
           type="button" 
           variant="ghost" 
           size="icon"
-          className="text-gray-400 hover:text-gray-600 transition-colors rounded-md" 
+          className="text-gray-400 hover:text-gray-600 transition-colors rounded-md hover-scale" 
           title="Enviar arquivo"
         >
           <Paperclip size={18} />
@@ -52,7 +52,7 @@ export default function MessageInput({ onSendMessage, isLoading = false }: Messa
           <input 
             type="text" 
             placeholder="Digite sua dúvida sobre cuidados em saúde para pessoas trans..." 
-            className="w-full py-2.5 pl-10 pr-10 bg-gray-50 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-[var(--color-chat-header-from)] focus:border-[var(--color-chat-header-to)] transition-all"
+            className="input-field pl-10 pr-10 bg-gray-50"
             value={message}
             onChange={(e) => setMessage(e.target.value)}
             onKeyDown={handleKeyDown}
@@ -64,7 +64,7 @@ export default function MessageInput({ onSendMessage, isLoading = false }: Messa
               type="button" 
               variant="ghost"
               size="icon"
-              className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-600 transition-colors bg-transparent rounded-md" 
+              className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-600 transition-colors bg-transparent rounded-md hover-scale" 
               title="Limpar"
               onClick={() => setMessage("")}
             >
@@ -77,13 +77,13 @@ export default function MessageInput({ onSendMessage, isLoading = false }: Messa
           type="submit" 
           size="icon"
           disabled={!message.trim() || isLoading}
-          className={`p-2.5 rounded-md transition-all ${
+          className={`p-2.5 rounded-md hover-scale ${
             !message.trim() || isLoading
               ? "bg-gray-100 text-gray-400 cursor-not-allowed"
-              : "bg-[var(--color-chat-header-from)] text-white hover:bg-[var(--color-chat-header-to)]"
+              : "btn-primary shadow-md" 
           }`}
         >
-          <Send size={16} />
+          <Send size={16} className="animate-pulse" />
         </Button>
       </form>
     </div>

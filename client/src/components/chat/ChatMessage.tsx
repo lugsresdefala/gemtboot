@@ -12,11 +12,11 @@ export default function ChatMessage({ message }: ChatMessageProps) {
   
   return (
     <div className={cn(
-      "flex items-start mb-6",
+      "flex items-start space-stack-lg",
       isBot ? "animate-slide-up" : "justify-end animate-fade-in"
     )}>
       {isBot && (
-        <div className="mt-1 flex-shrink-0">
+        <div className="mt-1 flex-shrink-0 hover-glow">
           <RobotAvatar size="sm" className="shadow-sm" />
         </div>
       )}
@@ -24,29 +24,30 @@ export default function ChatMessage({ message }: ChatMessageProps) {
       <div className={cn(
         "rounded-md max-w-3xl", 
         isBot 
-          ? "ml-3 bg-white rounded-tl-none border border-gray-200 shadow-sm px-4 py-3" 
-          : "mr-3 bg-gray-100 rounded-tr-none shadow-sm px-4 py-3"
+          ? "ml-3 bg-white rounded-tl-none border border-gray-200 shadow-md px-4 py-3 animate-scale-in" 
+          : "mr-3 bg-gray-100 rounded-tr-none shadow-md px-4 py-3 animate-slide-in-left"
       )}>
         <div className={cn(
           "whitespace-pre-line prose prose-neutral prose-p:leading-relaxed prose-headings:text-gray-800",
-          isBot ? "text-gray-700" : "text-gray-800"
+          isBot ? "text-body" : "text-body font-medium"
         )}>
           <ReactMarkdown>{message.content}</ReactMarkdown>
         </div>
         
         {/* Show source reference if available */}
         {isBot && message.source && (
-          <div className="mt-3 text-xs text-gray-500 flex items-center border-t border-gray-100 pt-2">
-            <div className="bg-gray-100 p-1 rounded mr-2 text-gray-600">
-              <i className="fas fa-file-alt"></i>
+          <div className="mt-3 text-caption flex items-center border-t border-gray-100 pt-2">
+            <div className="badge badge-outline mr-2">
+              <i className="fas fa-file-alt space-inline-xs"></i>
+              Fonte
             </div>
-            <span>Fonte: <span className="text-gray-700 font-medium">{message.source}</span></span>
+            <span className="text-gray-700 font-medium">{message.source}</span>
           </div>
         )}
       </div>
       
       {!isBot && (
-        <div className="flex-shrink-0 w-8 h-8 rounded-full bg-[var(--color-chat-header-from)] flex items-center justify-center text-white shadow-sm mt-1">
+        <div className="flex-shrink-0 w-8 h-8 rounded-full bg-gradient-to-r from-[var(--color-primary)] to-[var(--color-primary-light)] flex-center text-white shadow-md mt-1 hover-glow">
           <i className="fas fa-user text-xs"></i>
         </div>
       )}
