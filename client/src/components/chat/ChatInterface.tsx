@@ -43,24 +43,74 @@ Como posso ajudar você hoje?`,
   }, [messages]);
   
   return (
-    <div className="bg-white overflow-hidden border border-gray-200">
-      {/* Top bar minimalista e profissional */}
-      <div className="p-2 bg-[#2C5282] text-white flex justify-between items-center">
-        <div className="flex items-center">
+    <div className="bg-white rounded-md shadow-md overflow-hidden border border-gray-200">
+      {/* Top bar with title - Design mais sóbrio e profissional */}
+      <div className="p-3 bg-[#1A365D] text-white flex justify-between items-center">
+        <div className="flex items-center space-x-3">
+          <div 
+            className="bg-white/10 p-2 rounded-md shadow-inner cursor-pointer transition-all hover:bg-white/15"
+            onClick={() => setShowRobot3D(prev => !prev)}
+          >
+            <RobotAvatar size="md" />
+          </div>
           <div>
-            <h2 className="font-medium text-sm">diversidadebarrafunda.org</h2>
+            <h2 className="font-semibold text-base tracking-tight">Assistente Virtual | diversidadebarrafunda.org</h2>
           </div>
         </div>
         
-        <div className="flex">
-          <Button 
-            onClick={clearConversation} 
-            variant="ghost" 
-            size="sm" 
-            className="text-white text-xs"
-          >
-            Nova conversa
-          </Button>
+        <div className="flex space-x-2">
+          <TooltipProvider>
+            <Tooltip>
+              <TooltipTrigger asChild>
+                <Button 
+                  onClick={() => setShowRobot3D(prev => !prev)} 
+                  variant="ghost" 
+                  size="icon" 
+                  className="text-white hover:text-white hover:bg-white/10 transition-all rounded-md"
+                >
+                  {showRobot3D ? <Minimize2 size={16} /> : <Maximize2 size={16} />}
+                </Button>
+              </TooltipTrigger>
+              <TooltipContent>
+                <p>{showRobot3D ? 'Esconder robô 3D' : 'Mostrar robô 3D'}</p>
+              </TooltipContent>
+            </Tooltip>
+          </TooltipProvider>
+          
+          <TooltipProvider>
+            <Tooltip>
+              <TooltipTrigger asChild>
+                <Button 
+                  onClick={clearConversation} 
+                  variant="ghost" 
+                  size="icon" 
+                  className="text-white hover:text-white hover:bg-white/10 transition-all rounded-md"
+                >
+                  <Trash size={16} />
+                </Button>
+              </TooltipTrigger>
+              <TooltipContent>
+                <p>Limpar conversa</p>
+              </TooltipContent>
+            </Tooltip>
+          </TooltipProvider>
+          
+          <TooltipProvider>
+            <Tooltip>
+              <TooltipTrigger asChild>
+                <Button 
+                  variant="ghost" 
+                  size="icon" 
+                  className="text-white hover:text-white hover:bg-white/10 transition-all rounded-md"
+                >
+                  <Settings size={16} />
+                </Button>
+              </TooltipTrigger>
+              <TooltipContent>
+                <p>Configurações</p>
+              </TooltipContent>
+            </Tooltip>
+          </TooltipProvider>
         </div>
       </div>
       
@@ -78,8 +128,22 @@ Como posso ajudar você hoje?`,
         sendMessage(topicQueries[topic]);
       }} />
       
+      {/* Robot 3D Display */}
+      {showRobot3D && (
+        <div className="w-full flex justify-center items-center p-4 bg-[#1A365D]">
+          <div className="flex flex-col items-center">
+            <Robot3D 
+              width={200} 
+              height={200} 
+              state={isLoading ? "speaking" : "idle"}
+              className="shadow-lg"
+            />
+          </div>
+        </div>
+      )}
+      
       {/* Chat Messages */}
-      <div className="chat-height overflow-y-auto px-4 py-5 bg-white h-[450px]">
+      <div className={`chat-height overflow-y-auto px-5 py-6 custom-scrollbar bg-gradient-to-b from-[#f8f9fa] to-[#edf2f7] ${showRobot3D ? 'h-[380px]' : ''}`}>
         <div className="max-w-4xl mx-auto">
           {/* Welcome message if no messages yet */}
           {messages.length === 0 && (
