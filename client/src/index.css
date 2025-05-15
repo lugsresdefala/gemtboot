@@ -37,17 +37,17 @@
   --ring: 212 70% 35%;
   --radius: 0.5rem;
   
-  /* App-specific color palette - ORIGINAL */
-  --color-primary: #2A248C;       /* Deep purple - brand primary */
-  --color-primary-light: #3D3AAE; /* Lighter purple - hover states */
-  --color-primary-dark: #201C6E;  /* Darker purple - active states */
+  /* App-specific color palette - SOLICITADA PELO USUÁRIO */
+  --color-primary: #0A3255;       /* Azul escuro profundo/petróleo - brand primary */
+  --color-primary-light: #0E4173; /* Azul escuro petróleo - hover states */
+  --color-primary-dark: #062140;  /* Azul escuro petróleo mais escuro - active states */
   
-  --color-secondary: #4A148C;     /* Rich purple - secondary accent */
-  --color-secondary-light: #6A1B9A; /* Lighter secondary - hover states */
-  --color-secondary-dark: #38106E; /* Darker secondary - active states */
+  --color-secondary: #FFD1DC;     /* Rosa claríssimo pastel - secondary accent */
+  --color-secondary-light: #FFE0E8; /* Rosa claríssimo pastel mais claro - hover states */
+  --color-secondary-dark: #FFC0CF; /* Rosa claríssimo pastel mais escuro - active states */
   
-  --color-accent: #a1BEE7;        /* Blue accent for highlights */
-  --color-accent-light: #BFD4F0;  /* Lighter accent */
+  --color-accent: #FFFFFF;        /* Branco para highlights */
+  --color-accent-light: #F8F9FA;  /* Branco off-white para variação */
   
   --color-success: #2E7D32;       /* Success green */
   --color-warning: #F57C00;       /* Warning orange */

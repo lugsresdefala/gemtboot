@@ -28,12 +28,12 @@ export default function Home() {
         `}
       </Script>
       
-      <div className="flex flex-col min-h-screen bg-gradient-to-b from-indigo-900 via-purple-800 to-pink-500 text-white relative overflow-hidden">
+      <div className="flex flex-col min-h-screen bg-gradient-to-b from-[#062140] via-[#0A3255] to-[#0F4880] text-white relative overflow-hidden">
         {/* Partículas e efeitos de fundo decorativos */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute top-20 left-10 w-64 h-64 bg-pink-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob"></div>
-          <div className="absolute top-80 right-10 w-80 h-80 bg-indigo-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-2000"></div>
-          <div className="absolute bottom-40 left-1/4 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-4000"></div>
+          <div className="absolute top-20 left-10 w-64 h-64 bg-[#FFD1DC] rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob"></div>
+          <div className="absolute top-80 right-10 w-80 h-80 bg-white rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-2000"></div>
+          <div className="absolute bottom-40 left-1/4 w-72 h-72 bg-[#0F4880] rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-4000"></div>
           
           {/* Grid pattern overlay */}
           <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0zNiAxOGMwLTkuOTQtOC4wNi0xOC0xOC0xOHY2YTEyIDEyIDAgMCAxIDEyIDEyaC02eiIgZmlsbD0icmdiYSgyNTUsMjU1LDI1NSwwLjAzKSIvPjwvZz48L3N2Zz4=')] opacity-20"></div>
@@ -48,16 +48,16 @@ export default function Home() {
               <div className="max-w-4xl mx-auto">
                 <div className="text-center mb-12 md:mb-16">
                   <div className="inline-block mb-4">
-                    <span className="inline-flex items-center px-3 py-1 rounded-full bg-white/10 backdrop-blur-sm text-pink-200 text-xs font-medium tracking-wider uppercase border border-white/10">
+                    <span className="inline-flex items-center px-3 py-1 rounded-full bg-white/10 backdrop-blur-sm text-[#FFD1DC] text-xs font-medium tracking-wider uppercase border border-white/10">
                       ✨ Plataforma Inclusiva
                     </span>
                   </div>
                   
-                  <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight bg-clip-text text-transparent bg-gradient-to-r from-white via-pink-100 to-indigo-200 animate-gradient">
+                  <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight bg-clip-text text-transparent bg-gradient-to-r from-white via-[#FFD1DC] to-white animate-gradient">
                     Acolhimento e Informação para Pessoas Trans
                   </h1>
                   
-                  <p className="text-xl md:text-2xl text-indigo-100/90 max-w-3xl mx-auto font-light leading-relaxed">
+                  <p className="text-xl md:text-2xl text-white/90 max-w-3xl mx-auto font-light leading-relaxed">
                     Informações acessíveis sobre fluxos, critérios e cuidados em saúde para pessoas trans no SUS.
                   </p>
                 </div>
