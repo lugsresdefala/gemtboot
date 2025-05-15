@@ -37,17 +37,17 @@ export default function ChatMessage({ message }: ChatMessageProps) {
         {/* Show source reference if available */}
         {isBot && message.source && (
           <div className="mt-3 text-caption flex items-center border-t border-gray-100 pt-2">
-            <div className="badge badge-outline mr-2">
+            <div className="badge badge-outline mr-2 bg-[#FFD1DC]/20 text-[#0A3255] border-[#FFD1DC]/30">
               <i className="fas fa-file-alt space-inline-xs"></i>
               Fonte
             </div>
-            <span className="text-gray-700 font-medium">{message.source}</span>
+            <span className="text-[#0A3255] font-medium">{message.source}</span>
           </div>
         )}
       </div>
       
       {!isBot && (
-        <div className="flex-shrink-0 w-8 h-8 rounded-full bg-gradient-to-r from-[var(--color-primary)] to-[var(--color-primary-light)] flex-center text-white shadow-md mt-1 hover-glow">
+        <div className="flex-shrink-0 w-8 h-8 rounded-full bg-gradient-to-r from-[#FFD1DC] to-[#0A3255] flex-center text-white shadow-md mt-1 hover-glow">
           <i className="fas fa-user text-xs"></i>
         </div>
       )}

@@ -28,7 +28,7 @@ export default function MessageInput({ onSendMessage, isLoading = false }: Messa
   };
   
   return (
-    <div className="p-4 border-t border-gray-200 bg-white">
+    <div className="p-4 border-t border-gray-200 bg-white/80 backdrop-blur-sm">
       <form className="flex items-center max-w-4xl mx-auto" onSubmit={handleSubmit}>
         <Button 
           type="button" 
@@ -52,7 +52,7 @@ export default function MessageInput({ onSendMessage, isLoading = false }: Messa
           <input 
             type="text" 
             placeholder="Digite sua dúvida sobre cuidados em saúde para pessoas trans..." 
-            className="input-field pl-10 pr-10 bg-gray-50"
+            className="input-field pl-10 pr-10 bg-gray-50 border-[#FFD1DC]/30 focus:border-[#0A3255] focus:ring-[#0A3255]/20"
             value={message}
             onChange={(e) => setMessage(e.target.value)}
             onKeyDown={handleKeyDown}
@@ -80,7 +80,7 @@ export default function MessageInput({ onSendMessage, isLoading = false }: Messa
           className={`p-2.5 rounded-md hover-scale ${
             !message.trim() || isLoading
               ? "bg-gray-100 text-gray-400 cursor-not-allowed"
-              : "btn-primary shadow-md" 
+              : "bg-gradient-to-r from-[#FFD1DC] to-[#0A3255] text-white shadow-md hover:shadow-lg hover:shadow-[#FFD1DC]/20 transition-all duration-300" 
           }`}
         >
           <Send size={16} className="animate-pulse" />
