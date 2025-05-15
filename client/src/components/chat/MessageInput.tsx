@@ -28,13 +28,31 @@ export default function MessageInput({ onSendMessage, isLoading = false }: Messa
   };
   
   return (
-    <div className="p-3 border-t border-gray-200 bg-white">
+    <div className="p-4 border-t border-gray-200 bg-white">
       <form className="flex items-center max-w-4xl mx-auto" onSubmit={handleSubmit}>
-        <div className="relative flex-grow">
+        <Button 
+          type="button" 
+          variant="ghost" 
+          size="icon"
+          className="text-gray-400 hover:text-gray-600 transition-colors rounded-md" 
+          title="Enviar arquivo"
+        >
+          <Paperclip size={18} />
+        </Button>
+        
+        <div className="relative flex-grow mx-3">
+          <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+            <div className="h-4 w-4 text-gray-400">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4">
+                <circle cx="11" cy="11" r="8" />
+                <path d="m21 21-4.3-4.3" />
+              </svg>
+            </div>
+          </div>
           <input 
             type="text" 
-            placeholder="Digite sua dúvida..." 
-            className="w-full py-2 pl-3 pr-8 bg-white border-b border-gray-300 focus:outline-none focus:border-[#2C5282]"
+            placeholder="Digite sua dúvida sobre cuidados em saúde para pessoas trans..." 
+            className="w-full py-2.5 pl-10 pr-10 bg-gray-50 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-[#1A365D] focus:border-[#2D3748] transition-all"
             value={message}
             onChange={(e) => setMessage(e.target.value)}
             onKeyDown={handleKeyDown}
@@ -45,26 +63,27 @@ export default function MessageInput({ onSendMessage, isLoading = false }: Messa
             <Button 
               type="button" 
               variant="ghost"
-              size="sm"
-              className="absolute right-1 top-1/2 transform -translate-y-1/2 text-gray-400 h-5 w-5 p-0" 
+              size="icon"
+              className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-600 transition-colors bg-transparent rounded-md" 
+              title="Limpar"
               onClick={() => setMessage("")}
             >
-              <X size={12} />
+              <X size={14} />
             </Button>
           )}
         </div>
         
         <Button 
           type="submit" 
-          size="sm"
+          size="icon"
           disabled={!message.trim() || isLoading}
-          className={`ml-2 ${
+          className={`p-2.5 rounded-md transition-all ${
             !message.trim() || isLoading
-              ? "bg-gray-100 text-gray-400"
-              : "bg-[#2C5282] text-white"
+              ? "bg-gray-100 text-gray-400 cursor-not-allowed"
+              : "bg-[#1A365D] text-white hover:bg-[#2D3748]"
           }`}
         >
-          Enviar
+          <Send size={16} />
         </Button>
       </form>
     </div>
