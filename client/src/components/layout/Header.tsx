@@ -9,7 +9,7 @@ export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
   
   return (
-    <header className="bg-[#2A248C] shadow-md">
+    <header className="bg-[var(--color-header-bg)] shadow-md">
       <div className="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
         {/* Logo/Title */}
         <Link href="/">
@@ -19,7 +19,7 @@ export default function Header() {
             </div>
             
             <div>
-              <h1 className="text-[#a1BEE7] font-bold text-xl tracking-wide">GEM-T</h1>
+              <h1 className="text-[var(--color-header-text)] font-bold text-xl tracking-wide">GEM-T</h1>
               <p className="text-purple-200/70 text-xs font-light">Diversidade Barra Funda</p>
             </div>
           </div>

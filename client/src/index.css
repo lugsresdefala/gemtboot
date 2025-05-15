@@ -187,6 +187,18 @@
   --chart-4: 212 65% 25%; /* Azul mais escuro */
   --chart-5: 345 55% 35%; /* Rosa mais escuro */
 
+  /* Cores específicas do aplicativo (valores hexadecimais extraídos dos componentes) */
+  --color-header-bg: #2A248C;
+  --color-header-text: #a1BEE7;
+  --color-header-text-light: rgba(233, 213, 255, 0.7);
+  --color-footer-bg: #4A148C;
+  --color-chat-header-from: #1A365D;
+  --color-chat-header-to: #2D3748;
+  --color-chat-robot-bg-from: #1A365D;
+  --color-chat-robot-bg-to: #2B4C7E;
+  --color-chat-body-from: #f8f9fa;
+  --color-chat-body-to: #edf2f7;
+  
   --card-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.05), 0 2px 4px -2px rgb(0 0 0 / 0.05);
   --header-height: 64px;
   --sidebar-width: 280px;
