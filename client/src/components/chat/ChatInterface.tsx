@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import TopicPills from "./TopicPills";
 import MessageInput from "./MessageInput";
 import ChatMessage from "./ChatMessage";
 import { useChat } from "@/hooks/use-chat";
