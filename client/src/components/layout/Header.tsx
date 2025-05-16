@@ -10,85 +10,76 @@ export default function Header() {
   
   return (
     <header className="relative z-50">
-      {/* Overlay gradiente na parte superior */}
-      <div className="absolute inset-[30vh] bg-gradient-to-r from-[#0A3285] via-[#00516C]/70 to-white/20 h-1.5 w-full"></div>
-      
-      {/* Fundo do cabeçalho com glassmorphism */}
-      <div className="relative bg-gradient-to-r from-[#060120] to-[#0A1225] shadow-xl backdrop-blur-lg border-b border-white/10">
-        <div className="container-app py-2 flex-between">
-          {/* Logo/Title com design renovado */}
+      {/* Cabeçalho mais alto com fundo sólido */}
+      <div className="relative bg-[#0A1C3B] h-28">
+        <div className="container mx-auto px-6 h-full flex items-center justify-between">
+          {/* Logo maior sem moldura */}
           <Link href="/">
-            <div className="flex items-center gap-3 cursor-pointer group">
-              <div className="rounded-full overflow-hidden">
-                <RobotAvatar size="md" className="transform hover:brightness-110 transition-all duration-300" />
-              </div>
+            <div className="flex items-center gap-6 cursor-pointer">
+              <RobotAvatar size="md" />
               
-              <div className="flex items-center">
-                <span className="text-white text-sm font-medium">
+              <div>
+                <h1 className="text-white text-2xl font-bold tracking-wide">
                   Assistente Virtual
-                </span>
+                </h1>
               </div>
             </div>
           </Link>
           
-          {/* Desktop Navigation com botões modernos */}
-          <nav className="hidden md:flex items-center space-x-2">
-            <div className="flex items-center space-x-1">
-              <Link href="/">
-                <div className="px-4 py-2 text-white hover:text-white bg-white/5 hover:bg-[#FFD1DC]/20 rounded-xl transition-all duration-300 border border-white/5 hover:border-white/20 shadow-lg hover:shadow-[#FFD1DC]/20 text-sm font-medium">
-                  Início
-                </div>
-              </Link>
-              <Link href="/sobre">
-                <div className="px-4 py-2 text-white hover:text-white bg-white/5 hover:bg-[#FFD1DC]/20 rounded-xl transition-all duration-300 border border-white/5 hover:border-white/20 shadow-lg hover:shadow-[#FFD1DC]/20 text-sm font-medium">
-                  Sobre
-                </div>
-              </Link>
-              <Link href="/contato">
-                <div className="px-4 py-2 text-white hover:text-white bg-white/5 hover:bg-[#FFD1DC]/20 rounded-xl transition-all duration-300 border border-white/5 hover:border-white/20 shadow-lg hover:shadow-[#FFD1DC]/20 text-sm font-medium">
-                  Contato
-                </div>
-              </Link>
-            </div>
+          {/* Navegação com botões quadrados */}
+          <nav className="hidden md:flex items-center">
+            <Link href="/">
+              <div className="px-8 py-3 text-white bg-[#0F2D54] text-lg font-medium mx-1">
+                Início
+              </div>
+            </Link>
+            <Link href="/sobre">
+              <div className="px-8 py-3 text-white bg-[#0F2D54] text-lg font-medium mx-1">
+                Sobre
+              </div>
+            </Link>
+            <Link href="/contato">
+              <div className="px-8 py-3 text-white bg-[#0F2D54] text-lg font-medium mx-1">
+                Contato
+              </div>
+            </Link>
           </nav>
           
-          {/* Mobile menu button com efeito de glassmorphism */}
+          {/* Menu mobile */}
           <Sheet open={isOpen} onOpenChange={setIsOpen}>
             <SheetTrigger asChild>
-              <Button variant="ghost" size="icon" className="md:hidden text-white bg-white/10 hover:bg-white/20 backdrop-blur-md rounded-xl border border-white/10 shadow-lg">
-                <Menu size={20} className="animate-pulse" />
+              <Button variant="ghost" size="icon" className="md:hidden text-white">
+                <Menu size={24} />
               </Button>
             </SheetTrigger>
-            <SheetContent className="bg-gradient-to-br from-[#062140] to-[#0A3255] border-l border-white/10 text-white">
-              <div className="flex flex-col space-y-3 mt-10">
-                <div onClick={() => setIsOpen(false)} className="mb-4">
-                  <div className="flex justify-center">
-                    <div className="mb-4">
-                      <RobotAvatar size="lg" />
-                    </div>
+            <SheetContent className="bg-[#0A1C3B] text-white">
+              <div className="flex flex-col space-y-4 mt-10">
+                <div onClick={() => setIsOpen(false)} className="mb-6">
+                  <div className="flex justify-center mb-3">
+                    <RobotAvatar size="lg" />
                   </div>
-                  <h2 className="text-center text-white font-medium text-lg mb-6">
+                  <h2 className="text-center text-white font-bold text-xl">
                     Assistente Virtual
                   </h2>
                 </div>
                 
                 <div onClick={() => setIsOpen(false)}>
                   <Link href="/">
-                    <div className="text-white hover:text-white bg-white/5 hover:bg-[#FFD1DC]/20 transition-all duration-300 px-4 py-4 rounded-xl block font-medium border border-white/5 hover:border-white/20 shadow-lg">
+                    <div className="text-white bg-[#0F2D54] px-6 py-3 block font-medium">
                       Início
                     </div>
                   </Link>
                 </div>
                 <div onClick={() => setIsOpen(false)}>
                   <Link href="/sobre">
-                    <div className="text-white hover:text-white bg-white/5 hover:bg-[#FFD1DC]/20 transition-all duration-300 px-4 py-4 rounded-xl block font-medium border border-white/5 hover:border-white/20 shadow-lg">
+                    <div className="text-white bg-[#0F2D54] px-6 py-3 block font-medium">
                       Sobre
                     </div>
                   </Link>
                 </div>
                 <div onClick={() => setIsOpen(false)}>
                   <Link href="/contato">
-                    <div className="text-white hover:text-white bg-white/5 hover:bg-[#FFD1DC]/20 transition-all duration-300 px-4 py-4 rounded-xl block font-medium border border-white/5 hover:border-white/20 shadow-lg">
+                    <div className="text-white bg-[#0F2D54] px-6 py-3 block font-medium">
                       Contato
                     </div>
                   </Link>

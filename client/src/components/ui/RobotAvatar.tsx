@@ -11,23 +11,23 @@ export default function RobotAvatar({
   className 
 }: RobotAvatarProps) {
   const sizeClasses = {
-    sm: "w-8 h-8", // Tamanho ajustado
-    md: "w-10 h-10", // Tamanho ajustado
-    lg: "w-12 h-12" // Tamanho ajustado
+    sm: "w-20 h-20",
+    md: "w-24 h-24", 
+    lg: "w-32 h-32"
   };
   
   return (
     <div 
       className={cn(
-        "rounded-full overflow-hidden flex items-center justify-center", // Removed shadow-lg for transparency
+        "flex items-center justify-center",
         sizeClasses[size],
         className
       )}
     >
       <img 
         src={gemtLogo} 
-        alt="Assistente Virtual Logo" 
-        className="w-full h-full object-cover"
+        alt="Logo" 
+        className="w-full h-full object-contain"
       />
     </div>
   );
