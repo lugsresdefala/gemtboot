@@ -104,7 +104,20 @@ The application follows a monolithic architecture with clear separation between 
 
 Preferred communication style: Simple, everyday language.
 
+## Recent Changes
+
+- **June 24, 2025 - Debug fixes and link validation**:
+  - Fixed critical server error handler that was causing application crashes
+  - Improved error logging with consistent formatting and appropriate console methods
+  - Enhanced error messages with more context for better debugging
+  - Added proper error handling in natural language processing service
+  - Improved search functionality with better relevance sorting
+  - Fixed all navigation links and external references
+  - Created functional "Sobre" and "Contato" pages with proper routing
+  - Updated API endpoints with better caching and error handling
+  - Validated all external URLs and updated broken links
+  - Enhanced 404 page with proper styling and navigation
+
 ## Changelog
 
-Changelog:
-- June 24, 2025. Initial setup
+- June 24, 2025. Initial setup and debugging improvements
