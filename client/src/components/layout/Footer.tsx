@@ -65,7 +65,7 @@ export default function Footer() {
               </li>
               <li>
                 <a 
-                  href="http://www.saude.sp.gov.br/centro-de-referencia-e-treinamento-dstaids-sp/homepage/destaques/ambulatorio-de-saude-integral-para-travestis-e-transexuais-do-estado-de-sao-paulo" 
+                  href="http://www.saude.sp.gov.br/centro-de-referencia-e-treinamento-dstaids-sp" 
                   target="_blank" 
                   rel="noopener noreferrer" 
                   className="glass px-4 py-2 rounded-lg flex items-center hover:bg-white/10 transition-all duration-300 hover:shadow-lg hover:shadow-pink-500/10 group"
@@ -73,7 +73,7 @@ export default function Footer() {
                   <div className="bg-gradient-to-r from-[#FFD1DC] to-[#0A3255] p-2 rounded-md mr-3 text-white">
                     <i className="fas fa-external-link-alt"></i>
                   </div>
-                  <span className="text-white/80 group-hover:text-white transition-colors">Ambulatório de Saúde Integral para Pessoas Trans</span>
+                  <span className="text-white/80 group-hover:text-white transition-colors">CRT/AIDS - SP</span>
                 </a>
               </li>
             </ul>
@@ -87,14 +87,7 @@ export default function Footer() {
                   <div className="bg-gradient-to-r from-pink-500 to-indigo-600 p-2 rounded-md mr-3 text-white">
                     <i className="fas fa-globe"></i>
                   </div>
-                  <a 
-                    href="https://diversidadebarrafunda.org" 
-                    target="_blank" 
-                    rel="noopener noreferrer" 
-                    className="text-indigo-200 hover:text-white transition-colors"
-                  >
-                    diversidadebarrafunda.org
-                  </a>
+                  <span className="text-indigo-200">Projeto Diversidade Barra Funda</span>
                 </li>
                 <li className="flex items-center">
                   <div className="bg-gradient-to-r from-pink-500 to-indigo-600 p-2 rounded-md mr-3 text-white">

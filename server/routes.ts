@@ -70,6 +70,13 @@ export async function registerRoutes(app: Express): Promise<Server> {
   app.get("/api/faqs", async (req, res) => {
     try {
       const category = req.query.category as string | undefined;
+      
+      // Add cache headers for better performance
+      res.set({
+        'Cache-Control': 'public, max-age=300', // 5 minutes cache
+        'Content-Type': 'application/json; charset=utf-8'
+      });
+      
       const faqs = category 
         ? await storage.getFAQsByCategory(category)
         : await storage.getFAQs();
@@ -87,14 +94,26 @@ export async function registerRoutes(app: Express): Promise<Server> {
       const query = req.query.q as string;
       
       if (!query || query.trim() === "") {
-        return res.status(400).json({ message: "É necessário informar um termo de busca" });
+        return res.status(400).json({ 
+          message: "É necessário informar um termo de busca",
+          results: []
+        });
       }
       
-      const results = await storage.searchDocuments(query);
-      res.status(200).json(results);
+      // Add cache headers
+      res.set({
+        'Cache-Control': 'public, max-age=60', // 1 minute cache for search results
+        'Content-Type': 'application/json; charset=utf-8'
+      });
+      
+      const results = await storage.searchDocuments(query.trim());
+      res.status(200).json(results || []);
     } catch (error) {
       log(`Error searching documents with query '${req.query.q}': ${error}`, "error");
-      res.status(500).json({ message: "Erro ao buscar nos documentos" });
+      res.status(500).json({ 
+        message: "Erro ao buscar nos documentos",
+        results: []
+      });
     }
   });
 

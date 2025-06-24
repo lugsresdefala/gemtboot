@@ -6,6 +6,8 @@ import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import NotFound from "@/pages/not-found";
 import Home from "@/pages/home";
+import Sobre from "@/pages/sobre";
+import Contato from "@/pages/contato";
 import { Helmet } from "react-helmet";
 import SplashScreen from "@/components/ui/SplashScreen";
 
@@ -13,6 +15,8 @@ function Router() {
   return (
     <Switch>
       <Route path="/" component={Home} />
+      <Route path="/sobre" component={Sobre} />
+      <Route path="/contato" component={Contato} />
       {/* Fallback to 404 */}
       <Route component={NotFound} />
     </Switch>
@@ -22,6 +26,10 @@ function Router() {
 function App() {
   // Removendo splash screen
   const [showSplash, setShowSplash] = useState(false);
+  
+  const handleSplashComplete = () => {
+    setShowSplash(false);
+  };
   
   return (
     <QueryClientProvider client={queryClient}>
