@@ -110,5 +110,7 @@ export async function loadInitialData(): Promise<void> {
   const faqs = extractFAQs(allChunks);
   storage.loadFAQs([...faqs, ...commonQuestions]);
   
-  console.log(`Loaded ${allChunks.length} document chunks and ${faqs.length + commonQuestions.length} FAQs`);
+  // Using the log function for consistent formatting
+  const { log } = await import("../vite");
+  log(`Loaded ${allChunks.length} document chunks and ${faqs.length + commonQuestions.length} FAQs`);
 }

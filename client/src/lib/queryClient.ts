@@ -2,8 +2,22 @@ import { QueryClient, QueryFunction } from "@tanstack/react-query";
 
 async function throwIfResNotOk(res: Response) {
   if (!res.ok) {
-    const text = (await res.text()) || res.statusText;
-    throw new Error(`${res.status}: ${text}`);
+    let errorMessage = res.statusText;
+    try {
+      const text = await res.text();
+      if (text) {
+        // Try to parse JSON error response
+        try {
+          const errorData = JSON.parse(text);
+          errorMessage = errorData.message || text;
+        } catch {
+          errorMessage = text;
+        }
+      }
+    } catch (error) {
+      console.error('Error reading response text:', error);
+    }
+    throw new Error(`${res.status}: ${errorMessage}`);
   }
 }
 
@@ -48,10 +62,25 @@ export const queryClient = new QueryClient({
       refetchInterval: false,
       refetchOnWindowFocus: false,
       staleTime: Infinity,
-      retry: false,
+      retry: (failureCount, error) => {
+        // Don't retry on 4xx errors except 429 (rate limit)
+        if (error instanceof Error && error.message.includes("4")) {
+          const status = parseInt(error.message.split(":")[0]);
+          if (status >= 400 && status < 500 && status !== 429) {
+            return false;
+          }
+        }
+        return failureCount < 3;
+      },
     },
     mutations: {
-      retry: false,
+      retry: (failureCount, error) => {
+        // Only retry mutations on network errors or 5xx errors
+        if (error instanceof Error && error.message.includes("5")) {
+          return failureCount < 2;
+        }
+        return false;
+      },
     },
   },
 });

@@ -20,7 +20,7 @@ export function Script({ children }: ScriptProps) {
         document.body.removeChild(scriptEl);
       };
     } catch (error) {
-      console.error("Error executing script:", error);
+      console.error("Error executing script:", children.substring(0, 50) + "...", "Error:", error);
     }
   }, [children]);
   

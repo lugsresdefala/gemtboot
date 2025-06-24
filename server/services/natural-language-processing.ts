@@ -1,5 +1,6 @@
 import { storage } from "../storage";
 import { DocumentChunk } from "@shared/schema";
+import { log } from "../vite";
 
 interface ResponseData {
   content: string;
@@ -132,19 +133,31 @@ async function findMatchingFAQs(query: string) {
  * Generates a response based on the user query
  */
 export async function generateResponse(query: string): Promise<ResponseData> {
-  // Check if the query matches any FAQs
-  const matchingFAQs = await findMatchingFAQs(query);
-  
-  if (matchingFAQs.length > 0) {
-    const bestMatch = matchingFAQs[0];
-    return {
-      content: bestMatch.answer,
-      source: bestMatch.source
-    };
-  }
-  
-  // Search for relevant documents
-  const relevantDocs = await findRelevantDocuments(query);
+  try {
+    // Validate input
+    if (!query || query.trim().length === 0) {
+      return {
+        content: "Por favor, digite uma pergunta para que eu possa ajudá-lo.",
+        source: "Sistema"
+      };
+    }
+
+    log(`Processing query: "${query.substring(0, 50)}${query.length > 50 ? '...' : ''}"`, "nlp");
+
+    // Check if the query matches any FAQs
+    const matchingFAQs = await findMatchingFAQs(query);
+    
+    if (matchingFAQs.length > 0) {
+      const bestMatch = matchingFAQs[0];
+      log(`Found FAQ match: "${bestMatch.question.substring(0, 50)}..."`, "nlp");
+      return {
+        content: bestMatch.answer,
+        source: bestMatch.source
+      };
+    }
+    
+    // Search for relevant documents
+    const relevantDocs = await findRelevantDocuments(query);
   
   if (relevantDocs.length > 0) {
     // Use the most relevant document for the response

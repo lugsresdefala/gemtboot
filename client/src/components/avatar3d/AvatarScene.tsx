@@ -29,7 +29,7 @@ export default function AvatarScene({
     
     // Verificar compatibilidade do navegador com WebGL
     if (!isWebGLAvailable()) {
-      console.warn('WebGL não é suportado, exibindo versão estática do robô');
+      console.warn('WebGL not supported, showing static robot version');
       return;
     }
     
@@ -69,7 +69,7 @@ export default function AvatarScene({
       createAvatar(scene);
       setLoaded(true);
     } catch (error) {
-      console.error('Erro ao carregar o modelo 3D:', error);
+      console.error('Error loading 3D model:', error);
     }
     
     // Iniciar loop de renderização
