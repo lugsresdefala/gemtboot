@@ -20,7 +20,7 @@ export async function fetchFAQs(category?: string): Promise<FAQEntry[]> {
     
     return await response.json();
   } catch (error) {
-    console.error('Error fetching FAQs:', error);
+    console.error('Error fetching FAQs for category:', category, 'Error:', error);
     return [];
   }
 }
@@ -41,7 +41,7 @@ export async function searchDocuments(query: string) {
     
     return await response.json();
   } catch (error) {
-    console.error('Error searching documents:', error);
+    console.error('Error searching documents with query:', query, 'Error:', error);
     return [];
   }
 }

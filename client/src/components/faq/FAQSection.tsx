@@ -21,7 +21,7 @@ export default function FAQSection({ category }: FAQSectionProps) {
         const data = await fetchFAQs(category);
         setFaqs(data);
       } catch (err) {
-        console.error("Error loading FAQs:", err);
+        console.error("Error loading FAQs for category:", category, "Error:", err);
         setError("Erro ao carregar as perguntas frequentes.");
       } finally {
         setIsLoading(false);

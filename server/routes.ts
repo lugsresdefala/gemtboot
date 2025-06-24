@@ -4,6 +4,7 @@ import { storage } from "./storage";
 import { messageQuerySchema, insertMessageSchema } from "@shared/schema";
 import { loadInitialData } from "./services/document-processing";
 import { generateResponse } from "./services/natural-language-processing";
+import { log } from "./vite";
 import { z } from "zod";
 
 export async function registerRoutes(app: Express): Promise<Server> {
@@ -17,7 +18,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
       const messages = await storage.getMessagesByConversationId(conversationId);
       res.status(200).json(messages);
     } catch (error) {
-      console.error("Error getting messages:", error);
+      log(`Error getting messages for conversation ${req.params.conversationId}: ${error}`, "error");
       res.status(500).json({ message: "Erro ao buscar mensagens" });
     }
   });
@@ -60,7 +61,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
         });
       }
       
-      console.error("Error in chat endpoint:", error);
+      log(`Error in chat endpoint: ${error}`, "error");
       res.status(500).json({ message: "Erro ao processar sua mensagem" });
     }
   });
@@ -75,7 +76,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
       
       res.status(200).json(faqs);
     } catch (error) {
-      console.error("Error getting FAQs:", error);
+      log(`Error getting FAQs${req.query.category ? ` for category ${req.query.category}` : ''}: ${error}`, "error");
       res.status(500).json({ message: "Erro ao buscar perguntas frequentes" });
     }
   });
@@ -92,7 +93,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
       const results = await storage.searchDocuments(query);
       res.status(200).json(results);
     } catch (error) {
-      console.error("Error searching documents:", error);
+      log(`Error searching documents with query '${req.query.q}': ${error}`, "error");
       res.status(500).json({ message: "Erro ao buscar nos documentos" });
     }
   });

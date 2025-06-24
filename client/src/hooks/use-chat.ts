@@ -29,7 +29,7 @@ export function useChat() {
         
         setMessages(data);
       } catch (error) {
-        console.error('Error fetching messages:', error);
+        console.error('Error fetching messages for conversation:', conversationId, error);
       }
     }
     
@@ -60,7 +60,7 @@ export function useChat() {
       queryClient.invalidateQueries({ queryKey: [`/api/messages/${conversationId}`] });
       
     } catch (error) {
-      console.error('Failed to send message:', error);
+      console.error('Failed to send message:', content, 'Error:', error);
       toast({
         title: "Erro ao enviar mensagem",
         description: "Houve um problema ao processar sua mensagem. Por favor, tente novamente.",
