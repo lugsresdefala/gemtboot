@@ -96,12 +96,25 @@ export class MemStorage implements IStorage {
   }
   
   async searchDocuments(query: string): Promise<DocumentChunk[]> {
-    // In a real implementation, this would use NLP or a search index
-    // For now, basic string matching for the memory storage
-    const normalizedQuery = query.toLowerCase();
-    return this.documentChunks.filter(chunk => 
-      chunk.content.toLowerCase().includes(normalizedQuery)
-    );
+    try {
+      // In a real implementation, this would use NLP or a search index
+      // For now, basic string matching for the memory storage
+      const normalizedQuery = query.toLowerCase();
+      const results = this.documentChunks.filter(chunk => 
+        chunk.content.toLowerCase().includes(normalizedQuery) ||
+        chunk.source.toLowerCase().includes(normalizedQuery)
+      );
+      
+      // Sort by relevance (more matches = higher relevance)
+      return results.sort((a, b) => {
+        const aMatches = (a.content.toLowerCase().match(new RegExp(normalizedQuery, 'g')) || []).length;
+        const bMatches = (b.content.toLowerCase().match(new RegExp(normalizedQuery, 'g')) || []).length;
+        return bMatches - aMatches;
+      });
+    } catch (error) {
+      console.error('Error in searchDocuments:', error);
+      return [];
+    }
   }
   
   // FAQ methods

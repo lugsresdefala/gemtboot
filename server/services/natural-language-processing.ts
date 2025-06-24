@@ -158,19 +158,28 @@ export async function generateResponse(query: string): Promise<ResponseData> {
     
     // Search for relevant documents
     const relevantDocs = await findRelevantDocuments(query);
-  
-  if (relevantDocs.length > 0) {
-    // Use the most relevant document for the response
-    const bestDoc = relevantDocs[0];
     
+    if (relevantDocs.length > 0) {
+      const mostRelevant = relevantDocs[0];
+      log(`Found document match: "${mostRelevant.content.substring(0, 50)}..."`, "nlp");
+      return {
+        content: `Com base na documentação disponível: ${mostRelevant.content}`,
+        source: mostRelevant.source
+      };
+    }
+    
+    log(`No matches found for query: "${query}"`, "nlp");
+    
+    // Fallback response if no specific information is found
     return {
-      content: bestDoc.content,
-      source: bestDoc.source
+      content: "Desculpe, não encontrei informações específicas sobre sua pergunta. Para obter informações detalhadas sobre procedimentos de saúde trans no SUS, recomendo entrar em contato com a unidade de saúde mais próxima ou consultar o portal oficial do Ministério da Saúde.",
+      source: "Sistema de resposta padrão"
+    };
+  } catch (error) {
+    log(`Error generating response for query "${query}": ${error}`, "error");
+    return {
+      content: "Desculpe, ocorreu um erro ao processar sua pergunta. Por favor, tente novamente em alguns instantes.",
+      source: "Sistema de erro"
     };
   }
-  
-  // Fallback response if no relevant information is found
-  return {
-    content: "Desculpe, não encontrei informações específicas sobre esse assunto nos documentos oficiais sobre assistência à saúde de pessoas trans. Você pode tentar reformular sua pergunta ou consultar diretamente a unidade de saúde mais próxima."
-  };
 }
