@@ -52,14 +52,14 @@ export async function loadInitialData(): Promise<void> {
       "• mamoplastia masculinizadora e histerectomia: para homens trans e pessoas transmasculinas.\n\n" +
       "As demais cirurgias, mesmo que previstas na Portaria do MS, não são ofertadas pelo SUS em São Paulo.\n\n" +
       "Os critérios de inclusão para cirurgia de redesignação genital para mulheres trans/travestis ou pessoas transfemininas são:\n\n" +
-      "• Acima de 21 anos para entrar na fila;\n" +
+      "• Acima de 18 anos para procedimentos em geral;\n" +
+      "• Acima de 21 anos apenas para cirurgias que comprometem a fertilidade (Lei n° 14.443/2022);\n" +
       "• Ter inscrição no Cartão Nacional do SUS – CNS;\n" +
       "• Precisa ter matrícula no CRT (essa identificação é realizada pelo ASITT no momento do cadastro e enviada para a Unidade da Rede SAMPA Trans);\n" +
-      "• Quando nome for retificado é necessário cópia do RG atualizado e quando houver retificação de sexo, é necessário cópia da certidão de nascimento.\n" +
+      "• Quando nome for retificado é necessário cópia do RG atualizado e quando houver retificação de sexο, é necessário cópia da certidão de nascimento;\n" +
       "• Morar em São Paulo (Estado ou Município);\n" +
       "• A cirurgia pode ocorrer com a usuária de até 75 anos (precisa ser colocada na fila até 62 anos);\n" +
       "• Epilação a laser (será avaliada por profissional do ASITT);\n" +
-      "• O IMC acima de 27 pode dificultar o pós-operatório;\n" +
       "• Rede de apoio pós-cirurgia;\n" +
       "• Dados cadastrais atualizados; e\n" +
       "• Relatório(s) atualizado(s) com acompanhamento de 2 anos.",

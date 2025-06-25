@@ -1,11 +1,12 @@
 import { FAQEntry } from "@shared/schema";
+import { ageCriteriaFAQ, imcCriteriaFAQ } from "./age-criteria-update";
 
 export const faqData: FAQEntry[] = [
   {
     question:
       "Quais são os critérios para realizar a cirurgia de redesignação genital?",
     answer:
-      "De acordo com as orientações do Processo Transexualizador para cirurgia de redesignação genital para mulheres trans, travestis ou pessoas transfemininas, os critérios de inclusão são:\n\n• Acima de 21 anos para entrar na fila\n• Ter inscrição no Cartão Nacional do SUS – CNS\n• Precisa ter matrícula no CRT AIDS (essa identificação é realizada pelo ASITT no momento do cadastro)\n• Morar em São Paulo (Estado ou Município)\n• A cirurgia pode ocorrer com a usuária de até 75 anos (precisa ser colocada na fila até 62 anos)\n• Epilação a laser (será avaliada por profissional do ASITT)\n• O IMC acima de 27 pode dificultar o pós-operatório\n• Rede de apoio pós-cirurgia\n• Dados cadastrais atualizados\n• Relatório(s) atualizado(s) com acompanhamento de 2 anos\n\nO tempo médio de espera é de 8 a 10 anos, com aproximadamente 24 cirurgias realizadas por ano.",
+      "De acordo com as orientações do Processo Transexualizador para cirurgia de redesignação genital para mulheres trans, travestis ou pessoas transfemininas, os critérios de inclusão são:\n\n• Acima de 18 anos para procedimentos em geral\n• Acima de 21 anos apenas para cirurgias que comprometem a fertilidade (conforme Lei n° 14.443/2022)\n• Ter inscrição no Cartão Nacional do SUS – CNS\n• Precisa ter matrícula no CRT (essa identificação é realizada pelo ASITT no momento do cadastro)\n• Morar em São Paulo (Estado ou Município)\n• A cirurgia pode ocorrer com a usuária de até 75 anos (precisa ser colocada na fila até 62 anos)\n• Epilação a laser (será avaliada por profissional do ASITT)\n• Rede de apoio pós-cirurgia\n• Dados cadastrais atualizados\n• Relatório(s) atualizado(s) com acompanhamento de 2 anos\n\nO tempo médio de espera é de 8 a 10 anos, com aproximadamente 24 cirurgias realizadas por ano.",
     source:
       "Orientações e Fluxo para Cirurgias de Afirmação de Gênero, pág. 4-5",
     category: "cirurgias",
@@ -81,4 +82,7 @@ export const faqData: FAQEntry[] = [
     source: "Manual de uso do SAIPS - Processo Transexualizador, pág. 3",
     category: "habilitacao",
   },
+  // Add the new clarification FAQs
+  ageCriteriaFAQ,
+  imcCriteriaFAQ,
 ];
