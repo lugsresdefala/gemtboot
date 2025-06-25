@@ -1,4 +1,11 @@
-import { pgTable, text, serial, integer, timestamp, json } from "drizzle-orm/pg-core";
+import {
+  pgTable,
+  text,
+  serial,
+  integer,
+  timestamp,
+  json,
+} from "drizzle-orm/pg-core";
 import { createInsertSchema } from "drizzle-zod";
 import { z } from "zod";
 
@@ -22,7 +29,7 @@ export const messages = pgTable("messages", {
   id: serial("id").primaryKey(),
   role: text("role").notNull(), // 'user' or 'assistant'
   content: text("content").notNull(),
-  source: text("source").default(''),
+  source: text("source").default(""),
   timestamp: timestamp("timestamp").defaultNow().notNull(),
   conversationId: text("conversation_id").notNull(),
 });

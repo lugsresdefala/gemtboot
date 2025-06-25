@@ -1,6 +1,6 @@
 export interface Message {
   id: number;
-  role: 'user' | 'assistant';
+  role: "user" | "assistant";
   content: string;
   source: string;
   timestamp: Date;
@@ -19,7 +19,12 @@ export interface ChatResponse {
   assistantMessage: Message;
 }
 
-export type TopicType = 'faq' | 'fluxos' | 'criterios' | 'especialistas' | 'unidades';
+export type TopicType =
+  | "faq"
+  | "fluxos"
+  | "criterios"
+  | "especialistas"
+  | "unidades";
 
 export interface TopicPill {
   id: TopicType;

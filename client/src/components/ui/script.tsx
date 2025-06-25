@@ -11,18 +11,23 @@ export function Script({ children }: ScriptProps) {
       const scriptEl = document.createElement("script");
       scriptEl.type = "text/javascript";
       scriptEl.text = children;
-      
+
       // Append to document
       document.body.appendChild(scriptEl);
-      
+
       // Clean up
       return () => {
         document.body.removeChild(scriptEl);
       };
     } catch (error) {
-      console.error("Error executing script:", children.substring(0, 50) + "...", "Error:", error);
+      console.error(
+        "Error executing script:",
+        children.substring(0, 50) + "...",
+        "Error:",
+        error,
+      );
     }
   }, [children]);
-  
+
   return null;
 }

@@ -1,68 +1,139 @@
 /* Animações consolidadas para todo o aplicativo */
 @keyframes fadeIn {
-  0% { opacity: 0; }
-  100% { opacity: 1; }
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 @keyframes fadeOut {
-  0% { opacity: 1; }
-  100% { opacity: 0; }
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
 @keyframes scaleUp {
-  0% { transform: scale(1); }
-  100% { transform: scale(1.5); }
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.5);
+  }
 }
 
 @keyframes rotate {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 @keyframes pulse {
-  0%, 100% { transform: scale(1); opacity: 1; }
-  50% { transform: scale(1.1); opacity: 0.8; }
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.8;
+  }
 }
 
 @keyframes float {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
 }
 
 @keyframes shimmer {
-  0% { background-position: -100% 0; }
-  100% { background-position: 100% 0; }
+  0% {
+    background-position: -100% 0;
+  }
+  100% {
+    background-position: 100% 0;
+  }
 }
 
 @keyframes slideUp {
-  0% { transform: translateY(16px); opacity: 0; }
-  100% { transform: translateY(0); opacity: 1; }
+  0% {
+    transform: translateY(16px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 @keyframes slideInRight {
-  0% { transform: translateX(24px); opacity: 0; }
-  100% { transform: translateX(0); opacity: 1; }
+  0% {
+    transform: translateX(24px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
 
 @keyframes slideInLeft {
-  0% { transform: translateX(-24px); opacity: 0; }
-  100% { transform: translateX(0); opacity: 1; }
+  0% {
+    transform: translateX(-24px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
 
 @keyframes scaleIn {
-  0% { transform: scale(0.9); opacity: 0; }
-  100% { transform: scale(1); opacity: 1; }
+  0% {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
 
 @keyframes typingDot {
-  0%, 60%, 100% { transform: translateY(0) scale(0.95); opacity: 0.8; }
-  30% { transform: translateY(-5px) scale(1.1); opacity: 1; }
+  0%,
+  60%,
+  100% {
+    transform: translateY(0) scale(0.95);
+    opacity: 0.8;
+  }
+  30% {
+    transform: translateY(-5px) scale(1.1);
+    opacity: 1;
+  }
 }
 
 @keyframes floating {
-  0%, 100% { transform: translateY(0) scale(1) rotateZ(0deg); }
-  33% { transform: translateY(-10px) scale(1.01) rotateZ(0.5deg); }
-  66% { transform: translateY(-15px) scale(1.01) rotateZ(-0.5deg); }
+  0%,
+  100% {
+    transform: translateY(0) scale(1) rotateZ(0deg);
+  }
+  33% {
+    transform: translateY(-10px) scale(1.01) rotateZ(0.5deg);
+  }
+  66% {
+    transform: translateY(-15px) scale(1.01) rotateZ(-0.5deg);
+  }
 }
 
 .animate-fade-in {
@@ -90,29 +161,24 @@
 }
 
 .animate-shimmer {
-  background: linear-gradient(90deg, 
-    rgba(255,255,255,0) 0%, 
-    rgba(255,255,255,0.2) 50%, 
-    rgba(255,255,255,0) 100%);
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.2) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
   background-size: 200% 100%;
   animation: shimmer 1.5s infinite;
 }
 
 /* Animações específicas para a transição do GEM-T */
 @keyframes logoToRobot {
-  0% { 
+  0% {
     clip-path: circle(50% at center);
     background: var(--color-primary-500);
   }
   50% {
-    clip-path: polygon(
-      0% 0%, 
-      100% 0%, 
-      100% 50%,
-      70% 70%, 
-      30% 70%, 
-      0% 50%
-    );
+    clip-path: polygon(0% 0%, 100% 0%, 100% 50%, 70% 70%, 30% 70%, 0% 50%);
     background: var(--color-primary-600);
   }
   100% {
@@ -135,7 +201,7 @@
 
 /* Pontos de luz que aparecem durante a transição */
 @keyframes lightPointAppear {
-  0% { 
+  0% {
     opacity: 0;
     transform: scale(0);
   }

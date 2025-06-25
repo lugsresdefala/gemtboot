@@ -15,7 +15,7 @@ async function throwIfResNotOk(res: Response) {
         }
       }
     } catch (error) {
-      console.error('Error reading response text:', error);
+      console.error("Error reading response text:", error);
     }
     throw new Error(`${res.status}: ${errorMessage}`);
   }

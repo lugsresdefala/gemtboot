@@ -9,9 +9,9 @@ export default function Footer() {
         <div className="absolute -top-20 -right-20 w-80 h-80 bg-[#FFD1DC] rounded-full mix-blend-multiply filter blur-3xl opacity-20"></div>
         <div className="absolute bottom-10 left-10 w-72 h-72 bg-[#0F4880] rounded-full mix-blend-multiply filter blur-3xl opacity-20"></div>
       </div>
-      
+
       <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-[#FFD1DC] to-transparent opacity-50"></div>
-      
+
       <div className="container-app relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-12">
           <div className="md:col-span-4">
@@ -22,94 +22,117 @@ export default function Footer() {
                     <RobotAvatar size="sm" />
                   </div>
                 </div>
-                <h3 className="text-transparent bg-clip-text bg-gradient-to-r from-[#FFD1DC] to-white font-bold text-xl tracking-wide">GEM-T</h3>
+                <h3 className="text-transparent bg-clip-text bg-gradient-to-r from-[#FFD1DC] to-white font-bold text-xl tracking-wide">
+                  GEM-T
+                </h3>
               </div>
             </div>
-            
+
             <div className="glass-dark p-5 rounded-xl backdrop-blur-md">
               <p className="text-sm leading-relaxed text-white/90">
-                Sistema de informações sobre cuidados em saúde para pessoas trans no SUS, 
-                desenvolvido para facilitar o acesso a orientações e fluxos de atendimento.
+                Sistema de informações sobre cuidados em saúde para pessoas
+                trans no SUS, desenvolvido para facilitar o acesso a orientações
+                e fluxos de atendimento.
               </p>
             </div>
           </div>
-          
+
           <div className="md:col-span-4">
-            <h3 className="text-transparent bg-clip-text bg-gradient-to-r from-[#FFD1DC] to-white font-bold text-lg mb-5">Links Úteis</h3>
+            <h3 className="text-transparent bg-clip-text bg-gradient-to-r from-[#FFD1DC] to-white font-bold text-lg mb-5">
+              Links Úteis
+            </h3>
             <ul className="space-y-4">
               <li>
-                <a 
-                  href="https://www.gov.br/saude/pt-br" 
-                  target="_blank" 
-                  rel="noopener noreferrer" 
+                <a
+                  href="https://www.gov.br/saude/pt-br"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="glass px-4 py-2 rounded-lg flex items-center hover:bg-white/10 transition-all duration-300 hover:shadow-lg hover:shadow-pink-500/10 group"
                 >
                   <div className="bg-gradient-to-r from-[#FFD1DC] to-[#0A3255] p-2 rounded-md mr-3 text-white">
                     <i className="fas fa-external-link-alt"></i>
                   </div>
-                  <span className="text-white/80 group-hover:text-white transition-colors">Ministério da Saúde</span>
+                  <span className="text-white/80 group-hover:text-white transition-colors">
+                    Ministério da Saúde
+                  </span>
                 </a>
               </li>
               <li>
-                <a 
-                  href="https://www.prefeitura.sp.gov.br/cidade/secretarias/saude/" 
-                  target="_blank" 
-                  rel="noopener noreferrer" 
+                <a
+                  href="https://www.prefeitura.sp.gov.br/cidade/secretarias/saude/"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="glass px-4 py-2 rounded-lg flex items-center hover:bg-white/10 transition-all duration-300 hover:shadow-lg hover:shadow-pink-500/10 group"
                 >
                   <div className="bg-gradient-to-r from-[#FFD1DC] to-[#0A3255] p-2 rounded-md mr-3 text-white">
                     <i className="fas fa-external-link-alt"></i>
                   </div>
-                  <span className="text-white/80 group-hover:text-white transition-colors">Secretaria Municipal de Saúde</span>
+                  <span className="text-white/80 group-hover:text-white transition-colors">
+                    Secretaria Municipal de Saúde
+                  </span>
                 </a>
               </li>
               <li>
-                <a 
-                  href="http://www.saude.sp.gov.br/centro-de-referencia-e-treinamento-dstaids-sp" 
-                  target="_blank" 
-                  rel="noopener noreferrer" 
+                <a
+                  href="http://www.saude.sp.gov.br/centro-de-referencia-e-treinamento-dstaids-sp"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="glass px-4 py-2 rounded-lg flex items-center hover:bg-white/10 transition-all duration-300 hover:shadow-lg hover:shadow-pink-500/10 group"
                 >
                   <div className="bg-gradient-to-r from-[#FFD1DC] to-[#0A3255] p-2 rounded-md mr-3 text-white">
                     <i className="fas fa-external-link-alt"></i>
                   </div>
-                  <span className="text-white/80 group-hover:text-white transition-colors">CRT/AIDS - SP</span>
+                  <span className="text-white/80 group-hover:text-white transition-colors">
+                    CRT/AIDS - SP
+                  </span>
                 </a>
               </li>
             </ul>
           </div>
-          
+
           <div className="md:col-span-4">
-            <h3 className="text-transparent bg-clip-text bg-gradient-to-r from-pink-300 to-indigo-300 font-bold text-lg mb-5">Sobre o Projeto</h3>
+            <h3 className="text-transparent bg-clip-text bg-gradient-to-r from-pink-300 to-indigo-300 font-bold text-lg mb-5">
+              Sobre o Projeto
+            </h3>
             <div className="glass-dark p-5 rounded-xl backdrop-blur-md">
               <ul className="space-y-4">
                 <li className="flex items-center">
                   <div className="bg-gradient-to-r from-pink-500 to-indigo-600 p-2 rounded-md mr-3 text-white">
                     <i className="fas fa-globe"></i>
                   </div>
-                  <span className="text-indigo-200">Projeto Diversidade Barra Funda</span>
+                  <span className="text-indigo-200">
+                    Projeto Diversidade Barra Funda
+                  </span>
                 </li>
                 <li className="flex items-center">
                   <div className="bg-gradient-to-r from-pink-500 to-indigo-600 p-2 rounded-md mr-3 text-white">
                     <i className="fas fa-info-circle"></i>
                   </div>
-                  <span className="text-indigo-200">Ferramenta do Projeto Diversidade Barra Funda</span>
+                  <span className="text-indigo-200">
+                    Ferramenta do Projeto Diversidade Barra Funda
+                  </span>
                 </li>
                 <li className="flex items-center">
                   <div className="bg-gradient-to-r from-pink-500 to-indigo-600 p-2 rounded-md mr-3 text-white">
                     <i className="fas fa-hospital-user"></i>
                   </div>
-                  <span className="text-indigo-200">Acesse a UBS mais próxima para informações</span>
+                  <span className="text-indigo-200">
+                    Acesse a UBS mais próxima para informações
+                  </span>
                 </li>
               </ul>
             </div>
           </div>
         </div>
-        
+
         <div className="mt-16 glass-dark py-6 px-8 rounded-xl backdrop-blur-md text-center">
-          <p className="text-transparent bg-clip-text bg-gradient-to-r from-pink-300 to-indigo-300 font-medium">&copy; {new Date().getFullYear()} GEM-T - Projeto Diversidade Barra Funda</p>
+          <p className="text-transparent bg-clip-text bg-gradient-to-r from-pink-300 to-indigo-300 font-medium">
+            &copy; {new Date().getFullYear()} GEM-T - Projeto Diversidade Barra
+            Funda
+          </p>
           <p className="mt-2 text-indigo-200/80 text-sm">
-            As informações fornecidas por este assistente não substituem a consulta com profissionais de saúde qualificados.
+            As informações fornecidas por este assistente não substituem a
+            consulta com profissionais de saúde qualificados.
           </p>
         </div>
       </div>

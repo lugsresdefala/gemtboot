@@ -9,31 +9,37 @@ interface ChatMessageProps {
 
 export default function ChatMessage({ message }: ChatMessageProps) {
   const isBot = message.role === "assistant";
-  
+
   return (
-    <div className={cn(
-      "flex items-start space-stack-lg",
-      isBot ? "animate-slide-up" : "justify-end animate-fade-in"
-    )}>
+    <div
+      className={cn(
+        "flex items-start space-stack-lg",
+        isBot ? "animate-slide-up" : "justify-end animate-fade-in",
+      )}
+    >
       {isBot && (
         <div className="mt-1 flex-shrink-0 hover-glow">
           <RobotAvatar size="sm" className="shadow-sm" />
         </div>
       )}
-      
-      <div className={cn(
-        "rounded-md max-w-3xl", 
-        isBot 
-          ? "ml-3 bg-white rounded-tl-none border border-gray-200 shadow-md px-4 py-3 animate-scale-in" 
-          : "mr-3 bg-gray-100 rounded-tr-none shadow-md px-4 py-3 animate-slide-in-left"
-      )}>
-        <div className={cn(
-          "whitespace-pre-line prose prose-neutral prose-p:leading-relaxed prose-headings:text-gray-800",
-          isBot ? "text-body" : "text-body font-medium"
-        )}>
+
+      <div
+        className={cn(
+          "rounded-md max-w-3xl",
+          isBot
+            ? "ml-3 bg-white rounded-tl-none border border-gray-200 shadow-md px-4 py-3 animate-scale-in"
+            : "mr-3 bg-gray-100 rounded-tr-none shadow-md px-4 py-3 animate-slide-in-left",
+        )}
+      >
+        <div
+          className={cn(
+            "whitespace-pre-line prose prose-neutral prose-p:leading-relaxed prose-headings:text-gray-800",
+            isBot ? "text-body" : "text-body font-medium",
+          )}
+        >
           <ReactMarkdown>{message.content}</ReactMarkdown>
         </div>
-        
+
         {/* Show source reference if available */}
         {isBot && message.source && (
           <div className="mt-3 text-caption flex items-center border-t border-gray-100 pt-2">
@@ -45,7 +51,7 @@ export default function ChatMessage({ message }: ChatMessageProps) {
           </div>
         )}
       </div>
-      
+
       {!isBot && (
         <div className="flex-shrink-0 w-8 h-8 rounded-full bg-gradient-to-r from-[#FFD1DC] to-[#0A3255] flex-center text-white shadow-md mt-1 hover-glow">
           <i className="fas fa-user text-xs"></i>

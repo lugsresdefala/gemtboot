@@ -6,29 +6,25 @@ interface RobotAvatarProps {
   className?: string;
 }
 
-export default function RobotAvatar({ 
-  size = "md", 
-  className 
+export default function RobotAvatar({
+  size = "md",
+  className,
 }: RobotAvatarProps) {
   const sizeClasses = {
     sm: "w-20 h-20",
-    md: "w-24 h-24", 
-    lg: "w-32 h-32"
+    md: "w-24 h-24",
+    lg: "w-32 h-32",
   };
-  
+
   return (
-    <div 
+    <div
       className={cn(
         "flex items-center justify-center",
         sizeClasses[size],
-        className
+        className,
       )}
     >
-      <img 
-        src={gemtLogo} 
-        alt="Logo" 
-        className="w-full h-full object-contain"
-      />
+      <img src={gemtLogo} alt="Logo" className="w-full h-full object-contain" />
     </div>
   );
 }

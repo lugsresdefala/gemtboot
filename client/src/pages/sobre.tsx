@@ -1,7 +1,20 @@
 import { Link } from "wouter";
-import { ArrowLeft, ExternalLink, Heart, Users, Target, Shield } from "lucide-react";
+import {
+  ArrowLeft,
+  ExternalLink,
+  Heart,
+  Users,
+  Target,
+  Shield,
+} from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import RobotAvatar from "@/components/ui/RobotAvatar";
@@ -10,7 +23,7 @@ export default function Sobre() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50/30 to-indigo-50/50">
       <Header />
-      
+
       <main className="container mx-auto px-6 py-12">
         <div className="max-w-4xl mx-auto">
           {/* Header Section */}
@@ -20,10 +33,12 @@ export default function Sobre() {
                 <RobotAvatar size="lg" />
               </div>
             </div>
-            <h1 className="text-4xl font-bold text-gray-900 mb-4">Sobre o GEM-T</h1>
+            <h1 className="text-4xl font-bold text-gray-900 mb-4">
+              Sobre o GEM-T
+            </h1>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Assistente virtual do Projeto Diversidade Barra Funda para informações 
-              sobre cuidados em saúde para pessoas trans no SUS.
+              Assistente virtual do Projeto Diversidade Barra Funda para
+              informações sobre cuidados em saúde para pessoas trans no SUS.
             </p>
           </div>
 
@@ -38,9 +53,10 @@ export default function Sobre() {
               </CardHeader>
               <CardContent>
                 <p className="text-gray-700 leading-relaxed">
-                  Facilitar o acesso a informações sobre cuidados em saúde para pessoas trans 
-                  no Sistema Único de Saúde (SUS), fornecendo orientações claras sobre fluxos, 
-                  critérios e procedimentos disponíveis.
+                  Facilitar o acesso a informações sobre cuidados em saúde para
+                  pessoas trans no Sistema Único de Saúde (SUS), fornecendo
+                  orientações claras sobre fluxos, critérios e procedimentos
+                  disponíveis.
                 </p>
               </CardContent>
             </Card>
@@ -54,9 +70,9 @@ export default function Sobre() {
               </CardHeader>
               <CardContent>
                 <p className="text-gray-700 leading-relaxed">
-                  Compromisso com a dignidade, respeito à diversidade e garantia de 
-                  acesso equitativo aos serviços de saúde. Trabalhamos pela inclusão 
-                  e pelo direito universal à saúde.
+                  Compromisso com a dignidade, respeito à diversidade e garantia
+                  de acesso equitativo aos serviços de saúde. Trabalhamos pela
+                  inclusão e pelo direito universal à saúde.
                 </p>
               </CardContent>
             </Card>
@@ -70,7 +86,8 @@ export default function Sobre() {
                 <CardTitle className="text-2xl">Como Podemos Ajudar</CardTitle>
               </div>
               <CardDescription>
-                O GEM-T oferece informações sobre diversos aspectos dos cuidados em saúde trans
+                O GEM-T oferece informações sobre diversos aspectos dos cuidados
+                em saúde trans
               </CardDescription>
             </CardHeader>
             <CardContent>
@@ -81,47 +98,58 @@ export default function Sobre() {
                       <Shield className="h-5 w-5 text-blue-600" />
                     </div>
                     <div>
-                      <h4 className="font-semibold text-gray-900">Critérios e Requisitos</h4>
+                      <h4 className="font-semibold text-gray-900">
+                        Critérios e Requisitos
+                      </h4>
                       <p className="text-gray-600 text-sm">
-                        Informações sobre critérios para acesso a procedimentos e tratamentos
+                        Informações sobre critérios para acesso a procedimentos
+                        e tratamentos
                       </p>
                     </div>
                   </div>
-                  
+
                   <div className="flex items-start gap-3">
                     <div className="p-2 bg-green-100 rounded-lg">
                       <ExternalLink className="h-5 w-5 text-green-600" />
                     </div>
                     <div>
-                      <h4 className="font-semibold text-gray-900">Fluxos de Atendimento</h4>
+                      <h4 className="font-semibold text-gray-900">
+                        Fluxos de Atendimento
+                      </h4>
                       <p className="text-gray-600 text-sm">
                         Orientações sobre como navegar pelos serviços de saúde
                       </p>
                     </div>
                   </div>
                 </div>
-                
+
                 <div className="space-y-4">
                   <div className="flex items-start gap-3">
                     <div className="p-2 bg-purple-100 rounded-lg">
                       <Users className="h-5 w-5 text-purple-600" />
                     </div>
                     <div>
-                      <h4 className="font-semibold text-gray-900">Rede de Especialistas</h4>
+                      <h4 className="font-semibold text-gray-900">
+                        Rede de Especialistas
+                      </h4>
                       <p className="text-gray-600 text-sm">
-                        Informações sobre profissionais e serviços especializados
+                        Informações sobre profissionais e serviços
+                        especializados
                       </p>
                     </div>
                   </div>
-                  
+
                   <div className="flex items-start gap-3">
                     <div className="p-2 bg-orange-100 rounded-lg">
                       <Heart className="h-5 w-5 text-orange-600" />
                     </div>
                     <div>
-                      <h4 className="font-semibold text-gray-900">Unidades de Saúde</h4>
+                      <h4 className="font-semibold text-gray-900">
+                        Unidades de Saúde
+                      </h4>
                       <p className="text-gray-600 text-sm">
-                        Informações sobre unidades especializadas em cuidados trans
+                        Informações sobre unidades especializadas em cuidados
+                        trans
                       </p>
                     </div>
                   </div>
@@ -133,17 +161,20 @@ export default function Sobre() {
           {/* Project Info */}
           <Card className="border-0 shadow-lg bg-gradient-to-r from-blue-50 to-indigo-50 mb-12">
             <CardHeader>
-              <CardTitle className="text-2xl text-center">Projeto Diversidade Barra Funda</CardTitle>
+              <CardTitle className="text-2xl text-center">
+                Projeto Diversidade Barra Funda
+              </CardTitle>
             </CardHeader>
             <CardContent className="text-center">
               <p className="text-gray-700 mb-6 leading-relaxed">
-                Este assistente virtual faz parte do Projeto Diversidade Barra Funda, 
-                uma iniciativa dedicada a promover a inclusão e o acesso equitativo 
-                aos serviços de saúde para a população LGBTQIA+.
+                Este assistente virtual faz parte do Projeto Diversidade Barra
+                Funda, uma iniciativa dedicada a promover a inclusão e o acesso
+                equitativo aos serviços de saúde para a população LGBTQIA+.
               </p>
               <div className="text-center">
                 <p className="text-gray-600 text-sm">
-                  Para mais informações sobre o projeto, entre em contato através das unidades de saúde parceiras.
+                  Para mais informações sobre o projeto, entre em contato
+                  através das unidades de saúde parceiras.
                 </p>
               </div>
             </CardContent>
@@ -154,11 +185,14 @@ export default function Sobre() {
             <div className="flex items-start gap-3">
               <Shield className="h-6 w-6 text-amber-600 mt-1" />
               <div>
-                <h3 className="font-semibold text-amber-900 mb-2">Importante</h3>
+                <h3 className="font-semibold text-amber-900 mb-2">
+                  Importante
+                </h3>
                 <p className="text-amber-800 text-sm leading-relaxed">
-                  As informações fornecidas por este assistente têm caráter informativo e 
-                  não substituem a consulta com profissionais de saúde qualificados. 
-                  Sempre consulte uma unidade de saúde para orientações específicas sobre seu caso.
+                  As informações fornecidas por este assistente têm caráter
+                  informativo e não substituem a consulta com profissionais de
+                  saúde qualificados. Sempre consulte uma unidade de saúde para
+                  orientações específicas sobre seu caso.
                 </p>
               </div>
             </div>

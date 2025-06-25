@@ -6,5 +6,5 @@ import { ThemeProvider } from "./components/ui/theme-provider";
 createRoot(document.getElementById("root")!).render(
   <ThemeProvider defaultTheme="light" storageKey="gem-t-theme">
     <App />
-  </ThemeProvider>
+  </ThemeProvider>,
 );

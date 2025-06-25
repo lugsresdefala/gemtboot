@@ -6,21 +6,26 @@ import { FAQEntry } from "@/types";
  */
 export async function fetchFAQs(category?: string): Promise<FAQEntry[]> {
   try {
-    const url = category 
-      ? `/api/faqs?category=${encodeURIComponent(category)}` 
-      : '/api/faqs';
-    
+    const url = category
+      ? `/api/faqs?category=${encodeURIComponent(category)}`
+      : "/api/faqs";
+
     const response = await fetch(url, {
-      credentials: 'include'
+      credentials: "include",
     });
-    
+
     if (!response.ok) {
       throw new Error(`Error ${response.status}: ${response.statusText}`);
     }
-    
+
     return await response.json();
   } catch (error) {
-    console.error('Error fetching FAQs for category:', category, 'Error:', error);
+    console.error(
+      "Error fetching FAQs for category:",
+      category,
+      "Error:",
+      error,
+    );
     return [];
   }
 }
@@ -32,16 +37,21 @@ export async function fetchFAQs(category?: string): Promise<FAQEntry[]> {
 export async function searchDocuments(query: string) {
   try {
     const response = await fetch(`/api/search?q=${encodeURIComponent(query)}`, {
-      credentials: 'include'
+      credentials: "include",
     });
-    
+
     if (!response.ok) {
       throw new Error(`Error ${response.status}: ${response.statusText}`);
     }
-    
+
     return await response.json();
   } catch (error) {
-    console.error('Error searching documents with query:', query, 'Error:', error);
+    console.error(
+      "Error searching documents with query:",
+      query,
+      "Error:",
+      error,
+    );
     return [];
   }
 }

@@ -11,7 +11,7 @@ export default function Home() {
       <Helmet>
         <title>GEM-T | CSEBF</title>
       </Helmet>
-      
+
       {/* Font Awesome Script */}
       <Script>
         {`
@@ -27,20 +27,20 @@ export default function Home() {
           })();
         `}
       </Script>
-      
+
       <div className="flex flex-col min-h-screen bg-gradient-to-b from-[#062140] via-[#0A3255] to-[#0F4880] text-white relative overflow-hidden">
         {/* Partículas e efeitos de fundo decorativos */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <div className="absolute top-20 left-10 w-64 h-64 bg-[#FFD1DC] rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob"></div>
           <div className="absolute top-80 right-10 w-80 h-80 bg-white rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-2000"></div>
           <div className="absolute bottom-40 left-1/4 w-72 h-72 bg-[#0F4880] rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-4000"></div>
-          
+
           {/* Grid pattern overlay */}
           <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0zNiAxOGMwLTkuOTQtOC4wNi0xOC0xOC0xOHY2YTEyIDEyIDAgMCAxIDEyIDEyaC02eiIgZmlsbD0icmdiYSgyNTUsMjU1LDI1NSwwLjAzKSIvPjwvZz48L3N2Zz4=')] opacity-20"></div>
         </div>
-        
+
         <Header />
-        
+
         <main className="flex-grow relative z-10">
           {/* Hero section com design mais dramático */}
           <div className="relative pt-12 pb-16 md:pt-20 md:pb-24 overflow-hidden">
@@ -52,18 +52,19 @@ export default function Home() {
                       ✨ Plataforma Inclusiva
                     </span>
                   </div>
-                  
+
                   <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight bg-clip-text text-transparent bg-gradient-to-r from-white via-[#FFD1DC] to-white animate-gradient">
                     Acolhimento e Informação para Pessoas Trans
                   </h1>
-                  
+
                   <p className="text-xl md:text-2xl text-white/90 max-w-3xl mx-auto font-light leading-relaxed">
-                    Informações acessíveis sobre fluxos, critérios e cuidados em saúde para pessoas trans no SUS.
+                    Informações acessíveis sobre fluxos, critérios e cuidados em
+                    saúde para pessoas trans no SUS.
                   </p>
                 </div>
               </div>
             </div>
-            
+
             {/* Chat section com design visual moderno */}
             <div className="relative">
               <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#062140] -z-10"></div>
@@ -79,7 +80,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-          
+
           {/* FAQ section com novo design */}
           <div className="relative bg-[#062140]/80 backdrop-blur-md py-16 md:py-24">
             <div className="container-app space-y-component">
@@ -91,7 +92,7 @@ export default function Home() {
                   Perguntas Frequentes
                 </h2>
               </div>
-              
+
               <div className="relative">
                 <div className="absolute -top-40 -right-20 w-72 h-72 bg-[#FFD1DC] rounded-full mix-blend-multiply filter blur-3xl opacity-10 pointer-events-none"></div>
                 <div className="relative z-10">
@@ -101,7 +102,7 @@ export default function Home() {
             </div>
           </div>
         </main>
-        
+
         <Footer />
       </div>
     </>
