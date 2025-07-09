@@ -14,7 +14,7 @@ export const ageCriteriaFAQ: FAQEntry = {
     "• Mamoplastia masculinizadora\n" +
     "• Outros procedimentos de feminização facial ou masculinização",
   source: "Lei n° 14.443/2022 e Resolução CFM N° 2.427/2025",
-  category: "criterios"
+  category: "criterios",
 };
 
 // Additional FAQ entry to clarify IMC criteria
@@ -28,5 +28,5 @@ export const imcCriteriaFAQ: FAQEntry = {
     "• A avaliação é individualizada e considera diversos fatores além do IMC\n\n" +
     "Cada procedimento tem suas próprias considerações técnicas específicas.",
   source: "Protocolos técnicos cirúrgicos - Orientações ASITT",
-  category: "criterios"
+  category: "criterios",
 };

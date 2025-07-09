@@ -119,6 +119,7 @@ Preferred communication style: Simple, everyday language.
 ## Recent Changes
 
 - **June 24, 2025 - Age criteria and IMC clarifications**:
+
   - Corrected age requirements: 18 years for most procedures, 21 years only for fertility-compromising surgeries
   - Clarified IMC 27 is only a technical parameter for masculinizing mastoplasty by surgeons
   - Added specific FAQs to clarify age and IMC criteria distinctions
@@ -126,6 +127,7 @@ Preferred communication style: Simple, everyday language.
   - Ensured proper legal reference to Lei n° 14.443/2022 for fertility-related procedures
 
 - **June 24, 2025 - Content cleanup and terminology update**:
+
   - Removed all references to "AIDS" from information content
   - Updated terminology to use only "CRT" (Centro de Referência e Treinamento)
   - Updated FAQ data to reflect current terminology
